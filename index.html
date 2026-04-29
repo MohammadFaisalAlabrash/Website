@@ -1,113 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Faisal Al-abrash - Business Analyst</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/kMVqDtXH1zVH5T8WJc1bK4Nu+8l+9+5hb7IE2NE5+wKXJWfsU9wzEu/0wpW5DBqvv8HqlXW+EyqAQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            padding: 50px 0;
-            background-color: #6CC0B9;
-            color: white;
-        }
-        header img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-        header h1 {
-            margin: 0;
-        }
-        section {
-            margin: 20px 0;
-        }
-        h2 {
-            color: #643889;
-        }
-        .skills, .contact {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .skills ul, .contact ul {
-            list-style: none;
-            padding: 0;
-        }
-        .skills ul li, .contact ul li {
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-        }
-        .skills ul li i, .contact ul li i {
-            margin-right: 10px;
-            color: #6CC0B9;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #6CC0B9;
-            color: white;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammad Faisal Alabrash — ERP Consultant & Business Analyst</title>
+<meta name="description" content="ERP Consultant with 5+ years of experience implementing ERPNext and Logix ERP in real estate and investment sectors in Saudi Arabia. Expert in BRS, Power BI, SQL, and workflow automation.">
+<meta property="og:title" content="Mohammad Faisal Alabrash — ERP Consultant & Business Analyst">
+<meta property="og:description" content="ERP Consultant & Business Analyst based in Riyadh, Saudi Arabia. Specializing in ERPNext, Logix ERP, Power BI, and digital transformation.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://raw.githubusercontent.com/LoardFaisal/Website/main/PIC.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohammad Faisal Alabrash",
+  "jobTitle": "ERP Consultant & Business Analyst",
+  "description": "ERP Consultant with 5+ years of experience in ERPNext, Logix ERP, Power BI, SQL, and workflow automation in Saudi Arabia.",
+  "address": {"@type": "PostalAddress", "addressLocality": "Riyadh", "addressCountry": "SA"},
+  "email": "faisalabohusian@gmail.com",
+  "telephone": "+966553845572",
+  "sameAs": ["https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/"]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#09090c;--bg2:#111116;--bg3:#17171e;--bg4:#1e1e27;
+  --line:rgba(255,255,255,0.07);--line2:rgba(255,255,255,0.13);--line3:rgba(255,255,255,0.2);
+  --text:#ede9e1;--muted:#7a7673;--muted2:#a09c97;
+  --gold:#c9a86c;--gold2:#e8c98a;--gold-dim:rgba(201,168,108,0.12);--gold-border:rgba(201,168,108,0.22);
+  --teal:#6fb5ae;--teal-dim:rgba(111,181,174,0.1);
+  --coral:#c97b6b;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Outfit',system-ui,sans-serif;
+  --nav-h:66px;--max:1120px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;cursor:none}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* Cursor */
+#cur{position:fixed;top:0;left:0;z-index:9999;width:9px;height:9px;border-radius:50%;background:var(--gold);pointer-events:none;transform:translate(-50%,-50%);transition:width .25s,height .25s,opacity .3s}
+#cur-r{position:fixed;top:0;left:0;z-index:9998;width:34px;height:34px;border-radius:50%;border:1px solid rgba(201,168,108,0.35);pointer-events:none;transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease)}
+
+/* Grain */
+body::after{content:'';position:fixed;inset:0;z-index:900;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");opacity:.4}
+
+/* Glow orbs */
+.orb{position:fixed;border-radius:50%;pointer-events:none;z-index:0;filter:blur(80px);opacity:.55}
+.orb1{width:520px;height:520px;top:-120px;right:-80px;background:radial-gradient(circle,rgba(201,168,108,0.13),transparent 70%)}
+.orb2{width:440px;height:440px;bottom:-60px;left:-80px;background:radial-gradient(circle,rgba(111,181,174,0.11),transparent 70%)}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:800;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.2rem,4vw,3.5rem);transition:background .4s,border-color .4s,backdrop-filter .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(9,9,12,0.88);border-color:var(--line2);backdrop-filter:blur(24px)}
+.nav-logo{font-family:var(--serif);font-size:1.25rem;font-weight:400;letter-spacing:.03em}
+.nav-logo b{color:var(--gold);font-weight:600}
+.nav-links{display:flex;gap:2.2rem;align-items:center}
+.nav-links a{font-size:.73rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{border:1px solid var(--gold-border) !important;color:var(--gold) !important;padding:.45rem 1.1rem;border-radius:2px;transition:background .2s,color .2s !important}
+.nav-cta:hover{background:var(--gold);color:var(--bg) !important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:850}
+.burger span{display:block;width:22px;height:1px;background:var(--text);transition:.3s}
+
+/* Hero */
+.hero-wrap{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5rem;padding:calc(var(--nav-h) + 4rem) clamp(1.2rem,4vw,3.5rem) 5rem;max-width:var(--max);margin:0 auto}
+.eyebrow{display:flex;align-items:center;gap:.7rem;margin-bottom:1.4rem;animation:fadeUp .8s .2s both}
+.eyebrow::before{content:'';width:36px;height:1px;background:var(--gold)}
+.eyebrow span{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+h1.name{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5.2rem);font-weight:300;line-height:1.06;letter-spacing:-.01em;margin-bottom:.9rem;animation:fadeUp 1s .35s both}
+h1.name em{font-style:italic;color:var(--gold)}
+.hero-role{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted2);margin-bottom:1.4rem;animation:fadeUp .8s .5s both}
+.hero-bio{font-size:.97rem;color:rgba(237,233,225,.7);max-width:460px;line-height:1.9;margin-bottom:2.5rem;animation:fadeUp .8s .6s both}
+.hero-actions{display:flex;gap:.9rem;flex-wrap:wrap;animation:fadeUp .8s .72s both}
+.btn-gold{display:inline-flex;align-items:center;gap:.55rem;padding:.8rem 1.8rem;background:var(--gold);color:var(--bg);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:background .25s,transform .2s;cursor:pointer;border:none}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-outline{display:inline-flex;align-items:center;gap:.55rem;padding:.8rem 1.8rem;background:transparent;color:var(--text);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line3);border-radius:2px;transition:border-color .25s,transform .2s;cursor:pointer}
+.btn-outline:hover{border-color:var(--text);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line);animation:fadeUp .8s .88s both}
+.stat-n{font-family:var(--serif);font-size:2.1rem;font-weight:300;color:var(--gold);display:block}
+.stat-l{font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* Photo */
+.photo-side{position:relative;display:flex;align-items:center;justify-content:center;animation:fadeIn 1.2s .4s both}
+.photo-frame{position:relative;width:320px;height:390px}
+.photo-frame::before{content:'';position:absolute;inset:-14px -14px 14px 14px;border:1px solid var(--gold-border);border-radius:4px;z-index:0}
+.photo-frame::after{content:'';position:absolute;inset:14px -28px -28px 14px;background:var(--bg3);z-index:-1;border-radius:4px}
+.photo-frame img,.photo-frame .photo-placeholder{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:4px;position:relative;z-index:1}
+.photo-placeholder{background:var(--bg3);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.photo-placeholder img{width:100%;height:100%;border-radius:4px;object-fit:cover}
+.avail-badge{position:absolute;bottom:-18px;left:-18px;z-index:2;background:var(--bg3);border:1px solid var(--line2);border-radius:4px;padding:.8rem 1.1rem;display:flex;align-items:center;gap:.75rem}
+.avail-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px rgba(74,222,128,.5);flex-shrink:0}
+.avail-text{font-size:.77rem;color:var(--text);font-weight:500}
+.avail-sub{font-size:.66rem;color:var(--muted)}
+
+/* Sections */
+.section{padding:clamp(4.5rem,9vw,8rem) clamp(1.2rem,4vw,3.5rem);max-width:var(--max);margin:0 auto}
+.section-full{padding:clamp(4.5rem,9vw,8rem) 0;background:var(--bg2)}
+.section-full .section-inner{max-width:var(--max);margin:0 auto;padding:0 clamp(1.2rem,4vw,3.5rem)}
+.stag{display:flex;align-items:center;gap:.65rem;margin-bottom:.9rem}
+.stag::before{content:'';width:28px;height:1px;background:var(--gold)}
+.stag span{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.sec-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.3rem);font-weight:300;line-height:1.15;margin-bottom:.9rem}
+.sec-title em{font-style:italic;color:var(--gold)}
+.sec-lead{font-size:.95rem;color:rgba(237,233,225,.62);max-width:540px;line-height:1.9;margin-bottom:3.5rem}
+hr.div{border:none;border-top:1px solid var(--line)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:3fr 2fr;gap:5rem;align-items:start}
+.about-body p{font-size:1rem;color:rgba(237,233,225,.74);line-height:1.95;margin-bottom:1.1rem}
+.about-body strong{color:var(--text);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.8rem}
+.chip{display:flex;align-items:center;gap:.5rem;padding:.45rem .9rem;background:var(--bg3);border:1px solid var(--line);border-radius:2px;font-size:.74rem;color:var(--muted2)}
+.chip i{color:var(--teal);font-size:.75rem}
+.sidebar{display:flex;flex-direction:column}
+.srow{padding:1rem 0;border-bottom:1px solid var(--line)}
+.srow:first-child{border-top:1px solid var(--line)}
+.slbl{font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+.sval{font-size:.88rem;color:var(--text)}
+.sval a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.sk{background:var(--bg3);border:1px solid var(--line);border-radius:4px;padding:1.5rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s var(--ease)}
+.sk::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .3s}
+.sk:hover{border-color:var(--line2);transform:translateY(-3px)}
+.sk:hover::before{opacity:1}
+.sk-icon{width:40px;height:40px;border-radius:8px;background:var(--gold-dim);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1rem;margin-bottom:1rem;flex-shrink:0}
+.sk h3{font-size:.9rem;font-weight:500;margin-bottom:.5rem;color:var(--text)}
+.sk p{font-size:.79rem;color:var(--muted);line-height:1.7}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.9rem}
+.tag{font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;padding:.2rem .55rem;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:2px;color:var(--gold)}
+.tag.t2{background:var(--teal-dim);border-color:rgba(111,181,174,.22);color:var(--teal)}
+
+/* Timeline */
+.tl{position:relative;padding-left:2.2rem}
+.tl::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--line)}
+.tl-item{position:relative;margin-bottom:2.8rem}
+.tl-dot{position:absolute;left:-2.2rem;top:7px;width:9px;height:9px;border-radius:50%;background:var(--gold);border:2px solid var(--bg2);transform:translateX(-4px)}
+.tl-period{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem}
+.tl-title{font-family:var(--serif);font-size:1.35rem;font-weight:400;margin-bottom:.15rem}
+.tl-co{font-size:.8rem;color:var(--muted);margin-bottom:.9rem}
+.tl-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.tl-list li{font-size:.82rem;color:rgba(237,233,225,.7);line-height:1.65;padding-left:1.1rem;position:relative}
+.tl-list li::before{content:'—';position:absolute;left:0;color:var(--teal);font-size:.72rem}
+
+/* Projects */
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.proj{background:var(--bg2);border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:border-color .3s,transform .3s var(--ease)}
+.proj:hover{border-color:var(--gold-border);transform:translateY(-4px)}
+.proj.wide{grid-column:1/-1}
+.proj-vis{height:160px;background:var(--bg3);display:flex;align-items:flex-end;padding:1.2rem;gap:7px;position:relative;overflow:hidden}
+.proj.wide .proj-vis{height:190px}
+.bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px}
+.bar{width:100%;border-radius:2px 2px 0 0;min-height:4px;transition:height 1s var(--ease)}
+.bar.g{background:linear-gradient(180deg,var(--teal) 0%,rgba(111,181,174,.25) 100%)}
+.bar.a{background:linear-gradient(180deg,var(--gold) 0%,rgba(201,168,108,.25) 100%)}
+.bar.r{background:linear-gradient(180deg,var(--coral) 0%,rgba(201,120,107,.25) 100%)}
+.bar-lbl{font-size:.55rem;color:var(--muted);text-align:center;white-space:nowrap}
+.proj-body{padding:1.4rem}
+.proj-cat{font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+.proj-body h3{font-family:var(--serif);font-size:1.25rem;font-weight:400;margin-bottom:.45rem}
+.proj-body p{font-size:.8rem;color:var(--muted);line-height:1.7;margin-bottom:.9rem}
+.metrics{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.8rem}
+.metric{display:inline-flex;align-items:baseline;gap:.35rem;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:2px;padding:.25rem .65rem;font-size:.68rem;color:var(--gold)}
+.metric strong{font-size:.95rem;font-family:var(--serif);font-weight:400}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.c-intro p{font-size:.97rem;color:rgba(237,233,225,.65);line-height:1.9;margin-bottom:2rem}
+.clinks{display:flex;flex-direction:column}
+.clink{display:flex;align-items:center;gap:.9rem;padding:.95rem 0;border-bottom:1px solid var(--line);transition:gap .25s}
+.clink:first-child{border-top:1px solid var(--line)}
+.clink:hover{gap:1.3rem}
+.clink-ico{width:38px;height:38px;border-radius:50%;background:var(--bg3);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.85rem;flex-shrink:0}
+.clink-lbl{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.clink-val{font-size:.87rem;color:var(--text)}
+.clink-arr{color:var(--muted);font-size:.72rem;margin-left:auto;transition:transform .25s,color .25s}
+.clink:hover .clink-arr{transform:translateX(4px);color:var(--gold)}
+.cform{display:flex;flex-direction:column;gap:.9rem}
+.fgroup{display:flex;flex-direction:column;gap:.35rem}
+.fgroup label{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fgroup input,.fgroup textarea{background:var(--bg3);border:1px solid var(--line);border-radius:3px;padding:.8rem .95rem;color:var(--text);font-family:var(--sans);font-size:.86rem;font-weight:300;outline:none;transition:border-color .25s;resize:none}
+.fgroup input:focus,.fgroup textarea:focus{border-color:var(--gold-border)}
+.fgroup textarea{height:110px}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.fcopy{font-size:.72rem;color:var(--muted)}
+.fsocials{display:flex;gap:1.2rem}
+.fsocials a{font-size:.8rem;color:var(--muted);transition:color .25s}
+.fsocials a:hover{color:var(--gold)}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.on{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* Responsive */
+@media(max-width:960px){
+  .hero-wrap{grid-template-columns:1fr;gap:3rem;min-height:auto;padding-top:calc(var(--nav-h) + 2.5rem)}
+  .photo-side{order:-1}
+  .photo-frame{width:260px;height:315px}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem}
+  .skills-grid{grid-template-columns:1fr 1fr}
+  .proj-grid{grid-template-columns:1fr}
+  .proj.wide{grid-column:1}
+  .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  #exp-grid{grid-template-columns:1fr !important}
+}
+@media(max-width:600px){
+  .skills-grid{grid-template-columns:1fr}
+  .hero-stats{gap:1.5rem}
+  .chips{gap:.4rem}
+  .nav-links{display:none;position:fixed;inset:0;background:var(--bg);flex-direction:column;justify-content:center;align-items:center;gap:2.5rem;z-index:799}
+  .nav-links.open{display:flex}
+  .burger{display:flex}
+}
+</style>
 </head>
 <body>
-    <header>
-        <img src="PIC.jpeg" alt="Mohammad Faisal Al-abrash">
-        <h1>Mohammad Faisal Al-abrash</h1>
-        <h2>Business Analyst</h2>
-    </header>
-    <div class="container">
-        <section>
-            <h2>About Me</h2>
-            <p>I am an experienced Business Analyst with extensive expertise in conducting comprehensive analyses of existing business processes to identify inefficiencies and areas for improvement. I am skilled in gathering and documenting business requirements, and collaborating with cross-functional teams to develop and implement process improvements.</p>
-        </section>
-        <section>
-            <h2>Skills and Experience</h2>
-            <div class="skills">
-                <ul>
-                    <li><i class="fas fa-chart-line"></i>Conducted comprehensive analyses of existing business processes to identify inefficiencies and areas for improvement.</li>
-                    <li><i class="fas fa-file-alt"></i>Gathered and documented business requirements through interviews, workshops, and analysis of existing documentation.</li>
-                    <li><i class="fas fa-users"></i>Collaborated with cross-functional teams to develop and implement process improvements.</li>
-                    <li><i class="fas fa-database"></i>Utilized data analysis techniques to extract actionable insights and make data-driven recommendations to enhance business performance.</li>
-                    <li><i class="fas fa-folder-open"></i>Developed and maintained project documentation, including project charters, requirements specifications, and test plans.</li>
-                    <li><i class="fas fa-comments"></i>Facilitated meetings and workshops with stakeholders to elicit feedback, address concerns, and ensure project alignment with business objectives.</li>
-                    <li><i class="fas fa-exchange-alt"></i>Acted as a liaison between business stakeholders and technical teams, translating business requirements into functional specifications.</li>
-                    <li><i class="fas fa-vial"></i>Assisted in testing and quality assurance processes to ensure the successful implementation of innovative solutions.</li>
-                    <li><i class="fas fa-clipboard-check"></i>Conducted post-implementation reviews to evaluate the effectiveness of implemented solutions and identify areas for further improvement.</li>
-                    <li><i class="fas fa-balance-scale"></i>Distributed costs and ensured meticulous linkage of accounts as necessary, maintaining accuracy and integrity in financial processes.</li>
-                    <li><i class="fas fa-tasks"></i>Developed comprehensive work plans for each department, meticulously overseeing projects from initiation to completion, ensuring efficiency and adherence to timelines.</li>
-                    <li><i class="fas fa-sitemap"></i>Created detailed and visually informative flowchart diagrams that effectively illustrate the roles and responsibilities within each department, enhancing clarity and understanding.</li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <h2>Contact</h2>
-            <div class="contact">
-                <ul>
-                    <li><i class="fas fa-envelope"></i><strong>Email:</strong> mohammad@example.com</li>
-                    <li><i class="fas fa-phone"></i><strong>Phone:</strong> 123-456-7890</li>
-                    <li><i class="fas fa-linkedin"></i><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mohammad-faisal-al-abrash" target="_blank">linkedin.com/in/mohammad-faisal-al-abrash</a></li>
-                </ul>
-            </div>
-        </section>
+
+<div id="cur"></div>
+<div id="cur-r"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">MF <b>Alabrash</b></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </div>
+  <div class="burger" id="burger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <div>
+    <div class="eyebrow"><span>ERP Consultant · Business Analyst · Riyadh, KSA</span></div>
+    <h1 class="name">Mohammad<br><em>Faisal</em><br>Alabrash</h1>
+    <p class="hero-role">ERP Consultant | Digital Transformation | Business Analyst</p>
+    <p class="hero-bio">ERP Consultant with 5+ years of experience implementing, configuring, and optimizing ERP systems in real estate, property management, and investment sectors in Saudi Arabia. Expert in ERPNext, Logix ERP, Power BI, SQL, and workflow automation.</p>
+    <div class="hero-actions">
+      <a href="Mohammad_Faisal_Alabrash_CV.pdf" download class="btn-gold"><i class="fas fa-download"></i> Download CV</a>
+      <a href="#contact" class="btn-outline"><i class="fas fa-paper-plane"></i> Get in Touch</a>
     </div>
-    <footer>
-        <p>© 2024 Mohammad Faisal Al-abrash. All rights reserved.</p>
-    </footer>
+    <div class="hero-stats">
+      <div><span class="stat-n">5+</span><span class="stat-l">Years Experience</span></div>
+      <div><span class="stat-n">50K+</span><span class="stat-l">Records Migrated</span></div>
+      <div><span class="stat-n">40+</span><span class="stat-l">Users Trained</span></div>
+    </div>
+  </div>
+
+  <div class="photo-side">
+    <div class="photo-frame">
+      <div class="photo-placeholder">
+        <img src="https://raw.githubusercontent.com/LoardFaisal/Website/main/PIC.jpeg"
+             alt="Mohammad Faisal Alabrash"
+             onerror="this.src='data:image/png;base64,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'">
+      </div>
+      <div class="avail-badge">
+        <div class="avail-dot"></div>
+        <div>
+          <div class="avail-text">Open to Opportunities</div>
+          <div class="avail-sub">Riyadh, Saudi Arabia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div">
+
+<!-- ABOUT -->
+<div class="section" id="about">
+  <div class="stag reveal"><span>About Me</span></div>
+  <h2 class="sec-title reveal d1">Analyst. Consultant.<br><em>Problem Solver.</em></h2>
+
+  <div class="about-grid">
+    <div class="about-body reveal d2">
+      <p>I am an ERP Consultant and Business Analyst with <strong>5+ years of hands-on experience</strong> implementing and optimizing ERP systems across the real estate, property management, and investment sectors in Saudi Arabia.</p>
+      <p>My expertise spans the full ERP lifecycle — from <strong>Business Requirements Specification (BRS)</strong> and workflow automation to data migration, UAT, go-live support, and end-user training. I work closely with finance, PMO, and project teams to ensure ERP configurations align precisely with organizational goals.</p>
+      <p>Beyond implementation, I build <strong>SQL-based reporting solutions, Power BI dashboards,</strong> and automated workflows using Power Automate and SSIS — giving leadership the real-time visibility they need to make confident decisions.</p>
+      <div class="chips">
+        <div class="chip"><i class="fas fa-cogs"></i> ERPNext & Logix ERP</div>
+        <div class="chip"><i class="fas fa-chart-bar"></i> Power BI Dashboards</div>
+        <div class="chip"><i class="fas fa-database"></i> SQL & SSMS</div>
+        <div class="chip"><i class="fas fa-bolt"></i> Power Automate</div>
+        <div class="chip"><i class="fas fa-project-diagram"></i> SSIS Packages</div>
+        <div class="chip"><i class="fas fa-shield-alt"></i> ERP Security & Access Control</div>
+        <div class="chip"><i class="fas fa-code-branch"></i> Agile / Scrum</div>
+        <div class="chip"><i class="fas fa-sitemap"></i> CSI Code Categorization</div>
+      </div>
+    </div>
+    <div class="sidebar reveal d3">
+      <div class="srow"><div class="slbl">Location</div><div class="sval">Riyadh, Saudi Arabia</div></div>
+      <div class="srow"><div class="slbl">Nationality</div><div class="sval">Syrian</div></div>
+      <div class="srow"><div class="slbl">Availability</div><div class="sval" style="color:var(--gold)">30 Days Notice</div></div>
+      <div class="srow"><div class="slbl">Specialization</div><div class="sval">ERP Consulting · Business Analysis</div></div>
+      <div class="srow"><div class="slbl">ERP Platforms</div><div class="sval">ERPNext · Logix ERP</div></div>
+      <div class="srow"><div class="slbl">Tools</div><div class="sval">Power BI · SQL · Power Automate · SSIS</div></div>
+      <div class="srow"><div class="slbl">Education</div><div class="sval">B.Sc. Information Technology<br><span style="color:var(--gold);font-size:.8rem">GPA 3.54 — First Class Honors · 2021</span></div></div>
+      <div class="srow"><div class="slbl">Languages</div><div class="sval">Arabic (Native) · English (C1 — Fluent)</div></div>
+      <div class="srow"><div class="slbl">LinkedIn</div><div class="sval"><a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer">Mohammed Faisal Alabrash</a></div></div>
+      <div style="margin-top:1.5rem">
+        <a href="Mohammad_Faisal_Alabrash_CV.pdf" download class="btn-gold" style="width:100%;justify-content:center">Download CV <i class="fas fa-download"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="section-full" id="skills">
+<div class="section-inner">
+  <div class="stag reveal"><span>Core Technical Skills</span></div>
+  <h2 class="sec-title reveal d1">What I <em>Bring</em></h2>
+  <p class="sec-lead reveal d2">A proven technical stack built over 5+ years of ERP implementation, data engineering, and business process optimization in Saudi Arabia's real estate and investment sector.</p>
+
+  <div class="skills-grid">
+    <div class="sk reveal">
+      <div class="sk-icon"><i class="fas fa-server"></i></div>
+      <h3>ERP Implementation & Administration</h3>
+      <p>End-to-end implementation, configuration, and optimization of ERPNext and Logix ERP — aligning modules with Finance, PMO, Projects, Property Management, Procurement, and Contracts.</p>
+      <div class="tags"><span class="tag">ERPNext</span><span class="tag">Logix ERP</span><span class="tag">Go-Live</span></div>
+    </div>
+    <div class="sk reveal d1">
+      <div class="sk-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="fas fa-file-alt"></i></div>
+      <h3>Business Requirements Specification</h3>
+      <p>Preparing detailed BRS documents for multiple departments — capturing functional requirements, process flows, and system configuration specifications for ERP deployments.</p>
+      <div class="tags"><span class="tag t2">BRS</span><span class="tag t2">Process Flows</span><span class="tag t2">UAT</span></div>
+    </div>
+    <div class="sk reveal d2">
+      <div class="sk-icon" style="background:rgba(201,123,107,.1);color:var(--coral)"><i class="fas fa-bolt"></i></div>
+      <h3>Workflow Automation & Process Optimization</h3>
+      <p>Creating and automating enterprise business processes and ERP workflows using Power Automate and SSIS packages — improving operational efficiency, accuracy, and approval cycles.</p>
+      <div class="tags"><span class="tag">Power Automate</span><span class="tag">SSIS</span><span class="tag">Automation</span></div>
+    </div>
+    <div class="sk reveal d3">
+      <div class="sk-icon"><i class="fas fa-chart-bar"></i></div>
+      <h3>Power BI & KPI Dashboards</h3>
+      <p>Developing Power BI dashboards and KPI reports that surface ERP performance data, track strategic metrics, and support management decision-making in real time.</p>
+      <div class="tags"><span class="tag">Power BI</span><span class="tag">KPI Reporting</span><span class="tag">DAX</span></div>
+    </div>
+    <div class="sk reveal d1">
+      <div class="sk-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="fas fa-database"></i></div>
+      <h3>SQL & Database Reporting</h3>
+      <p>Extracting, validating, and analyzing data using SQL in SSMS and Report Builder — building operational reports that improve management insights and ERP performance tracking.</p>
+      <div class="tags"><span class="tag t2">SQL</span><span class="tag t2">SSMS</span><span class="tag t2">Report Builder</span></div>
+    </div>
+    <div class="sk reveal d2">
+      <div class="sk-icon"><i class="fas fa-exchange-alt"></i></div>
+      <h3>Data Migration & Cleansing</h3>
+      <p>Managing data migration from legacy systems — including extraction, cleansing, validation, and reconciliation to ensure integrity and continuity during ERP transitions.</p>
+      <div class="tags"><span class="tag">Data Migration</span><span class="tag">Validation</span><span class="tag">Reconciliation</span></div>
+    </div>
+    <div class="sk reveal">
+      <div class="sk-icon" style="background:rgba(201,123,107,.1);color:var(--coral)"><i class="fas fa-sitemap"></i></div>
+      <h3>CSI Code Categorization</h3>
+      <p>Categorizing Finance, PMO, and Project items using CSI codes — enabling accurate budgeting, forecasting, project cost tracking, and strategic decision-making.</p>
+      <div class="tags"><span class="tag">CSI Codes</span><span class="tag">Budgeting</span><span class="tag">Forecasting</span></div>
+    </div>
+    <div class="sk reveal d1">
+      <div class="sk-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="fas fa-shield-alt"></i></div>
+      <h3>ERP Security & Access Control</h3>
+      <p>Defining user roles, permissions, and security protocols within ERP systems — enhancing compliance, data integrity, and organizational governance.</p>
+      <div class="tags"><span class="tag t2">Access Control</span><span class="tag t2">Compliance</span><span class="tag t2">Roles</span></div>
+    </div>
+    <div class="sk reveal d2">
+      <div class="sk-icon"><i class="fas fa-sync-alt"></i></div>
+      <h3>Agile / Scrum Methodology</h3>
+      <p>Applying Agile/Scrum practices to plan, review, and deliver ERP solutions iteratively — ensuring continuous alignment between business needs and technical delivery.</p>
+      <div class="tags"><span class="tag">Agile</span><span class="tag">Scrum</span><span class="tag">Iterative Delivery</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section-full" id="experience" style="background:var(--bg)">
+<div class="section-inner">
+  <div class="stag reveal"><span>Career Timeline</span></div>
+  <h2 class="sec-title reveal d1">Professional <em>Experience</em></h2>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem" id="exp-grid">
+    <div class="tl">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-period">Jan 2021 — Present · 4+ Years</div>
+        <div class="tl-title">ERP Administrator / Business Analyst</div>
+        <div class="tl-co">Memar Development and Investment — Riyadh, Saudi Arabia</div>
+        <ul class="tl-list">
+          <li>Led end-to-end implementation of Logix ERP across <strong style="color:var(--text)">6 departments</strong>, delivered on schedule and within scope</li>
+          <li>Prepared <strong style="color:var(--text)">15+ detailed BRS documents</strong> covering Finance, Procurement, PMO, Projects, and Property Management</li>
+          <li>Automated enterprise workflows, improving operational efficiency by <strong style="color:var(--gold)">over 30%</strong> and eliminating manual bottlenecks</li>
+          <li>Migrated <strong style="color:var(--gold)">50,000+ records</strong> from 3 legacy systems with a <strong style="color:var(--gold)">99%+ data accuracy rate</strong></li>
+          <li>Configured ERP modules: Finance, Procurement, Projects, Property Management, and Contracts</li>
+          <li>Defined user roles, permissions, and security protocols — enhancing compliance and data integrity</li>
+          <li>Conducted UAT, system testing, and go-live support — <strong style="color:var(--text)">5 integrated modules launched simultaneously</strong></li>
+          <li>Trained <strong style="color:var(--gold)">40+ end-users</strong> across 6 departments — rapid adoption with minimal post-go-live support requests</li>
+          <li>Categorized items using CSI Codes for accurate budgeting, forecasting, and project cost tracking</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-item reveal d1">
+        <div class="tl-dot"></div>
+        <div class="tl-period">Concurrent — ERPNext Implementation</div>
+        <div class="tl-title">ERPNext Consultant</div>
+        <div class="tl-co">Memar Development and Investment — Riyadh, Saudi Arabia</div>
+        <ul class="tl-list">
+          <li>Supported ERPNext implementation with full BRS documentation for all key processes</li>
+          <li>Designed and improved business processes embedded into ERP workflows, streamlining approvals</li>
+          <li>Collaborated with Finance, PMO, and Project teams for forecasting, budgeting, and reporting alignment</li>
+          <li>Developed SQL-based reports and dashboards to improve management insights</li>
+          <li>Guided technical teams on ERP customization and system functionality</li>
+          <li>Applied Agile/Scrum practices for iterative ERP solution delivery</li>
+          <li>Automated reporting and workflows using Power Automate and SSIS — reducing manual reporting effort by <strong style="color:var(--gold)">~40%</strong></li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal d2" style="margin-top:2.5rem">
+        <div class="tl-dot"></div>
+        <div class="tl-period">Education</div>
+        <div class="tl-title">B.Sc. Information Technology & Computing</div>
+        <div class="tl-co">Arab Open University · GPA: 3.54 / 4.0 — First Class Honors</div>
+        <ul class="tl-list">
+          <li>Relevant courses: Data Analytics, Statistics, HR Management, Information Systems</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section" id="projects">
+  <div class="stag reveal"><span>Portfolio</span></div>
+  <h2 class="sec-title reveal d1">Key <em>Deliverables</em></h2>
+  <p class="sec-lead reveal d2">Selected implementations and analytical deliverables from my role at Memar Development and Investment.</p>
+
+  <div class="proj-grid">
+    <div class="proj wide reveal">
+      <div class="proj-vis" id="pv1">
+        <div class="bar-wrap"><div class="bar a" data-h="45%"></div><div class="bar-lbl">Finance</div></div>
+        <div class="bar-wrap"><div class="bar g" data-h="78%"></div><div class="bar-lbl">PMO</div></div>
+        <div class="bar-wrap"><div class="bar a" data-h="62%"></div><div class="bar-lbl">Projects</div></div>
+        <div class="bar-wrap"><div class="bar g" data-h="88%"></div><div class="bar-lbl">Procurement</div></div>
+        <div class="bar-wrap"><div class="bar r" data-h="55%"></div><div class="bar-lbl">Property</div></div>
+        <div class="bar-wrap"><div class="bar a" data-h="70%"></div><div class="bar-lbl">Contracts</div></div>
+        <div class="bar-wrap"><div class="bar g" data-h="95%"></div><div class="bar-lbl">Reporting</div></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">ERP Implementation · Logix ERP · Memar Development</div>
+        <h3>Full Logix ERP Implementation — Multi-Module Rollout</h3>
+        <p>Led the complete end-to-end implementation of Logix ERP across Finance, Procurement, Projects, Property Management, and Contracts modules. Prepared BRS documentation, managed data migration from legacy systems, configured security protocols, and provided go-live support with end-user training.</p>
+        <div class="metrics">
+          <div class="metric"><strong>6</strong> Modules Configured</div>
+          <div class="metric"><strong>15+</strong> BRS Documents</div>
+          <div class="metric"><strong>50K+</strong> Records Migrated</div>
+          <div class="metric"><strong>40+</strong> Users Trained</div>
+        </div>
+        <div class="tags"><span class="tag">Logix ERP</span><span class="tag">BRS</span><span class="tag">Data Migration</span><span class="tag">UAT</span><span class="tag">Go-Live</span></div>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="proj-vis" id="pv2" style="align-items:center;justify-content:center;flex-direction:column;gap:1rem">
+        <div style="display:flex;gap:.8rem;align-items:center">
+          <div style="padding:.4rem .8rem;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:3px;font-size:.68rem;color:var(--gold)">Legacy Data</div>
+          <span style="color:var(--muted);font-size:.8rem">→</span>
+          <div style="padding:.4rem .8rem;background:var(--teal-dim);border:1px solid rgba(111,181,174,.22);border-radius:3px;font-size:.68rem;color:var(--teal)">Cleanse & Validate</div>
+          <span style="color:var(--muted);font-size:.8rem">→</span>
+          <div style="padding:.4rem .8rem;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:3px;font-size:.68rem;color:var(--gold)">ERP Live</div>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">Data Engineering · ERPNext</div>
+        <h3>ERPNext Implementation & BRS Documentation</h3>
+        <p>Supported full ERPNext deployment with comprehensive BRS documentation across all key business processes. Designed embedded ERP workflows, guided technical customization teams, and applied Agile sprints for iterative delivery.</p>
+        <div class="metrics"><div class="metric"><strong>100%</strong> Processes Documented</div></div>
+        <div class="tags"><span class="tag">ERPNext</span><span class="tag t2">Agile</span><span class="tag t2">Workflows</span></div>
+      </div>
+    </div>
+
+    <div class="proj reveal d1">
+      <div class="proj-vis" id="pv3">
+        <div class="bar-wrap"><div class="bar a" data-h="40%"></div><div class="bar-lbl">Q1</div></div>
+        <div class="bar-wrap"><div class="bar g" data-h="68%"></div><div class="bar-lbl">Q2</div></div>
+        <div class="bar-wrap"><div class="bar a" data-h="82%"></div><div class="bar-lbl">Q3</div></div>
+        <div class="bar-wrap"><div class="bar g" data-h="95%"></div><div class="bar-lbl">Q4</div></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">Analytics · Power BI · SQL</div>
+        <h3>Executive KPI Dashboards & Automated Reporting</h3>
+        <p>Built Power BI dashboards and SQL-based reports for management — monitoring ERP performance, tracking KPIs, and supporting strategic planning. Automated workflows using Power Automate and SSIS packages, significantly reducing manual reporting effort.</p>
+        <div class="metrics">
+          <div class="metric"><strong>40%</strong> Less Manual Reporting</div>
+          <div class="metric"><strong>Real-time</strong> KPI Visibility</div>
+        </div>
+        <div class="tags"><span class="tag">Power BI</span><span class="tag t2">SQL</span><span class="tag t2">SSIS</span><span class="tag">Power Automate</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section-full" id="contact" style="background:var(--bg2)">
+<div class="section-inner">
+  <div class="stag reveal"><span>Contact</span></div>
+  <h2 class="sec-title reveal d1">Let's <em>Connect</em></h2>
+
+  <div class="contact-grid">
+    <div class="c-intro reveal d2">
+      <p>Whether you're looking for an ERP Consultant to lead an implementation, a Business Analyst for a transformation project, or simply want to explore collaboration opportunities — I'd love to hear from you.</p>
+      <div class="clinks">
+        <a href="mailto:faisalabohusian@gmail.com" class="clink">
+          <div class="clink-ico"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="clink-lbl">Email</div>
+            <div class="clink-val">faisalabohusian@gmail.com</div>
+          </div>
+          <i class="fas fa-arrow-right clink-arr"></i>
+        </a>
+        <a href="tel:+966553845572" class="clink">
+          <div class="clink-ico"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="clink-lbl">Phone (WhatsApp)</div>
+            <div class="clink-val">+966 553 845 572</div>
+          </div>
+          <i class="fas fa-arrow-right clink-arr"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer" class="clink">
+          <div class="clink-ico" style="color:var(--teal)"><i class="fab fa-linkedin-in"></i></div>
+          <div>
+            <div class="clink-lbl">LinkedIn</div>
+            <div class="clink-val">Mohammed Faisal Alabrash</div>
+          </div>
+          <i class="fas fa-arrow-right clink-arr"></i>
+        </a>
+        <a href="Mohammad_Faisal_Alabrash_CV.pdf" download class="clink">
+          <div class="clink-ico" style="color:var(--gold)"><i class="fas fa-file-pdf"></i></div>
+          <div>
+            <div class="clink-lbl">Curriculum Vitae</div>
+            <div class="clink-val">Download PDF — Mohammad Faisal Alabrash</div>
+          </div>
+          <i class="fas fa-arrow-right clink-arr"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="cform reveal d3">
+      <div class="fgroup">
+        <label for="fname">Your Name</label>
+        <input type="text" id="fname" placeholder="Ahmed Al-Rashid" autocomplete="name">
+      </div>
+      <div class="fgroup">
+        <label for="femail">Email Address</label>
+        <input type="email" id="femail" placeholder="ahmed@company.com" autocomplete="email">
+      </div>
+      <div class="fgroup">
+        <label for="fsubj">Subject</label>
+        <input type="text" id="fsubj" placeholder="ERP Project Inquiry / Collaboration">
+      </div>
+      <div class="fgroup">
+        <label for="fmsg">Message</label>
+        <textarea id="fmsg" placeholder="Tell me about your project..."></textarea>
+      </div>
+      <button class="btn-gold" onclick="sendMsg()" style="align-self:flex-start">
+        Send Message <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fcopy">© <span id="yr"></span> Mohammad Faisal Alabrash. All rights reserved. · Riyadh, Saudi Arabia</div>
+  <div class="fsocials">
+    <a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="mailto:faisalabohusian@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="tel:+966553845572" title="Call"><i class="fas fa-phone"></i></a>
+    <a href="Mohammad_Faisal_Alabrash_CV.pdf" download title="Download CV"><i class="fas fa-file-pdf"></i></a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Cursor
+const cur=document.getElementById('cur'),curR=document.getElementById('cur-r');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+(function animCur(){
+  cur.style.left=mx+'px';cur.style.top=my+'px';
+  rx+=(mx-rx)*.1;ry+=(my-ry)*.1;
+  curR.style.left=rx+'px';curR.style.top=ry+'px';
+  requestAnimationFrame(animCur);
+})();
+document.querySelectorAll('a,button,.sk,.proj').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='15px';cur.style.height='15px';curR.style.width='48px';curR.style.height='48px'});
+  el.addEventListener('mouseleave',()=>{cur.style.width='9px';cur.style.height='9px';curR.style.width='34px';curR.style.height='34px'});
+});
+
+// Nav scroll
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+
+// Mobile menu
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+
+// Scroll reveal
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+
+// Bar animation
+document.querySelectorAll('.proj-vis').forEach(vis=>{
+  const barObs=new IntersectionObserver(entries=>entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.bar').forEach((b,i)=>{
+        const h=b.dataset.h||b.style.height;
+        b.style.height='0';
+        setTimeout(()=>{b.style.height=h;},i*70);
+      });
+      barObs.unobserve(e.target);
+    }
+  }),{threshold:.3});
+  barObs.observe(vis);
+});
+
+// Exp grid responsive
+function checkExpGrid(){const g=document.getElementById('exp-grid');if(g)g.style.gridTemplateColumns=innerWidth<768?'1fr':'1fr 1fr'}
+window.addEventListener('resize',checkExpGrid);checkExpGrid();
+
+// Contact form
+function sendMsg(){
+  const n=document.getElementById('fname').value;
+  const e=document.getElementById('femail').value;
+  const m=document.getElementById('fmsg').value;
+  if(!n||!e||!m){alert('Please fill in all required fields.');return;}
+  const mailto='mailto:faisalabohusian@gmail.com?subject=Portfolio%20Inquiry%20from%20'+encodeURIComponent(n)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+e+'\n\n'+m);
+  window.location.href=mailto;
+}
+</script>
 </body>
 </html>
