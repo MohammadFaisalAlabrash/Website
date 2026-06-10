@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohammad Faisal Alabrash — ERP Consultant & Business Analyst</title>
-<meta name="description" content="ERP Consultant with 5+ years of experience implementing ERPNext and Logix ERP in real estate and investment sectors in Saudi Arabia. Expert in BRS, Power BI, SQL, and workflow automation.">
-<meta property="og:title" content="Mohammad Faisal Alabrash — ERP Consultant & Business Analyst">
-<meta property="og:description" content="ERP Consultant & Business Analyst based in Riyadh, Saudi Arabia. Specializing in ERPNext, Logix ERP, Power BI, and digital transformation.">
+<title>Mohammad Faisal Alabrash | ERP Consultant Riyadh | ERPNext &middot; Logix ERP &middot; Power BI</title>
+<meta name="description" content="ERP Consultant &amp; Business Analyst in Riyadh, Saudi Arabia. 5+ years implementing ERPNext and Logix ERP for real estate and investment firms. Available for hire &mdash; 30 days notice.">
+<link rel="canonical" href="https://mohammadfaisalalabrash.github.io/Website/" />
+<link rel="icon" type="image/jpeg" href="PIC.jpeg" />
+<meta property="og:title" content="Mohammad Faisal Alabrash &mdash; ERP Consultant &amp; Business Analyst">
+<meta property="og:description" content="ERP Consultant &amp; Business Analyst based in Riyadh, Saudi Arabia. Specializing in ERPNext, Logix ERP, Power BI, and digital transformation.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://raw.githubusercontent.com/LoardFaisal/Website/main/PIC.jpeg">
+<meta property="og:image" content="https://raw.githubusercontent.com/MohammadFaisalAlabrash/Website/main/PIC.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" crossorigin="anonymous"></script>
@@ -47,40 +49,43 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;cursor:none}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-
-/* Cursor */
+@media(hover:none){body{cursor:auto}#cur,#cur-r{display:none}}
 #cur{position:fixed;top:0;left:0;z-index:9999;width:9px;height:9px;border-radius:50%;background:var(--gold);pointer-events:none;transform:translate(-50%,-50%);transition:width .25s,height .25s,opacity .3s}
 #cur-r{position:fixed;top:0;left:0;z-index:9998;width:34px;height:34px;border-radius:50%;border:1px solid rgba(201,168,108,0.35);pointer-events:none;transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease)}
-
-/* Grain */
 body::after{content:'';position:fixed;inset:0;z-index:900;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");opacity:.4}
-
-/* Glow orbs */
 .orb{position:fixed;border-radius:50%;pointer-events:none;z-index:0;filter:blur(80px);opacity:.55}
 .orb1{width:520px;height:520px;top:-120px;right:-80px;background:radial-gradient(circle,rgba(201,168,108,0.13),transparent 70%)}
 .orb2{width:440px;height:440px;bottom:-60px;left:-80px;background:radial-gradient(circle,rgba(111,181,174,0.11),transparent 70%)}
-
-/* Nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:800;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.2rem,4vw,3.5rem);transition:background .4s,border-color .4s,backdrop-filter .4s;border-bottom:1px solid transparent}
-nav.scrolled{background:rgba(9,9,12,0.88);border-color:var(--line2);backdrop-filter:blur(24px)}
-.nav-logo{font-family:var(--serif);font-size:1.25rem;font-weight:400;letter-spacing:.03em}
+#nav-progress{position:fixed;top:0;left:0;z-index:9997;height:2px;width:0%;background:linear-gradient(90deg,var(--teal),var(--gold));transition:width .1s linear;pointer-events:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:800;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.2rem,4vw,3.5rem);transition:background .5s,border-color .5s,backdrop-filter .5s,box-shadow .5s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(9,9,12,0.92);border-color:var(--line2);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);box-shadow:0 8px 32px rgba(0,0,0,.35)}
+.nav-logo{font-family:var(--serif);font-size:1.28rem;font-weight:400;letter-spacing:.03em;flex-shrink:0;display:flex;align-items:center;gap:.7rem}
+.nav-logo-mark{width:30px;height:30px;border-radius:50%;border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;background:var(--gold-dim);font-family:var(--serif);font-size:.85rem;color:var(--gold);flex-shrink:0;transition:background .3s,border-color .3s}
+.nav-logo:hover .nav-logo-mark{background:var(--gold);color:var(--bg)}
 .nav-logo b{color:var(--gold);font-weight:600}
-.nav-links{display:flex;gap:2.2rem;align-items:center}
-.nav-links a{font-size:.73rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-links{display:flex;gap:2.4rem;align-items:center;justify-content:center;margin:0 1.5rem;flex-shrink:0}
+.nav-links a{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);transition:color .3s;font-weight:400;position:relative;padding:.5rem 0;white-space:nowrap}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--gold);transition:width .35s var(--ease);transform-origin:left}
 .nav-links a:hover{color:var(--text)}
-.nav-cta{border:1px solid var(--gold-border) !important;color:var(--gold) !important;padding:.45rem 1.1rem;border-radius:2px;transition:background .2s,color .2s !important}
-.nav-cta:hover{background:var(--gold);color:var(--bg) !important}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:850}
-.burger span{display:block;width:22px;height:1px;background:var(--text);transition:.3s}
-
-/* Hero */
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-links a.active{color:var(--gold)}
+.nav-sep{width:1px;height:14px;background:var(--line2);flex-shrink:0}
+.nav-cta{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--gold-border) !important;color:var(--gold) !important;padding:.45rem 1.2rem;border-radius:2px;transition:background .25s,color .25s,box-shadow .25s !important;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;flex-shrink:0}
+.nav-cta i{font-size:.65rem;transition:transform .25s}
+.nav-cta:hover{background:var(--gold);color:var(--bg) !important;box-shadow:0 0 18px rgba(201,168,108,.25) !important}
+.nav-cta:hover i{transform:translateX(3px)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:850;padding:.3rem}
+.burger span{display:block;width:20px;height:1px;background:var(--text);transition:.35s var(--ease)}
+.burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 .hero-wrap{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5rem;padding:calc(var(--nav-h) + 4rem) clamp(1.2rem,4vw,3.5rem) 5rem;max-width:var(--max);margin:0 auto}
 .eyebrow{display:flex;align-items:center;gap:.7rem;margin-bottom:1.4rem;animation:fadeUp .8s .2s both}
 .eyebrow::before{content:'';width:36px;height:1px;background:var(--gold)}
 .eyebrow span{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 h1.name{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5.2rem);font-weight:300;line-height:1.06;letter-spacing:-.01em;margin-bottom:.9rem;animation:fadeUp 1s .35s both}
 h1.name em{font-style:italic;color:var(--gold)}
-.hero-role{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted2);margin-bottom:1.4rem;animation:fadeUp .8s .5s both;position:relative;display:inline-block}
+.hero-role{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted2);margin-bottom:1.4rem;animation:fadeUp .8s .5s both;position:relative;display:inline-block;min-height:1.4em}
 .hero-role::after{content:'';display:block;width:0;height:1px;background:var(--gold);margin-top:.5rem;transition:width 1s var(--ease);transform-origin:center}
 .hero-role.line-revealed::after{width:80%}
 .hero-bio{font-size:.97rem;color:rgba(237,233,225,.7);max-width:460px;line-height:1.9;margin-bottom:2.5rem;animation:fadeUp .8s .6s both}
@@ -92,21 +97,15 @@ h1.name em{font-style:italic;color:var(--gold)}
 .hero-stats{display:flex;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line);animation:fadeUp .8s .88s both}
 .stat-n{font-family:var(--serif);font-size:2.1rem;font-weight:300;color:var(--gold);display:block}
 .stat-l{font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-
-/* Photo */
 .photo-side{position:relative;display:flex;align-items:center;justify-content:center;animation:fadeIn 1.2s .4s both}
 .photo-frame{position:relative;width:320px;height:390px}
 .photo-frame::before{content:'';position:absolute;inset:-14px -14px 14px 14px;border:1px solid var(--gold-border);border-radius:4px;z-index:0}
 .photo-frame::after{content:'';position:absolute;inset:14px -28px -28px 14px;background:var(--bg3);z-index:-1;border-radius:4px}
-.photo-frame img,.photo-frame .photo-placeholder{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:4px;position:relative;z-index:1}
-.photo-placeholder{background:var(--bg3);display:flex;flex-direction:column;align-items:center;justify-content:center}
-.photo-placeholder img{width:100%;height:100%;border-radius:4px;object-fit:cover}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:4px;position:relative;z-index:1}
 .avail-badge{position:absolute;bottom:-18px;left:-18px;z-index:2;background:var(--bg3);border:1px solid var(--line2);border-radius:4px;padding:.8rem 1.1rem;display:flex;align-items:center;gap:.75rem}
 .avail-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px rgba(74,222,128,.5);flex-shrink:0}
 .avail-text{font-size:.77rem;color:var(--text);font-weight:500}
 .avail-sub{font-size:.66rem;color:var(--muted)}
-
-/* Sections */
 .section{padding:clamp(4.5rem,9vw,8rem) clamp(1.2rem,4vw,3.5rem);max-width:var(--max);margin:0 auto}
 .section-full{padding:clamp(4.5rem,9vw,8rem) 0;background:var(--bg2)}
 .section-full .section-inner{max-width:var(--max);margin:0 auto;padding:0 clamp(1.2rem,4vw,3.5rem)}
@@ -117,13 +116,13 @@ h1.name em{font-style:italic;color:var(--gold)}
 .sec-title em{font-style:italic;color:var(--gold)}
 .sec-lead{font-size:.95rem;color:rgba(237,233,225,.62);max-width:540px;line-height:1.9;margin-bottom:3.5rem}
 hr.div{border:none;border-top:1px solid var(--line)}
-
-/* About */
 .about-grid{display:grid;grid-template-columns:3fr 2fr;gap:5rem;align-items:start}
 .about-body p{font-size:1rem;color:rgba(237,233,225,.74);line-height:1.95;margin-bottom:1.1rem}
 .about-body strong{color:var(--text);font-weight:500}
 .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.8rem}
-.chip{display:flex;align-items:center;gap:.5rem;padding:.45rem .9rem;background:var(--bg3);border:1px solid var(--line);border-radius:2px;font-size:.74rem;color:var(--muted2)}
+.chip{display:flex;align-items:center;gap:.5rem;padding:.45rem .9rem;background:var(--bg3);border:1px solid var(--line);border-radius:2px;font-size:.74rem;color:var(--muted2);opacity:0;transform:translateY(10px);transition:opacity .4s var(--ease),transform .4s var(--ease),background .2s,border-color .2s}
+.chip.chip-on{opacity:1;transform:translateY(0)}
+.chip:hover{background:var(--bg4);border-color:var(--line2)}
 .chip i{color:var(--teal);font-size:.75rem}
 .sidebar{display:flex;flex-direction:column}
 .srow{padding:1rem 0;border-bottom:1px solid var(--line)}
@@ -131,12 +130,10 @@ hr.div{border:none;border-top:1px solid var(--line)}
 .slbl{font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
 .sval{font-size:.88rem;color:var(--text)}
 .sval a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
-
-/* Skills */
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.sk{background:var(--bg3);border:1px solid var(--line);border-radius:4px;padding:1.5rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s var(--ease)}
+.sk{background:var(--bg3);border:1px solid var(--line);border-radius:4px;padding:1.5rem;position:relative;overflow:hidden;will-change:transform;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
 .sk::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .3s}
-.sk:hover{border-color:var(--line2);transform:translateY(-3px)}
+.sk:hover{border-color:var(--line2);transform:translateY(-3px);box-shadow:0 18px 35px -10px rgba(0,0,0,.6),0 0 0 1px var(--gold-border)}
 .sk:hover::before{opacity:1}
 .sk-icon{width:40px;height:40px;border-radius:8px;background:var(--gold-dim);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1rem;margin-bottom:1rem;flex-shrink:0}
 .sk h3{font-size:.9rem;font-weight:500;margin-bottom:.5rem;color:var(--text)}
@@ -144,32 +141,33 @@ hr.div{border:none;border-top:1px solid var(--line)}
 .tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.9rem}
 .tag{font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;padding:.2rem .55rem;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:2px;color:var(--gold)}
 .tag.t2{background:var(--teal-dim);border-color:rgba(111,181,174,.22);color:var(--teal)}
-
-/* Timeline */
 .tl{position:relative;padding-left:2.2rem}
 .tl::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--line)}
-.tl-item{position:relative;margin-bottom:2.8rem}
+.tl-item{position:relative;margin-bottom:2.8rem;opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.tl-item.tl-on{opacity:1;transform:translateY(0)}
+.tl-item:nth-child(1){transition-delay:.05s}.tl-item:nth-child(2){transition-delay:.2s}.tl-item:nth-child(3){transition-delay:.35s}
 .tl-dot{position:absolute;left:-2.2rem;top:7px;width:9px;height:9px;border-radius:50%;background:var(--gold);border:2px solid var(--bg2);transform:translateX(-4px)}
 .tl-period{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem}
 .tl-title{font-family:var(--serif);font-size:1.35rem;font-weight:400;margin-bottom:.15rem}
 .tl-co{font-size:.8rem;color:var(--muted);margin-bottom:.9rem}
 .tl-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
 .tl-list li{font-size:.82rem;color:rgba(237,233,225,.7);line-height:1.65;padding-left:1.1rem;position:relative}
-.tl-list li::before{content:'—';position:absolute;left:0;color:var(--teal);font-size:.72rem}
-
-/* Projects */
+.tl-list li::before{content:'\2192';position:absolute;left:0;color:var(--teal);font-size:.72rem}
 .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
 .proj{background:var(--bg2);border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:border-color .3s,transform .3s var(--ease)}
 .proj:hover{border-color:var(--gold-border);transform:translateY(-4px)}
 .proj.wide{grid-column:1/-1}
 .proj-vis{height:160px;background:var(--bg3);display:flex;align-items:flex-end;padding:1.2rem;gap:7px;position:relative;overflow:hidden}
 .proj.wide .proj-vis{height:190px}
-.bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px}
+.bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative;cursor:pointer}
 .bar{width:100%;border-radius:2px 2px 0 0;min-height:4px;transition:height 1s var(--ease)}
 .bar.g{background:linear-gradient(180deg,var(--teal) 0%,rgba(111,181,174,.25) 100%)}
 .bar.a{background:linear-gradient(180deg,var(--gold) 0%,rgba(201,168,108,.25) 100%)}
 .bar.r{background:linear-gradient(180deg,var(--coral) 0%,rgba(201,120,107,.25) 100%)}
 .bar-lbl{font-size:.55rem;color:var(--muted);text-align:center;white-space:nowrap}
+.bar-tip{position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--bg);color:var(--gold);padding:.2rem .55rem;border-radius:2px;font-size:.65rem;white-space:nowrap;opacity:0;pointer-events:none;border:1px solid var(--gold-border);transition:opacity .2s;z-index:10}
+.bar-wrap:hover .bar-tip{opacity:1}
+.bar-wrap:hover .bar{filter:brightness(1.2)}
 .proj-body{padding:1.4rem}
 .proj-cat{font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
 .proj-body h3{font-family:var(--serif);font-size:1.25rem;font-weight:400;margin-bottom:.45rem}
@@ -177,8 +175,6 @@ hr.div{border:none;border-top:1px solid var(--line)}
 .metrics{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.8rem}
 .metric{display:inline-flex;align-items:baseline;gap:.35rem;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:2px;padding:.25rem .65rem;font-size:.68rem;color:var(--gold)}
 .metric strong{font-size:.95rem;font-family:var(--serif);font-weight:400}
-
-/* Contact */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .c-intro p{font-size:.97rem;color:rgba(237,233,225,.65);line-height:1.9;margin-bottom:2rem}
 .clinks{display:flex;flex-direction:column}
@@ -196,95 +192,104 @@ hr.div{border:none;border-top:1px solid var(--line)}
 .fgroup input,.fgroup textarea{background:var(--bg3);border:1px solid var(--line);border-radius:3px;padding:.8rem .95rem;color:var(--text);font-family:var(--sans);font-size:.86rem;font-weight:300;outline:none;transition:border-color .25s;resize:none}
 .fgroup input:focus,.fgroup textarea:focus{border-color:var(--gold-border)}
 .fgroup textarea{height:110px}
-
-/* Footer */
 footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .fcopy{font-size:.72rem;color:var(--muted)}
 .fsocials{display:flex;gap:1.2rem}
 .fsocials a{font-size:.8rem;color:var(--muted);transition:color .25s}
 .fsocials a:hover{color:var(--gold)}
-
-/* Animations */
+#toTop{position:fixed;bottom:2rem;right:2rem;z-index:700;width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--bg);border:none;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .2s;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(201,168,108,.3)}
+#toTop.visible{opacity:1;pointer-events:auto}
+#toTop:hover{transform:translateY(-3px)}
+#mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:700;padding:.8rem 1.2rem;background:rgba(17,17,22,.96);border-top:1px solid var(--line2);backdrop-filter:blur(20px)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .reveal.on{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
-
-/* Responsive */
+.about-grid .about-body{opacity:0;transform:translateX(-28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.about-grid .sidebar{opacity:0;transform:translateX(28px);transition:opacity .9s .15s var(--ease),transform .9s .15s var(--ease)}
+.about-grid.revealed .about-body,.about-grid.revealed .sidebar{opacity:1;transform:translateX(0)}
+.btn-gold.success{background:#4ade80 !important;color:var(--bg) !important}
+@keyframes pop{0%{transform:scale(0)}80%{transform:scale(1.3)}100%{transform:scale(1)}}
+.btn-gold.success i{animation:pop .35s var(--ease)}
+.typed-cursor{color:var(--gold);font-weight:300}
 @media(max-width:960px){
   .hero-wrap{grid-template-columns:1fr;gap:3rem;min-height:auto;padding-top:calc(var(--nav-h) + 2.5rem)}
-  .photo-side{order:-1}
-  .photo-frame{width:260px;height:315px}
+  .photo-side{order:-1}.photo-frame{width:260px;height:315px}
   .about-grid{grid-template-columns:1fr;gap:2.5rem}
   .skills-grid{grid-template-columns:1fr 1fr}
-  .proj-grid{grid-template-columns:1fr}
-  .proj.wide{grid-column:1}
+  .proj-grid{grid-template-columns:1fr}.proj.wide{grid-column:1}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem}
   #exp-grid{grid-template-columns:1fr !important}
 }
 @media(max-width:600px){
-  .skills-grid{grid-template-columns:1fr}
-  .hero-stats{gap:1.5rem}
-  .chips{gap:.4rem}
-  .nav-links{display:none;position:fixed;inset:0;background:var(--bg);flex-direction:column;justify-content:center;align-items:center;gap:2.5rem;z-index:799}
+  .skills-grid{grid-template-columns:1fr}.hero-stats{gap:1.5rem}
+  nav{height:auto;padding:.8rem clamp(1.2rem,4vw,3.5rem)}
+  .nav-links{display:none;position:fixed;inset:0;background:rgba(9,9,12,.97);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:799;margin:0}
   .nav-links.open{display:flex}
+  .nav-links a{font-size:1rem;padding:.8rem 0;letter-spacing:.12em}
+  .nav-links a::after{display:none}.nav-sep{display:none}.nav-cta{margin-top:.5rem}
   .burger{display:flex}
+  #mobile-cta{display:block}
+  #toTop{bottom:5.5rem}
+  footer{padding-bottom:5rem}
 }
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
 
-/* ── Typewriter cursor blink ── */
-.typed-cursor{color:var(--gold);font-weight:300}
+/* ═══ LANGUAGE TOGGLE BUTTON ═══ */
+.lang-toggle{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:.38rem .8rem;border:1px solid var(--line2);border-radius:2px;background:transparent;color:var(--muted2);cursor:pointer;transition:all .25s;white-space:nowrap;font-family:var(--sans);display:inline-flex;align-items:center;gap:.4rem;flex-shrink:0}
+.lang-toggle:hover{border-color:var(--gold-border);color:var(--gold)}
+[dir="rtl"] .lang-toggle{font-family:'Tajawal',var(--sans)}
 
-/* ── About slide-in ── */
-.about-grid .about-body{opacity:0;transform:translateX(-28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.about-grid .sidebar{opacity:0;transform:translateX(28px);transition:opacity .9s .15s var(--ease),transform .9s .15s var(--ease)}
-.about-grid.revealed .about-body,.about-grid.revealed .sidebar{opacity:1;transform:translateX(0)}
+/* ═══ RTL / ARABIC LAYOUT ═══ */
+[dir="rtl"]{font-family:'Tajawal',var(--sans)}
+[dir="rtl"] .eyebrow{flex-direction:row-reverse}
+[dir="rtl"] .eyebrow::before{content:none}
+[dir="rtl"] .eyebrow::after{content:'';width:36px;height:1px;background:var(--gold)}
+[dir="rtl"] .stag{flex-direction:row-reverse}
+[dir="rtl"] .stag::before{content:none}
+[dir="rtl"] .stag::after{content:'';width:28px;height:1px;background:var(--gold)}
+[dir="rtl"] .tl{padding-left:0;padding-right:2.2rem}
+[dir="rtl"] .tl::before{left:auto;right:0}
+[dir="rtl"] .tl-dot{left:auto;right:-2.2rem;transform:translateX(4px)}
+[dir="rtl"] .tl-list li{padding-left:0;padding-right:1.1rem}
+[dir="rtl"] .tl-list li::before{left:auto;right:0;content:'\2190'}
+[dir="rtl"] .avail-badge{left:auto;right:-18px}
+[dir="rtl"] .about-grid .about-body{transform:translateX(28px)}
+[dir="rtl"] .about-grid .sidebar{transform:translateX(-28px)}
+[dir="rtl"] .about-grid.revealed .about-body,[dir="rtl"] .about-grid.revealed .sidebar{transform:translateX(0)}
+[dir="rtl"] .clink-arr{margin-left:0;margin-right:auto}
+[dir="rtl"] .photo-frame::before{inset:-14px 14px 14px -14px}
+[dir="rtl"] .photo-frame::after{inset:14px 14px -28px -28px}
+[dir="rtl"] .hero-role::after{transform-origin:right}
+[dir="rtl"] .nav-links a::after{transform-origin:right}
+[dir="rtl"] .nav-logo{flex-direction:row-reverse}
+[dir="rtl"] .chips{direction:rtl}
+[dir="rtl"] .chip{direction:rtl}
+[dir="rtl"] .tags{direction:rtl}
+[dir="rtl"] .metrics{direction:rtl}
+[dir="rtl"] .fsocials{direction:rtl}
+[dir="rtl"] .sec-lead{text-align:right}
+[dir="rtl"] .hero-bio{text-align:right}
+[dir="rtl"] .about-body blockquote{border-left:none;border-right:2px solid var(--gold);text-align:right}
+[dir="rtl"] .srow{text-align:right}
+[dir="rtl"] .pbi-filters{direction:rtl}
+[dir="rtl"] .pbi-kpi{text-align:right}
+[dir="rtl"] .pbi-chart-title{direction:rtl}
+[dir="rtl"] .cform{direction:rtl}
+[dir="rtl"] .fgroup{text-align:right}
+[dir="rtl"] .c-intro p{text-align:right}
+[dir="rtl"] .fcopy{text-align:right}
+[dir="rtl"] .footer{flex-direction:row-reverse}
+[dir="rtl"] .hero-stats{direction:rtl}
+[dir="rtl"] .proj-body{text-align:right}
+[dir="rtl"] .sk{text-align:right}
+[dir="rtl"] .sk-icon{margin-right:0;margin-left:1rem}
+@media(max-width:600px){[dir="rtl"] .nav-links{direction:rtl}}
 
-/* ── Skill card 3D tilt ── */
-.sk{will-change:transform;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
-.sk:hover{box-shadow:0 18px 35px -10px rgba(0,0,0,.6),0 0 0 1px var(--gold-border)}
-
-/* ── Timeline stagger reveal ── */
-.tl-item{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
-.tl-item.tl-on{opacity:1;transform:translateY(0)}
-.tl-item:nth-child(1){transition-delay:.05s}
-.tl-item:nth-child(2){transition-delay:.2s}
-.tl-item:nth-child(3){transition-delay:.35s}
-
-/* ── Bar tooltip ── */
-.bar-wrap{position:relative;cursor:pointer}
-.bar-tip{position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--bg);color:var(--gold);padding:.2rem .55rem;border-radius:2px;font-size:.65rem;white-space:nowrap;opacity:0;pointer-events:none;border:1px solid var(--gold-border);transition:opacity .2s;z-index:10}
-.bar-wrap:hover .bar-tip{opacity:1}
-.bar-wrap:hover .bar{filter:brightness(1.2)}
-
-/* ── Contact btn success ── */
-.btn-gold.success{background:#4ade80 !important;color:var(--bg) !important}
-@keyframes pop{0%{transform:scale(0)}80%{transform:scale(1.3)}100%{transform:scale(1)}}
-.btn-gold.success i{animation:pop .35s var(--ease)}
-
-/* ── Number counter ── */
-.stat-n{transition:all .3s}
-
-/* ── Chips stagger ── */
-.chip{opacity:0;transform:translateY(10px);transition:opacity .4s var(--ease),transform .4s var(--ease),background .2s,border-color .2s}
-.chip.chip-on{opacity:1;transform:translateY(0)}
-.chip:hover{background:var(--bg4);border-color:var(--line2)}
-
-/* ── Section titles underline draw ── */
-.sec-title{position:relative;display:inline-block}
-
-/* ── Smooth scroll progress bar ── */
-#progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--gold));z-index:9997;width:0%;transition:width .1s linear;pointer-events:none}
-
-/* ── prefers-reduced-motion ── */
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-  html{scroll-behavior:auto}
-}
-
-/* ═══ SQL PLAYGROUND ═══════════════════════════════════════════════ */
+/* SQL */
 .sql-shell{background:var(--bg3);border:1px solid var(--line2);border-radius:8px;overflow:hidden;font-family:'Courier New',monospace}
-.sql-tabs{display:flex;gap:0;border-bottom:1px solid var(--line2);background:var(--bg);overflow-x:auto}
+.sql-tabs{display:flex;border-bottom:1px solid var(--line2);background:var(--bg);overflow-x:auto}
 .sql-tab{padding:.7rem 1.2rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:transparent;border:none;border-right:1px solid var(--line);cursor:pointer;white-space:nowrap;transition:color .2s,background .2s;display:flex;align-items:center;gap:.5rem}
 .sql-tab:hover{color:var(--text);background:var(--bg3)}
 .sql-tab.active{color:var(--gold);background:var(--bg3);border-bottom:2px solid var(--gold)}
@@ -297,9 +302,7 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
 .sql-run-btn{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;padding:.3rem .8rem;background:var(--gold);color:var(--bg);border:none;border-radius:2px;cursor:pointer;display:flex;align-items:center;gap:.4rem;font-weight:500;transition:background .2s}
 .sql-run-btn:hover{background:var(--gold2)}
 .sql-code{padding:1rem 1.2rem;font-size:.78rem;line-height:1.8;color:#abb2bf;overflow-x:auto;flex:1;margin:0;white-space:pre;tab-size:2}
-.sql-code .kw{color:#c678dd}.sql-code .fn{color:#61afef}.sql-code .str{color:#98c379}
-.sql-code .num{color:#d19a66}.sql-code .cm{color:#5c6370;font-style:italic}
-.sql-code .tbl{color:#e06c75}.sql-code .alias{color:#56b6c2}
+.sql-code .kw{color:#c678dd}.sql-code .fn{color:#61afef}.sql-code .str{color:#98c379}.sql-code .num{color:#d19a66}.sql-code .cm{color:#5c6370;font-style:italic}.sql-code .tbl{color:#e06c75}.sql-code .alias{color:#56b6c2}
 .sql-results-wrap{display:flex;flex-direction:column}
 .sql-results-header{padding:.55rem .9rem;background:var(--bg);border-bottom:1px solid var(--line);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);display:flex;align-items:center;gap:.6rem}
 .sql-row-count{font-size:.65rem;color:var(--teal);margin-left:auto}
@@ -309,13 +312,12 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
 .sql-table-wrap td{padding:.4rem .7rem;color:var(--text);border-bottom:1px solid var(--line);white-space:nowrap}
 .sql-table-wrap tr:hover td{background:rgba(255,255,255,.03)}
 .sql-table-wrap td.num-cell{color:var(--teal);text-align:right}
-.sql-table-wrap td.gold-cell{color:var(--gold)}
 .sql-table-wrap td.bar-cell{min-width:80px}
 .mini-bar{height:4px;border-radius:2px;background:linear-gradient(90deg,var(--teal),var(--gold));margin-top:3px}
 .sql-statusbar{padding:.35rem .9rem;background:var(--bg);border-top:1px solid var(--line);font-size:.65rem;color:var(--muted);display:flex;justify-content:space-between}
-@media(max-width:700px){.sql-body{grid-template-columns:1fr;grid-template-rows:auto auto}.sql-editor-wrap{border-right:none;border-bottom:1px solid var(--line2)}}
+@media(max-width:700px){.sql-body{grid-template-columns:1fr}.sql-editor-wrap{border-right:none;border-bottom:1px solid var(--line2)}}
 
-/* ═══ POWER BI DASHBOARD ═══════════════════════════════════════════ */
+/* Power BI */
 .pbi-kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-bottom:1.5rem}
 .pbi-kpi{background:var(--bg3);border:1px solid var(--line);border-radius:6px;padding:1.1rem;transition:border-color .3s,transform .3s var(--ease)}
 .pbi-kpi:hover{border-color:var(--line2);transform:translateY(-2px)}
@@ -330,11 +332,9 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
 .pbi-fbtn:hover{border-color:var(--gold-border);color:var(--text)}
 .pbi-fbtn.active{background:var(--gold-dim);border-color:var(--gold-border);color:var(--gold)}
 .pbi-filter-sep{width:1px;height:20px;background:var(--line2);margin:0 .3rem}
-.pbi-charts-row{display:grid;grid-template-columns:2fr 1fr;gap:1.2rem}
+.pbi-charts-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
 .pbi-chart-card{background:var(--bg3);border:1px solid var(--line);border-radius:6px;padding:1.2rem}
-.pbi-chart-card.wide{/* already 2fr */}
 .pbi-chart-title{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
-.pbi-linechart-wrap,.pbi-donut-wrap{position:relative}
 .pbi-legend{display:flex;flex-direction:column;gap:.4rem;margin-top:.8rem}
 .pbi-legend-item{display:flex;align-items:center;gap:.5rem;font-size:.7rem;color:var(--muted2)}
 .pbi-legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
@@ -346,29 +346,23 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
 .pbi-sparkline{display:inline-flex;align-items:flex-end;gap:2px;height:20px}
 .spark-bar{width:4px;border-radius:1px;background:var(--teal)}
 .occ-pill{display:inline-block;padding:.15rem .5rem;border-radius:2px;font-size:.65rem;font-weight:500}
-.occ-high{background:rgba(74,222,128,.1);color:#4ade80}
-.occ-mid{background:rgba(201,168,108,.1);color:var(--gold)}
-.occ-low{background:rgba(201,123,107,.1);color:var(--coral)}
+.occ-high{background:rgba(74,222,128,.1);color:#4ade80}.occ-mid{background:rgba(201,168,108,.1);color:var(--gold)}.occ-low{background:rgba(201,123,107,.1);color:var(--coral)}
 .pbi-footer{margin-top:1.2rem;font-size:.68rem;color:var(--muted);text-align:center;padding:.8rem;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:.5rem}
-@media(max-width:900px){
-  .pbi-kpis{grid-template-columns:repeat(3,1fr)}
-  .pbi-charts-row{grid-template-columns:1fr}
-}
+@media(max-width:900px){.pbi-kpis{grid-template-columns:repeat(3,1fr)}.pbi-charts-row{grid-template-columns:1fr}}
 @media(max-width:560px){.pbi-kpis{grid-template-columns:1fr 1fr}}
-
 </style>
 </head>
 <body>
 
-<div id="progress"></div>
-<div id="cur"></div>
-<div id="cur-r"></div>
-<div class="orb orb1"></div>
-<div class="orb orb2"></div>
+<div id="cur"></div><div id="cur-r"></div>
+<div class="orb orb1"></div><div class="orb orb2"></div>
+<div id="nav-progress"></div>
 
-<!-- NAV -->
 <nav id="nav">
-  <a href="#" class="nav-logo">MF <b>Alabrash</b></a>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">M</div>
+    <span>MF <b>Alabrash</b></span>
+  </a>
   <div class="nav-links" id="navLinks">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -376,43 +370,39 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
     <a href="#projects">Projects</a>
     <a href="#sql-demo">SQL</a>
     <a href="#powerbi-demo">Dashboard</a>
-    <a href="#contact" class="nav-cta">Contact</a>
+    <div class="nav-sep"></div>
+    <a href="#contact" class="nav-cta">Hire Me <i class="fas fa-arrow-right"></i></a>
   </div>
+  <button class="lang-toggle" id="lang-btn" onclick="toggleLang()" aria-label="Switch language"><i class="fas fa-globe"></i> عربي</button>
   <div class="burger" id="burger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero-wrap">
   <div>
-    <div class="eyebrow"><span>ERP Consultant · Business Analyst · Riyadh, KSA</span></div>
+    <div class="eyebrow"><span>ERP Consultant &middot; Business Analyst &middot; Riyadh, KSA</span></div>
     <h1 class="name">Mohammad<br><em>Faisal</em><br>Alabrash</h1>
-    <p class="hero-role" id="typed-role"><span id="typed-text"></span></p>
-    <p class="hero-bio">ERP Consultant with 5+ years of experience implementing, configuring, and optimizing ERP systems in real estate, property management, and investment sectors in Saudi Arabia. Expert in ERPNext, Logix ERP, Power BI, SQL, and workflow automation.</p>
+    <p class="hero-role"><span id="typed-text"></span></p>
+    <p class="hero-bio">5+ years delivering ERP implementations with zero data loss &mdash; ERPNext, Logix ERP, Power BI &amp; SQL for Saudi Arabia&rsquo;s real estate and investment sector.</p>
     <div class="hero-actions">
       <a href="Mohammad_Faisal_Alabrash_CV.pdf" download class="btn-gold"><i class="fas fa-download"></i> Download CV</a>
       <a href="#contact" class="btn-outline"><i class="fas fa-paper-plane"></i> Get in Touch</a>
     </div>
     <div class="hero-stats">
-      <div><span class="stat-n">5+</span><span class="stat-l">Years Experience</span></div>
-      <div><span class="stat-n">50K+</span><span class="stat-l">Records Migrated</span></div>
-      <div><span class="stat-n">40+</span><span class="stat-l">Users Trained</span></div>
+      <div><span class="stat-n">5+</span><span class="stat-l">Years &middot; ERP Consulting</span></div>
+      <div><span class="stat-n">50K+</span><span class="stat-l">Records &middot; Zero Data Loss</span></div>
+      <div><span class="stat-n">40+</span><span class="stat-l">Staff Trained &middot; 6 Depts</span></div>
     </div>
   </div>
-
   <div class="photo-side">
     <div class="photo-frame">
-      <div class="photo-placeholder">
-        <img src="https://raw.githubusercontent.com/LoardFaisal/Website/main/PIC.jpeg"
-             alt="Mohammad Faisal Alabrash"
-             onerror="this.src='data:image/png;base64,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'">
-      </div>
+      <img src="PIC.jpeg" alt="Mohammad Faisal Alabrash &mdash; ERP Consultant Riyadh Saudi Arabia" width="320" height="390" onerror="this.style.display='none'">
       <div class="avail-badge">
         <div class="avail-dot"></div>
         <div>
-          <div class="avail-text">Open to Opportunities</div>
-          <div class="avail-sub">Riyadh, Saudi Arabia</div>
+          <div class="avail-text">Available &mdash; 30 Days Notice</div>
+          <div class="avail-sub">Riyadh &middot; Open to roles across KSA</div>
         </div>
       </div>
     </div>
@@ -421,143 +411,92 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
 
 <hr class="div">
 
-<!-- ABOUT -->
 <div class="section" id="about">
   <div class="stag reveal"><span>About Me</span></div>
   <h2 class="sec-title reveal d1">Analyst. Consultant.<br><em>Problem Solver.</em></h2>
-
   <div class="about-grid">
-    <div class="about-body reveal d2">
-      <p>I am an ERP Consultant and Business Analyst with <strong>5+ years of hands-on experience</strong> implementing and optimizing ERP systems across the real estate, property management, and investment sectors in Saudi Arabia.</p>
-      <p>My expertise spans the full ERP lifecycle — from <strong>Business Requirements Specification (BRS)</strong> and workflow automation to data migration, UAT, go-live support, and end-user training. I work closely with finance, PMO, and project teams to ensure ERP configurations align precisely with organizational goals.</p>
-      <p>Beyond implementation, I build <strong>SQL-based reporting solutions, Power BI dashboards,</strong> and automated workflows using Power Automate and SSIS — giving leadership the real-time visibility they need to make confident decisions.</p>
+    <div class="about-body">
+      <blockquote style="border-left:2px solid var(--gold);margin:0 0 1.6rem 0;padding:.8rem 1.4rem;background:var(--gold-dim);border-radius:0 4px 4px 0">
+        <p style="font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--gold2);margin:0;line-height:1.7">&ldquo;I don&rsquo;t just configure systems &mdash; I redesign the workflows that feed them.&rdquo;</p>
+      </blockquote>
+      <p>I am <strong>Mohammad Faisal Alabrash</strong> &mdash; an ERP Consultant and Business Analyst with <strong>5+ years of hands-on experience</strong> transforming how real estate and investment organizations operate in Saudi Arabia. My work sits at the intersection of technology and business strategy: I translate complex operational needs into precise, scalable ERP configurations that actually get used.</p>
+      <p>My expertise covers the <strong>full ERP lifecycle</strong> &mdash; from discovery workshops and Business Requirements Specification (BRS) documentation, through system design, data migration, UAT, go-live, and post-launch optimization. I&rsquo;ve led a complete multi-module <strong>Logix ERP rollout</strong> across 6 departments, migrated over <strong>50,000 legacy records</strong> with 99%+ accuracy, and trained 40+ staff who adopted the system with minimal friction.</p>
+      <p>Beyond implementation, I build <strong>Power BI dashboards</strong> that surface real-time KPIs for leadership, write production-grade <strong>SQL reports</strong> in SSMS, and automate cross-departmental workflows via Power Automate and SSIS &mdash; reducing manual effort by up to 40%. I hold a <strong>B.Sc. in Information Technology</strong> (First Class Honors, GPA 3.54) from Arab Open University and communicate with equal fluency in Arabic and English.</p>
       <div class="chips">
-        <div class="chip"><i class="fas fa-cogs"></i> ERPNext & Logix ERP</div>
+        <div class="chip"><i class="fas fa-cogs"></i> ERPNext &amp; Logix ERP</div>
         <div class="chip"><i class="fas fa-chart-bar"></i> Power BI Dashboards</div>
-        <div class="chip"><i class="fas fa-database"></i> SQL & SSMS</div>
+        <div class="chip"><i class="fas fa-database"></i> SQL &amp; SSMS</div>
         <div class="chip"><i class="fas fa-bolt"></i> Power Automate</div>
         <div class="chip"><i class="fas fa-project-diagram"></i> SSIS Packages</div>
-        <div class="chip"><i class="fas fa-shield-alt"></i> ERP Security & Access Control</div>
+        <div class="chip"><i class="fas fa-shield-alt"></i> ERP Security &amp; Access Control</div>
         <div class="chip"><i class="fas fa-code-branch"></i> Agile / Scrum</div>
         <div class="chip"><i class="fas fa-sitemap"></i> CSI Code Categorization</div>
       </div>
     </div>
-    <div class="sidebar reveal d3">
+    <div class="sidebar">
       <div class="srow"><div class="slbl">Location</div><div class="sval">Riyadh, Saudi Arabia</div></div>
       <div class="srow"><div class="slbl">Nationality</div><div class="sval">Syrian</div></div>
       <div class="srow"><div class="slbl">Availability</div><div class="sval" style="color:var(--gold)">30 Days Notice</div></div>
-      <div class="srow"><div class="slbl">Specialization</div><div class="sval">ERP Consulting · Business Analysis</div></div>
-      <div class="srow"><div class="slbl">ERP Platforms</div><div class="sval">ERPNext · Logix ERP</div></div>
-      <div class="srow"><div class="slbl">Tools</div><div class="sval">Power BI · SQL · Power Automate · SSIS</div></div>
-      <div class="srow"><div class="slbl">Education</div><div class="sval">B.Sc. Information Technology<br><span style="color:var(--gold);font-size:.8rem">GPA 3.54 — First Class Honors · 2021</span></div></div>
-      <div class="srow"><div class="slbl">Languages</div><div class="sval">Arabic (Native) · English (C1 — Fluent)</div></div>
+      <div class="srow"><div class="slbl">Specialization</div><div class="sval">ERP Consulting &middot; Business Analysis</div></div>
+      <div class="srow"><div class="slbl">ERP Platforms</div><div class="sval">ERPNext &middot; Logix ERP</div></div>
+      <div class="srow"><div class="slbl">Tools</div><div class="sval">Power BI &middot; SQL &middot; Power Automate &middot; SSIS</div></div>
+      <div class="srow"><div class="slbl">Education</div><div class="sval">B.Sc. Information Technology<br><span style="color:var(--gold);font-size:.8rem">GPA 3.54 &mdash; First Class Honors &middot; 2021</span></div></div>
+      <div class="srow"><div class="slbl">Languages</div><div class="sval">Arabic (Native) &middot; English (C1 &mdash; Fluent)</div></div>
       <div class="srow"><div class="slbl">LinkedIn</div><div class="sval"><a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer">Mohammed Faisal Alabrash</a></div></div>
-      <div style="margin-top:1.5rem">
-        <a href="Mohammad_Faisal_Alabrash_CV.pdf" download class="btn-gold" style="width:100%;justify-content:center">Download CV <i class="fas fa-download"></i></a>
-      </div>
+      <div style="margin-top:1.5rem"><a href="Mohammad_Faisal_Alabrash_CV.pdf" download class="btn-gold" style="width:100%;justify-content:center">Download CV <i class="fas fa-download"></i></a></div>
     </div>
   </div>
 </div>
 
-<!-- SKILLS -->
 <div class="section-full" id="skills">
 <div class="section-inner">
   <div class="stag reveal"><span>Core Technical Skills</span></div>
   <h2 class="sec-title reveal d1">What I <em>Bring</em></h2>
-  <p class="sec-lead reveal d2">A proven technical stack built over 5+ years of ERP implementation, data engineering, and business process optimization in Saudi Arabia's real estate and investment sector.</p>
-
+  <p class="sec-lead reveal d2">A proven technical stack built over 5+ years of ERP implementation, data engineering, and business process optimization in Saudi Arabia&rsquo;s real estate and investment sector.</p>
   <div class="skills-grid">
-    <div class="sk reveal">
-      <div class="sk-icon"><i class="fas fa-server"></i></div>
-      <h3>ERP Implementation & Administration</h3>
-      <p>End-to-end implementation, configuration, and optimization of ERPNext and Logix ERP — aligning modules with Finance, PMO, Projects, Property Management, Procurement, and Contracts.</p>
-      <div class="tags"><span class="tag">ERPNext</span><span class="tag">Logix ERP</span><span class="tag">Go-Live</span></div>
-    </div>
-    <div class="sk reveal d1">
-      <div class="sk-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="fas fa-file-alt"></i></div>
-      <h3>Business Requirements Specification</h3>
-      <p>Preparing detailed BRS documents for multiple departments — capturing functional requirements, process flows, and system configuration specifications for ERP deployments.</p>
-      <div class="tags"><span class="tag t2">BRS</span><span class="tag t2">Process Flows</span><span class="tag t2">UAT</span></div>
-    </div>
-    <div class="sk reveal d2">
-      <div class="sk-icon" style="background:rgba(201,123,107,.1);color:var(--coral)"><i class="fas fa-bolt"></i></div>
-      <h3>Workflow Automation & Process Optimization</h3>
-      <p>Creating and automating enterprise business processes and ERP workflows using Power Automate and SSIS packages — improving operational efficiency, accuracy, and approval cycles.</p>
-      <div class="tags"><span class="tag">Power Automate</span><span class="tag">SSIS</span><span class="tag">Automation</span></div>
-    </div>
-    <div class="sk reveal d3">
-      <div class="sk-icon"><i class="fas fa-chart-bar"></i></div>
-      <h3>Power BI & KPI Dashboards</h3>
-      <p>Developing Power BI dashboards and KPI reports that surface ERP performance data, track strategic metrics, and support management decision-making in real time.</p>
-      <div class="tags"><span class="tag">Power BI</span><span class="tag">KPI Reporting</span><span class="tag">DAX</span></div>
-    </div>
-    <div class="sk reveal d1">
-      <div class="sk-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="fas fa-database"></i></div>
-      <h3>SQL & Database Reporting</h3>
-      <p>Extracting, validating, and analyzing data using SQL in SSMS and Report Builder — building operational reports that improve management insights and ERP performance tracking.</p>
-      <div class="tags"><span class="tag t2">SQL</span><span class="tag t2">SSMS</span><span class="tag t2">Report Builder</span></div>
-    </div>
-    <div class="sk reveal d2">
-      <div class="sk-icon"><i class="fas fa-exchange-alt"></i></div>
-      <h3>Data Migration & Cleansing</h3>
-      <p>Managing data migration from legacy systems — including extraction, cleansing, validation, and reconciliation to ensure integrity and continuity during ERP transitions.</p>
-      <div class="tags"><span class="tag">Data Migration</span><span class="tag">Validation</span><span class="tag">Reconciliation</span></div>
-    </div>
-    <div class="sk reveal">
-      <div class="sk-icon" style="background:rgba(201,123,107,.1);color:var(--coral)"><i class="fas fa-sitemap"></i></div>
-      <h3>CSI Code Categorization</h3>
-      <p>Categorizing Finance, PMO, and Project items using CSI codes — enabling accurate budgeting, forecasting, project cost tracking, and strategic decision-making.</p>
-      <div class="tags"><span class="tag">CSI Codes</span><span class="tag">Budgeting</span><span class="tag">Forecasting</span></div>
-    </div>
-    <div class="sk reveal d1">
-      <div class="sk-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="fas fa-shield-alt"></i></div>
-      <h3>ERP Security & Access Control</h3>
-      <p>Defining user roles, permissions, and security protocols within ERP systems — enhancing compliance, data integrity, and organizational governance.</p>
-      <div class="tags"><span class="tag t2">Access Control</span><span class="tag t2">Compliance</span><span class="tag t2">Roles</span></div>
-    </div>
-    <div class="sk reveal d2">
-      <div class="sk-icon"><i class="fas fa-sync-alt"></i></div>
-      <h3>Agile / Scrum Methodology</h3>
-      <p>Applying Agile/Scrum practices to plan, review, and deliver ERP solutions iteratively — ensuring continuous alignment between business needs and technical delivery.</p>
-      <div class="tags"><span class="tag">Agile</span><span class="tag">Scrum</span><span class="tag">Iterative Delivery</span></div>
-    </div>
+    <div class="sk reveal"><div class="sk-icon"><i class="fas fa-server"></i></div><h3>ERP Implementation &amp; Administration</h3><p>End-to-end implementation, configuration, and optimization of ERPNext and Logix ERP &mdash; aligning modules with Finance, PMO, Projects, Property Management, Procurement, and Contracts.</p><div class="tags"><span class="tag">ERPNext</span><span class="tag">Logix ERP</span><span class="tag">Go-Live</span></div></div>
+    <div class="sk reveal d1"><div class="sk-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="fas fa-file-alt"></i></div><h3>Business Requirements Specification</h3><p>Preparing detailed BRS documents for multiple departments &mdash; capturing functional requirements, process flows, and system configuration specifications for ERP deployments.</p><div class="tags"><span class="tag t2">BRS</span><span class="tag t2">Process Flows</span><span class="tag t2">UAT</span></div></div>
+    <div class="sk reveal d2"><div class="sk-icon" style="background:rgba(201,123,107,.1);color:var(--coral)"><i class="fas fa-bolt"></i></div><h3>Workflow Automation &amp; Process Optimization</h3><p>Creating and automating enterprise business processes via Power Automate and SSIS packages &mdash; improving operational efficiency, accuracy, and approval cycles.</p><div class="tags"><span class="tag">Power Automate</span><span class="tag">SSIS</span><span class="tag">Automation</span></div></div>
+    <div class="sk reveal d3"><div class="sk-icon"><i class="fas fa-chart-bar"></i></div><h3>Power BI &amp; KPI Dashboards</h3><p>Developing Power BI dashboards and KPI reports that surface ERP performance data, track strategic metrics, and support management decision-making in real time.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">KPI Reporting</span><span class="tag">DAX</span></div></div>
+    <div class="sk reveal d1"><div class="sk-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="fas fa-database"></i></div><h3>SQL &amp; Database Reporting</h3><p>Extracting, validating, and analyzing data using SQL in SSMS and Report Builder &mdash; building operational reports that improve management insights and ERP performance tracking.</p><div class="tags"><span class="tag t2">SQL</span><span class="tag t2">SSMS</span><span class="tag t2">Report Builder</span></div></div>
+    <div class="sk reveal d2"><div class="sk-icon"><i class="fas fa-exchange-alt"></i></div><h3>Data Migration &amp; Cleansing</h3><p>Managing data migration from legacy systems &mdash; extraction, cleansing, validation, and reconciliation to ensure integrity and continuity during ERP transitions.</p><div class="tags"><span class="tag">Data Migration</span><span class="tag">Validation</span><span class="tag">Reconciliation</span></div></div>
+    <div class="sk reveal"><div class="sk-icon" style="background:rgba(201,123,107,.1);color:var(--coral)"><i class="fas fa-sitemap"></i></div><h3>CSI Code Categorization</h3><p>Categorizing Finance, PMO, and Project items using CSI codes &mdash; enabling accurate budgeting, forecasting, project cost tracking, and strategic decision-making.</p><div class="tags"><span class="tag">CSI Codes</span><span class="tag">Budgeting</span><span class="tag">Forecasting</span></div></div>
+    <div class="sk reveal d1"><div class="sk-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="fas fa-shield-alt"></i></div><h3>ERP Security &amp; Access Control</h3><p>Defining user roles, permissions, and security protocols within ERP systems &mdash; enhancing compliance, data integrity, and organizational governance.</p><div class="tags"><span class="tag t2">Access Control</span><span class="tag t2">Compliance</span><span class="tag t2">Roles</span></div></div>
+    <div class="sk reveal d2"><div class="sk-icon"><i class="fas fa-sync-alt"></i></div><h3>Agile / Scrum Methodology</h3><p>Applying Agile/Scrum practices to plan, review, and deliver ERP solutions iteratively &mdash; ensuring continuous alignment between business needs and technical delivery.</p><div class="tags"><span class="tag">Agile</span><span class="tag">Scrum</span><span class="tag">Iterative Delivery</span></div></div>
   </div>
 </div>
 </div>
 
-<!-- EXPERIENCE -->
 <div class="section-full" id="experience" style="background:var(--bg)">
 <div class="section-inner">
   <div class="stag reveal"><span>Career Timeline</span></div>
   <h2 class="sec-title reveal d1">Professional <em>Experience</em></h2>
-
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem" id="exp-grid">
-    <div class="tl">
-      <div class="tl-item reveal">
+    <div class="tl reveal">
+      <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-period">Jan 2021 — Present · 4+ Years</div>
+        <div class="tl-period">Jan 2021 &mdash; Present &middot; 4+ Years</div>
         <div class="tl-title">ERP Administrator / Business Analyst</div>
-        <div class="tl-co">Memar Development and Investment — Riyadh, Saudi Arabia</div>
+        <div class="tl-co">Memar Development and Investment &mdash; Riyadh, Saudi Arabia</div>
         <ul class="tl-list">
           <li>Led end-to-end implementation of Logix ERP across <strong style="color:var(--text)">6 departments</strong>, delivered on schedule and within scope</li>
           <li>Prepared <strong style="color:var(--text)">15+ detailed BRS documents</strong> covering Finance, Procurement, PMO, Projects, and Property Management</li>
           <li>Automated enterprise workflows, improving operational efficiency by <strong style="color:var(--gold)">over 30%</strong> and eliminating manual bottlenecks</li>
           <li>Migrated <strong style="color:var(--gold)">50,000+ records</strong> from 3 legacy systems with a <strong style="color:var(--gold)">99%+ data accuracy rate</strong></li>
           <li>Configured ERP modules: Finance, Procurement, Projects, Property Management, and Contracts</li>
-          <li>Defined user roles, permissions, and security protocols — enhancing compliance and data integrity</li>
-          <li>Conducted UAT, system testing, and go-live support — <strong style="color:var(--text)">5 integrated modules launched simultaneously</strong></li>
-          <li>Trained <strong style="color:var(--gold)">40+ end-users</strong> across 6 departments — rapid adoption with minimal post-go-live support requests</li>
+          <li>Defined user roles, permissions, and security protocols &mdash; enhancing compliance and data integrity</li>
+          <li>Conducted UAT, system testing, and go-live support &mdash; <strong style="color:var(--text)">5 integrated modules launched simultaneously</strong></li>
+          <li>Trained <strong style="color:var(--gold)">40+ end-users</strong> across 6 departments &mdash; rapid adoption with minimal post-go-live support requests</li>
           <li>Categorized items using CSI Codes for accurate budgeting, forecasting, and project cost tracking</li>
         </ul>
       </div>
     </div>
-
-    <div class="tl">
-      <div class="tl-item reveal d1">
+    <div class="tl reveal d1">
+      <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-period">Concurrent — ERPNext Implementation</div>
+        <div class="tl-period">Concurrent &mdash; ERPNext Implementation</div>
         <div class="tl-title">ERPNext Consultant</div>
-        <div class="tl-co">Memar Development and Investment — Riyadh, Saudi Arabia</div>
+        <div class="tl-co">Memar Development and Investment &mdash; Riyadh, Saudi Arabia</div>
         <ul class="tl-list">
           <li>Supported ERPNext implementation with full BRS documentation for all key processes</li>
           <li>Designed and improved business processes embedded into ERP workflows, streamlining approvals</li>
@@ -565,25 +504,21 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
           <li>Developed SQL-based reports and dashboards to improve management insights</li>
           <li>Guided technical teams on ERP customization and system functionality</li>
           <li>Applied Agile/Scrum practices for iterative ERP solution delivery</li>
-          <li>Automated reporting and workflows using Power Automate and SSIS — reducing manual reporting effort by <strong style="color:var(--gold)">~40%</strong></li>
+          <li>Automated reporting and workflows using Power Automate and SSIS &mdash; reducing manual reporting effort by <strong style="color:var(--gold)">~40%</strong></li>
         </ul>
       </div>
-
-      <div class="tl-item reveal d2" style="margin-top:2.5rem">
+      <div class="tl-item" style="margin-top:2.5rem">
         <div class="tl-dot"></div>
         <div class="tl-period">Education</div>
-        <div class="tl-title">B.Sc. Information Technology & Computing</div>
-        <div class="tl-co">Arab Open University · GPA: 3.54 / 4.0 — First Class Honors</div>
-        <ul class="tl-list">
-          <li>Relevant courses: Data Analytics, Statistics, HR Management, Information Systems</li>
-        </ul>
+        <div class="tl-title">B.Sc. Information Technology &amp; Computing</div>
+        <div class="tl-co">Arab Open University &middot; GPA: 3.54 / 4.0 &mdash; First Class Honors</div>
+        <ul class="tl-list"><li>Relevant courses: Data Analytics, Statistics, HR Management, Information Systems</li></ul>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-<!-- PROJECTS -->
 <div class="section" id="projects">
   <div class="stag reveal"><span>Portfolio</span></div>
   <h2 class="sec-title reveal d1">Key <em>Deliverables</em></h2>
@@ -597,23 +532,18 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
         <div class="bar-wrap"><div class="bar g" data-h="88%"></div><span class="bar-tip">Procurement</span><div class="bar-lbl">Procurement</div></div>
         <div class="bar-wrap"><div class="bar r" data-h="55%"></div><span class="bar-tip">Property Mgmt</span><div class="bar-lbl">Property</div></div>
         <div class="bar-wrap"><div class="bar a" data-h="70%"></div><span class="bar-tip">Contracts</span><div class="bar-lbl">Contracts</div></div>
-        <div class="bar-wrap"><div class="bar g" data-h="95%"></div><span class="bar-tip">Reporting & BI</span><div class="bar-lbl">Reporting</div></div>
+        <div class="bar-wrap"><div class="bar g" data-h="95%"></div><span class="bar-tip">Reporting &amp; BI</span><div class="bar-lbl">Reporting</div></div>
       </div>
       <div class="proj-body">
-        <div class="proj-cat">ERP Implementation · Logix ERP · Memar Development</div>
-        <h3>Full Logix ERP Implementation — Multi-Module Rollout</h3>
+        <div class="proj-cat">ERP Implementation &middot; Logix ERP &middot; Memar Development</div>
+        <h3>Full Logix ERP Implementation &mdash; Multi-Module Rollout</h3>
         <p>Led complete end-to-end implementation of Logix ERP across Finance, Procurement, Projects, Property Management, and Contracts. BRS documentation, data migration from 3 legacy systems, security configuration, go-live support.</p>
-        <div class="metrics">
-          <div class="metric"><strong>6</strong> Modules</div>
-          <div class="metric"><strong>15+</strong> BRS Docs</div>
-          <div class="metric"><strong>50K+</strong> Records</div>
-          <div class="metric"><strong>40+</strong> Users Trained</div>
-        </div>
+        <div class="metrics"><div class="metric"><strong>6</strong> Modules</div><div class="metric"><strong>15+</strong> BRS Docs</div><div class="metric"><strong>50K+</strong> Records</div><div class="metric"><strong>40+</strong> Users Trained</div></div>
         <div class="tags"><span class="tag">Logix ERP</span><span class="tag">BRS</span><span class="tag">Data Migration</span><span class="tag">UAT</span></div>
       </div>
     </div>
     <div class="proj reveal">
-      <div class="proj-vis" id="pv2" style="align-items:center;justify-content:center;flex-direction:column">
+      <div class="proj-vis" style="align-items:center;justify-content:center;flex-direction:column">
         <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;justify-content:center">
           <div style="padding:.4rem .8rem;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:3px;font-size:.68rem;color:var(--gold)">Legacy Data</div>
           <span style="color:var(--muted)">&#8594;</span>
@@ -623,8 +553,8 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
         </div>
       </div>
       <div class="proj-body">
-        <div class="proj-cat">Data Engineering · ERPNext</div>
-        <h3>ERPNext Implementation & BRS Documentation</h3>
+        <div class="proj-cat">Data Engineering &middot; ERPNext</div>
+        <h3>ERPNext Implementation &amp; BRS Documentation</h3>
         <p>Full ERPNext deployment with BRS documentation, embedded ERP workflows, and Agile sprint delivery.</p>
         <div class="metrics"><div class="metric"><strong>100%</strong> Processes Documented</div></div>
         <div class="tags"><span class="tag">ERPNext</span><span class="tag t2">Agile</span></div>
@@ -638,21 +568,16 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
         <div class="bar-wrap"><div class="bar g" data-h="95%"></div><span class="bar-tip">Q4 Automated</span><div class="bar-lbl">Q4</div></div>
       </div>
       <div class="proj-body">
-        <div class="proj-cat">Analytics · Power BI · SQL</div>
-        <h3>Executive KPI Dashboards & Automated Reporting</h3>
-        <p>Power BI dashboards and SQL reports for management. Automated workflows with Power Automate and SSIS — reducing manual reporting by 40%.</p>
-        <div class="metrics">
-          <div class="metric"><strong>40%</strong> Less Manual Work</div>
-          <div class="metric"><strong>Real-time</strong> KPIs</div>
-        </div>
+        <div class="proj-cat">Analytics &middot; Power BI &middot; SQL</div>
+        <h3>Executive KPI Dashboards &amp; Automated Reporting</h3>
+        <p>Power BI dashboards and SQL reports for management. Automated workflows with Power Automate and SSIS &mdash; reducing manual reporting by 40%.</p>
+        <div class="metrics"><div class="metric"><strong>40%</strong> Less Manual Work</div><div class="metric"><strong>Real-time</strong> KPIs</div></div>
         <div class="tags"><span class="tag">Power BI</span><span class="tag t2">SQL</span><span class="tag t2">SSIS</span></div>
       </div>
     </div>
   </div>
 </div>
 
-
-<!-- SQL INTERACTIVE PLAYGROUND -->
 <div class="section-full" id="sql-demo" style="background:var(--bg)">
 <div class="section-inner">
   <div class="stag reveal"><span>Live Demo &middot; SQL</span></div>
@@ -675,10 +600,7 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
         <pre class="sql-code" id="sqlCode"></pre>
       </div>
       <div class="sql-results-wrap">
-        <div class="sql-results-header">
-          <i class="fas fa-table"></i>&nbsp; Results
-          <span class="sql-row-count" id="sqlRowCount"></span>
-        </div>
+        <div class="sql-results-header"><i class="fas fa-table"></i>&nbsp; Results<span class="sql-row-count" id="sqlRowCount"></span></div>
         <div class="sql-table-wrap" id="sqlTable"></div>
         <div class="sql-statusbar" id="sqlStatus"></div>
       </div>
@@ -687,46 +609,18 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
 </div>
 </div>
 
-<!-- POWER BI HOTEL DASHBOARD -->
 <div class="section-full" id="powerbi-demo" style="background:var(--bg2)">
 <div class="section-inner">
   <div class="stag reveal"><span>Live Demo &middot; Power BI Style</span></div>
   <h2 class="sec-title reveal d1">Hotel Operations <em>Dashboard</em></h2>
   <p class="sec-lead reveal d2">Operational intelligence report for a 3-property hotel group &mdash; built in the style of Power BI dashboards I develop for management. Sample data, fully interactive.</p>
-
   <div class="pbi-kpis reveal">
-    <div class="pbi-kpi">
-      <div class="pbi-kpi-icon" style="background:rgba(201,168,108,.12);color:var(--gold)"><i class="fas fa-hotel"></i></div>
-      <div class="pbi-kpi-val" id="kpi-occ">78.4%</div>
-      <div class="pbi-kpi-lbl">Occupancy Rate</div>
-      <div class="pbi-kpi-delta up"><i class="fas fa-caret-up"></i> +3.2% vs last month</div>
-    </div>
-    <div class="pbi-kpi">
-      <div class="pbi-kpi-icon" style="background:rgba(111,181,174,.1);color:var(--teal)"><i class="fas fa-dollar-sign"></i></div>
-      <div class="pbi-kpi-val" id="kpi-rev">SAR 2.84M</div>
-      <div class="pbi-kpi-lbl">Total Revenue (MTD)</div>
-      <div class="pbi-kpi-delta up"><i class="fas fa-caret-up"></i> +12.1% vs prev month</div>
-    </div>
-    <div class="pbi-kpi">
-      <div class="pbi-kpi-icon" style="background:rgba(201,123,107,.1);color:var(--coral)"><i class="fas fa-bed"></i></div>
-      <div class="pbi-kpi-val" id="kpi-revpar">SAR 412</div>
-      <div class="pbi-kpi-lbl">RevPAR</div>
-      <div class="pbi-kpi-delta down"><i class="fas fa-caret-down"></i> -1.8% vs prev month</div>
-    </div>
-    <div class="pbi-kpi">
-      <div class="pbi-kpi-icon" style="background:rgba(201,168,108,.12);color:var(--gold)"><i class="fas fa-star"></i></div>
-      <div class="pbi-kpi-val" id="kpi-sat">4.3 / 5</div>
-      <div class="pbi-kpi-lbl">Guest Satisfaction</div>
-      <div class="pbi-kpi-delta up"><i class="fas fa-caret-up"></i> +0.2 vs prev month</div>
-    </div>
-    <div class="pbi-kpi">
-      <div class="pbi-kpi-icon" style="background:rgba(111,181,174,.1);color:var(--teal)"><i class="fas fa-concierge-bell"></i></div>
-      <div class="pbi-kpi-val" id="kpi-bookings">1,247</div>
-      <div class="pbi-kpi-lbl">Total Bookings</div>
-      <div class="pbi-kpi-delta up"><i class="fas fa-caret-up"></i> +8.4% vs prev month</div>
-    </div>
+    <div class="pbi-kpi"><div class="pbi-kpi-icon" style="background:rgba(201,168,108,.12);color:var(--gold)"><i class="fas fa-hotel"></i></div><div class="pbi-kpi-val" id="kpi-occ">78.4%</div><div class="pbi-kpi-lbl">Occupancy Rate</div><div class="pbi-kpi-delta up"><i class="fas fa-caret-up"></i> +3.2% vs last month</div></div>
+    <div class="pbi-kpi"><div class="pbi-kpi-icon" style="background:rgba(111,181,174,.1);color:var(--teal)"><i class="fas fa-dollar-sign"></i></div><div class="pbi-kpi-val" id="kpi-rev">SAR 2.84M</div><div class="pbi-kpi-lbl">Total Revenue (MTD)</div><div class="pbi-kpi-delta up"><i class="fas fa-caret-up"></i> +12.1% vs prev month</div></div>
+    <div class="pbi-kpi"><div class="pbi-kpi-icon" style="background:rgba(201,123,107,.1);color:var(--coral)"><i class="fas fa-bed"></i></div><div class="pbi-kpi-val" id="kpi-revpar">SAR 412</div><div class="pbi-kpi-lbl">RevPAR</div><div class="pbi-kpi-delta down"><i class="fas fa-caret-down"></i> -1.8% vs prev month</div></div>
+    <div class="pbi-kpi"><div class="pbi-kpi-icon" style="background:rgba(201,168,108,.12);color:var(--gold)"><i class="fas fa-star"></i></div><div class="pbi-kpi-val" id="kpi-sat">4.3 / 5</div><div class="pbi-kpi-lbl">Guest Satisfaction</div><div class="pbi-kpi-delta up"><i class="fas fa-caret-up"></i> +0.2 vs prev month</div></div>
+    <div class="pbi-kpi"><div class="pbi-kpi-icon" style="background:rgba(111,181,174,.1);color:var(--teal)"><i class="fas fa-concierge-bell"></i></div><div class="pbi-kpi-val" id="kpi-bookings">1,247</div><div class="pbi-kpi-lbl">Total Bookings</div><div class="pbi-kpi-delta up"><i class="fas fa-caret-up"></i> +8.4% vs prev month</div></div>
   </div>
-
   <div class="pbi-filters reveal d1">
     <span class="pbi-filter-lbl"><i class="fas fa-filter"></i> Property:</span>
     <button class="pbi-fbtn active" onclick="pbiProp('all',this)">All Properties</button>
@@ -740,599 +634,414 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
     <button class="pbi-fbtn active" onclick="pbiQuarter('q3',this)">Q3</button>
     <button class="pbi-fbtn" onclick="pbiQuarter('q4',this)">Q4</button>
   </div>
-
   <div class="pbi-charts-row reveal d2">
-    <div class="pbi-chart-card wide">
-      <div class="pbi-chart-title"><i class="fas fa-chart-line" style="color:var(--gold)"></i> Monthly Revenue by Property (SAR &rsquo;000)</div>
-      <canvas id="lineChart" height="190"></canvas>
-    </div>
-    <div class="pbi-chart-card">
-      <div class="pbi-chart-title"><i class="fas fa-chart-pie" style="color:var(--teal)"></i> Revenue by Room Type</div>
-      <canvas id="donutChart" height="190"></canvas>
-      <div class="pbi-legend" id="donutLegend"></div>
-    </div>
+    <div class="pbi-chart-card"><div class="pbi-chart-title"><i class="fas fa-chart-line" style="color:var(--gold)"></i> Monthly Revenue (SAR &rsquo;000)</div><canvas id="lineChart" height="190"></canvas></div>
+    <div class="pbi-chart-card"><div class="pbi-chart-title"><i class="fas fa-chart-pie" style="color:var(--teal)"></i> Revenue by Room Type</div><canvas id="donutChart" height="190"></canvas><div class="pbi-legend" id="donutLegend"></div></div>
   </div>
-
   <div class="pbi-charts-row reveal d3" style="margin-top:1.2rem">
-    <div class="pbi-chart-card">
-      <div class="pbi-chart-title"><i class="fas fa-chart-bar" style="color:var(--coral)"></i> Monthly Occupancy %</div>
-      <canvas id="occBar" height="190"></canvas>
-    </div>
-    <div class="pbi-chart-card wide">
-      <div class="pbi-chart-title"><i class="fas fa-table" style="color:var(--gold)"></i> Property Performance Summary</div>
-      <div class="pbi-data-table">
-        <table>
-          <thead><tr>
-            <th>Property</th><th>Rooms</th><th>Occupancy</th>
-            <th>Revenue (SAR)</th><th>RevPAR</th><th>Satisfaction</th><th>Trend</th>
-          </tr></thead>
-          <tbody id="propTableBody"></tbody>
-        </table>
-      </div>
-    </div>
+    <div class="pbi-chart-card"><div class="pbi-chart-title"><i class="fas fa-chart-bar" style="color:var(--coral)"></i> Monthly Occupancy %</div><canvas id="occBar" height="190"></canvas></div>
+    <div class="pbi-chart-card"><div class="pbi-chart-title"><i class="fas fa-table" style="color:var(--gold)"></i> Property Performance</div><div class="pbi-data-table"><table><thead><tr><th>Property</th><th>Rooms</th><th>Occupancy</th><th>Revenue (SAR)</th><th>RevPAR</th><th>Satisfaction</th><th>Trend</th></tr></thead><tbody id="propTableBody"></tbody></table></div></div>
   </div>
-
-  <div class="pbi-footer"><i class="fas fa-info-circle"></i> Sample data for demonstration &middot; Power BI-style operational dashboard &middot; Mohammad Faisal Alabrash</div>
+  <div class="pbi-footer"><i class="fas fa-info-circle"></i> Sample data &middot; Power BI-style dashboard &middot; Mohammad Faisal Alabrash</div>
 </div>
 </div>
 
-<!-- CONTACT -->
 <div class="section-full" id="contact" style="background:var(--bg2)">
 <div class="section-inner">
   <div class="stag reveal"><span>Contact</span></div>
-  <h2 class="sec-title reveal d1">Let's <em>Connect</em></h2>
-
+  <h2 class="sec-title reveal d1">Let&rsquo;s <em>Connect</em></h2>
   <div class="contact-grid">
     <div class="c-intro reveal d2">
-      <p>Whether you're looking for an ERP Consultant to lead an implementation, a Business Analyst for a transformation project, or simply want to explore collaboration opportunities — I'd love to hear from you.</p>
+      <p>Whether you&rsquo;re looking for an ERP Consultant to lead an implementation, a Business Analyst for a transformation project, or want to explore collaboration &mdash; I&rsquo;d love to hear from you.</p>
       <div class="clinks">
-        <a href="mailto:faisalabohusian@gmail.com" class="clink">
-          <div class="clink-ico"><i class="fas fa-envelope"></i></div>
-          <div>
-            <div class="clink-lbl">Email</div>
-            <div class="clink-val">faisalabohusian@gmail.com</div>
-          </div>
-          <i class="fas fa-arrow-right clink-arr"></i>
-        </a>
-        <a href="tel:+966553845572" class="clink">
-          <div class="clink-ico"><i class="fas fa-phone"></i></div>
-          <div>
-            <div class="clink-lbl">Phone (WhatsApp)</div>
-            <div class="clink-val">+966 553 845 572</div>
-          </div>
-          <i class="fas fa-arrow-right clink-arr"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer" class="clink">
-          <div class="clink-ico" style="color:var(--teal)"><i class="fab fa-linkedin-in"></i></div>
-          <div>
-            <div class="clink-lbl">LinkedIn</div>
-            <div class="clink-val">Mohammed Faisal Alabrash</div>
-          </div>
-          <i class="fas fa-arrow-right clink-arr"></i>
-        </a>
-        <a href="Mohammad_Faisal_Alabrash_CV.pdf" download class="clink">
-          <div class="clink-ico" style="color:var(--gold)"><i class="fas fa-file-pdf"></i></div>
-          <div>
-            <div class="clink-lbl">Curriculum Vitae</div>
-            <div class="clink-val">Download PDF — Mohammad Faisal Alabrash</div>
-          </div>
-          <i class="fas fa-arrow-right clink-arr"></i>
-        </a>
+        <a href="mailto:faisalabohusian@gmail.com" class="clink"><div class="clink-ico"><i class="fas fa-envelope"></i></div><div><div class="clink-lbl">Email</div><div class="clink-val">faisalabohusian@gmail.com</div></div><i class="fas fa-arrow-right clink-arr"></i></a>
+        <a href="https://wa.me/966553845572?text=Hello%20Faisal%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="clink"><div class="clink-ico" style="color:#25D366"><i class="fab fa-whatsapp"></i></div><div><div class="clink-lbl">WhatsApp</div><div class="clink-val">+966 553 845 572</div></div><i class="fas fa-arrow-right clink-arr"></i></a>
+        <a href="tel:+966553845572" class="clink"><div class="clink-ico"><i class="fas fa-phone"></i></div><div><div class="clink-lbl">Phone</div><div class="clink-val">+966 553 845 572</div></div><i class="fas fa-arrow-right clink-arr"></i></a>
+        <a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer" class="clink"><div class="clink-ico" style="color:var(--teal)"><i class="fab fa-linkedin-in"></i></div><div><div class="clink-lbl">LinkedIn</div><div class="clink-val">Mohammed Faisal Alabrash</div></div><i class="fas fa-arrow-right clink-arr"></i></a>
+        <a href="Mohammad_Faisal_Alabrash_CV.pdf" download class="clink"><div class="clink-ico" style="color:var(--gold)"><i class="fas fa-file-pdf"></i></div><div><div class="clink-lbl">Curriculum Vitae</div><div class="clink-val">Download PDF &mdash; Mohammad Faisal Alabrash</div></div><i class="fas fa-arrow-right clink-arr"></i></a>
       </div>
     </div>
-
     <div class="cform reveal d3">
-      <div class="fgroup">
-        <label for="fname">Your Name</label>
-        <input type="text" id="fname" placeholder="Ahmed Al-Rashid" autocomplete="name">
-      </div>
-      <div class="fgroup">
-        <label for="femail">Email Address</label>
-        <input type="email" id="femail" placeholder="ahmed@company.com" autocomplete="email">
-      </div>
-      <div class="fgroup">
-        <label for="fsubj">Subject</label>
-        <input type="text" id="fsubj" placeholder="ERP Project Inquiry / Collaboration">
-      </div>
-      <div class="fgroup">
-        <label for="fmsg">Message</label>
-        <textarea id="fmsg" placeholder="Tell me about your project..."></textarea>
-      </div>
-      <button class="btn-gold" onclick="sendMsg()" style="align-self:flex-start">
-        Send Message <i class="fas fa-paper-plane"></i>
-      </button>
+      <div class="fgroup"><label for="fname">Your Name</label><input type="text" id="fname" placeholder="Ahmed Al-Rashid" autocomplete="name"></div>
+      <div class="fgroup"><label for="femail">Email Address</label><input type="email" id="femail" placeholder="ahmed@company.com" autocomplete="email"></div>
+      <div class="fgroup"><label for="fsubj">Subject</label><input type="text" id="fsubj" placeholder="ERP Project Inquiry / Collaboration"></div>
+      <div class="fgroup"><label for="fmsg">Message</label><textarea id="fmsg" placeholder="Tell me about your project..."></textarea></div>
+      <button class="btn-gold" onclick="sendMsg()" style="align-self:flex-start">Send Message <i class="fas fa-paper-plane"></i></button>
     </div>
   </div>
 </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
-  <div class="fcopy">© <span id="yr"></span> Mohammad Faisal Alabrash. All rights reserved. · Riyadh, Saudi Arabia</div>
+  <div class="fcopy">&copy; <span id="yr"></span> Mohammad Faisal Alabrash. All rights reserved. &middot; Riyadh, Saudi Arabia</div>
   <div class="fsocials">
     <a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     <a href="mailto:faisalabohusian@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-    <a href="tel:+966553845572" title="Call"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/966553845572" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     <a href="Mohammad_Faisal_Alabrash_CV.pdf" download title="Download CV"><i class="fas fa-file-pdf"></i></a>
   </div>
 </footer>
 
-<script>
+<button id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<div id="mobile-cta"><a href="Mohammad_Faisal_Alabrash_CV.pdf" download class="btn-gold" style="width:100%;justify-content:center"><i class="fas fa-download"></i> Download CV &mdash; Mohammad Faisal Alabrash</a></div>
 
-// Cursor
+<script>
+/* Cursor */
 const cur=document.getElementById('cur'),curR=document.getElementById('cur-r');
 let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
-(function animCur(){
-  cur.style.left=mx+'px';cur.style.top=my+'px';
-  rx+=(mx-rx)*.1;ry+=(my-ry)*.1;
-  curR.style.left=rx+'px';curR.style.top=ry+'px';
-  requestAnimationFrame(animCur);
-})();
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function loop(){cur.style.left=mx+'px';cur.style.top=my+'px';rx+=(mx-rx)*.1;ry+=(my-ry)*.1;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(loop);})();
 document.querySelectorAll('a,button,.sk,.proj').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.width='15px';cur.style.height='15px';curR.style.width='48px';curR.style.height='48px'});
-  el.addEventListener('mouseleave',()=>{cur.style.width='9px';cur.style.height='9px';curR.style.width='34px';curR.style.height='34px'});
+  el.addEventListener('mouseenter',()=>{cur.style.width='15px';cur.style.height='15px';curR.style.width='48px';curR.style.height='48px';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='9px';cur.style.height='9px';curR.style.width='34px';curR.style.height='34px';});
 });
 
-// Nav scroll
-const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+/* Nav + progress + scroll-to-top */
+const navEl=document.getElementById('nav'),np=document.getElementById('nav-progress'),toTopBtn=document.getElementById('toTop');
+window.addEventListener('scroll',()=>{
+  navEl.classList.toggle('scrolled',scrollY>40);
+  const dh=document.documentElement.scrollHeight-window.innerHeight;
+  if(np) np.style.width=(dh>0?(scrollY/dh)*100:0)+'%';
+  if(toTopBtn) toTopBtn.classList.toggle('visible',scrollY>400);
+});
 
-// Mobile menu
-function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
-document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+/* Mobile menu */
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('navLinks').classList.toggle('open');}
+document.addEventListener('click',e=>{
+  const l=document.getElementById('navLinks'),b=document.getElementById('burger');
+  if(l.classList.contains('open')&&!l.contains(e.target)&&!b.contains(e.target)){l.classList.remove('open');b.classList.remove('open');}
+});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open');document.getElementById('burger').classList.remove('open');}));
 
-// Scroll reveal
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+/* Active nav */
+function updateNav(){
+  const ids=['about','skills','experience','projects','sql-demo','powerbi-demo','contact'];
+  let cur2='';
+  ids.forEach(id=>{const el=document.getElementById(id);if(el&&window.pageYOffset>=el.offsetTop-200)cur2=id;});
+  document.querySelectorAll('.nav-links a:not(.nav-cta)').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur2));
+}
+window.addEventListener('scroll',updateNav);
+
+/* Reveal observer */
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.classList.add('on');
+    e.target.querySelectorAll('.tl-item').forEach((item,i)=>setTimeout(()=>item.classList.add('tl-on'),i*160));
+    obs.unobserve(e.target);
+  }
+}),{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
 
-// Bar animation
+/* About grid */
+const ag=document.querySelector('.about-grid');
+if(ag) new IntersectionObserver(([e])=>{if(e.isIntersecting)ag.classList.add('revealed');},{threshold:0.15}).observe(ag);
+
+/* Chips */
+const co=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll('.chip').forEach((c,i)=>setTimeout(()=>c.classList.add('chip-on'),i*80));co.unobserve(e.target);}
+}),{threshold:0.2});
+document.querySelectorAll('.chips').forEach(c=>co.observe(c));
+
+/* Bar animation */
 document.querySelectorAll('.proj-vis').forEach(vis=>{
-  const barObs=new IntersectionObserver(entries=>entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.querySelectorAll('.bar').forEach((b,i)=>{
-        const h=b.dataset.h||b.style.height;
-        b.style.height='0';
-        setTimeout(()=>{b.style.height=h;},i*70);
-      });
-      barObs.unobserve(e.target);
-    }
-  }),{threshold:.3});
-  barObs.observe(vis);
+  new IntersectionObserver(([e])=>{
+    if(e.isIntersecting){vis.querySelectorAll('.bar').forEach((b,i)=>{const h=b.dataset.h||b.style.height;b.style.height='0';setTimeout(()=>{b.style.height=h;},i*70);});}
+  },{threshold:0.3}).observe(vis);
 });
 
-// Exp grid responsive
-function checkExpGrid(){const g=document.getElementById('exp-grid');if(g)g.style.gridTemplateColumns=innerWidth<768?'1fr':'1fr 1fr'}
-window.addEventListener('resize',checkExpGrid);checkExpGrid();
+/* Exp grid */
+function checkGrid(){const g=document.getElementById('exp-grid');if(g)g.style.gridTemplateColumns=innerWidth<768?'1fr':'1fr 1fr';}
+window.addEventListener('resize',checkGrid);
 
-// Contact form
+/* Counters */
+function animCount(el,target,suffix,dur){let v=0;const s=target/(dur/16),t=setInterval(()=>{v=Math.min(v+s,target);el.textContent=(target%1?v.toFixed(1):Math.floor(v))+suffix;if(v>=target){el.textContent=target+suffix;clearInterval(t);}},16);}
+const statsEl=document.querySelector('.hero-stats');
+if(statsEl) new IntersectionObserver(([e])=>{if(e.isIntersecting)document.querySelectorAll('.stat-n').forEach(el=>{const r=el.textContent.trim();animCount(el,parseFloat(r),r.slice(String(parseFloat(r)).length),1200);});},{threshold:0.5}).observe(statsEl);
+
+/* SK tilt */
+document.querySelectorAll('.sk').forEach(c=>{
+  c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.transform=`perspective(700px) rotateX(${((e.clientY-r.top-r.height/2)/(r.height/2))*6}deg) rotateY(${((r.width/2-(e.clientX-r.left))/(r.width/2))*6}deg) translateY(-4px)`;});
+  c.addEventListener('mouseleave',()=>{c.style.transform='perspective(700px) rotateX(0) rotateY(0) translateY(0)';});
+});
+
+/* Contact form */
 function sendMsg(){
-  const n=document.getElementById('fname').value;
-  const e=document.getElementById('femail').value;
-  const m=document.getElementById('fmsg').value;
-  if(!n||!e||!m){alert('Please fill in all required fields.');return;}
-  const mailto='mailto:faisalabohusian@gmail.com?subject=Portfolio%20Inquiry%20from%20'+encodeURIComponent(n)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+e+'\n\n'+m);
-  window.location.href=mailto;
+  const isAr=window._lang==='ar';
+  const n=document.getElementById('fname').value.trim(),e=document.getElementById('femail').value.trim(),s=document.getElementById('fsubj').value.trim(),m=document.getElementById('fmsg').value.trim();
+  if(!n||!e||!m){alert(isAr?'يرجى ملء الاسم والبريد الإلكتروني والرسالة.':'Please fill in your name, email, and message.');return;}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){alert(isAr?'يرجى إدخال بريد إلكتروني صحيح.':'Please enter a valid email address.');return;}
+  const btn=document.querySelector('.cform .btn-gold');
+  btn.innerHTML=(isAr?'<i class="fas fa-check"></i> جاري فتح عميل البريد...':'<i class="fas fa-check"></i> Opening email client...');btn.classList.add('success');
+  window.location.href='mailto:faisalabohusian@gmail.com?subject='+encodeURIComponent(s||'Portfolio Inquiry from '+n)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+e+'\n\n'+m);
+  setTimeout(()=>{btn.innerHTML=isAr?'إرسال الرسالة <i class="fas fa-paper-plane"></i>':'Send Message <i class="fas fa-paper-plane"></i>';btn.classList.remove('success');},4000);
 }
 
-// ── Animated counters for hero stats ─────────────────────────────────────────
-function animateCounter(el, target, suffix, duration) {
-  let start = 0;
-  const step = target / (duration / 16);
-  const timer = setInterval(() => {
-    start = Math.min(start + step, target);
-    el.textContent = (target % 1 !== 0 ? start.toFixed(1) : Math.floor(start)) + suffix;
-    if (start >= target) { el.textContent = target + suffix; clearInterval(timer); }
-  }, 16);
+/* ═══════════════════════ SQL PLAYGROUND ═══════════════════════ */
+const SQL_QUERIES=[
+  {code:`<span class="cm">-- Top 8 revenue-generating property units (Q3 2024)</span>\n<span class="kw">SELECT TOP</span> <span class="num">8</span>\n    u.unit_code          <span class="kw">AS</span> <span class="alias">Unit</span>,\n    u.unit_type          <span class="kw">AS</span> <span class="alias">Type</span>,\n    t.tenant_name        <span class="kw">AS</span> <span class="alias">Tenant</span>,\n    <span class="fn">FORMAT</span>(t.monthly_rent, <span class="str">'N0'</span>) <span class="kw">AS</span> <span class="alias">Monthly_Rent_SAR</span>,\n    <span class="fn">SUM</span>(p.amount)         <span class="kw">AS</span> <span class="alias">Q3_Revenue_SAR</span>,\n    <span class="fn">COUNT</span>(p.payment_id)   <span class="kw">AS</span> <span class="alias">Payments</span>\n<span class="kw">FROM</span>       <span class="tbl">tbl_Units</span>        u\n<span class="kw">INNER JOIN</span> <span class="tbl">tbl_Tenants</span>      t  <span class="kw">ON</span> u.unit_id = t.unit_id\n<span class="kw">INNER JOIN</span> <span class="tbl">tbl_Payments</span>     p  <span class="kw">ON</span> t.tenant_id = p.tenant_id\n<span class="kw">WHERE</span>  p.payment_date <span class="kw">BETWEEN</span> <span class="str">'2024-07-01'</span> <span class="kw">AND</span> <span class="str">'2024-09-30'</span>\n  <span class="kw">AND</span>  p.status = <span class="str">'Paid'</span>\n<span class="kw">GROUP BY</span>  u.unit_code, u.unit_type, t.tenant_name, t.monthly_rent\n<span class="kw">ORDER BY</span>  Q3_Revenue_SAR <span class="kw">DESC</span>;`,
+   headers:['Unit','Type','Tenant','Monthly Rent SAR','Q3 Revenue SAR','Payments'],
+   rows:[['B-1201','Suite','Al-Noor Trading Co.','42,500','127,500','3'],['A-0801','Office','Gulf Tech Solutions','38,200','114,600','3'],['C-1501','Retail','Riyadh Cafe Chain','35,000','105,000','3'],['B-0602','Apartment','Dr. Khalid Mansour','28,000','84,000','3'],['A-1102','Office','Saudi Consulting Grp','26,500','79,500','3'],['D-0301','Retail','Pharmacy Plus KSA','24,000','72,000','3'],['C-0401','Suite','Al-Madar Investments','23,800','71,400','3'],['B-0903','Apartment','Eng. Faisal Al-Otaibi','18,500','55,500','3']],
+   numCols:[3,4,5],barCol:4,time:'00:00:01',db:'Logix_ERP_PROD'},
+  {code:`<span class="cm">-- Procurement spend by vendor category (YTD 2024)</span>\n<span class="kw">SELECT</span>\n    v.vendor_category    <span class="kw">AS</span> <span class="alias">Category</span>,\n    <span class="fn">COUNT</span>(po.po_id)      <span class="kw">AS</span> <span class="alias">PO_Count</span>,\n    <span class="fn">SUM</span>(po.total_amount) <span class="kw">AS</span> <span class="alias">Total_Spend_SAR</span>,\n    <span class="fn">AVG</span>(po.total_amount) <span class="kw">AS</span> <span class="alias">Avg_PO_Value</span>,\n    <span class="fn">MAX</span>(po.total_amount) <span class="kw">AS</span> <span class="alias">Largest_PO</span>,\n    <span class="fn">AVG</span>(<span class="fn">DATEDIFF</span>(day,po.issue_date,po.delivery_date)) <span class="kw">AS</span> <span class="alias">Avg_Lead_Days</span>\n<span class="kw">FROM</span>       <span class="tbl">tbl_PurchaseOrders</span>  po\n<span class="kw">INNER JOIN</span> <span class="tbl">tbl_Vendors</span>         v  <span class="kw">ON</span> po.vendor_id = v.vendor_id\n<span class="kw">WHERE</span>  <span class="fn">YEAR</span>(po.issue_date) = <span class="num">2024</span>\n  <span class="kw">AND</span>  po.status <span class="kw">IN</span> (<span class="str">'Approved'</span>, <span class="str">'Delivered'</span>)\n<span class="kw">GROUP BY</span>  v.vendor_category\n<span class="kw">ORDER BY</span>  Total_Spend_SAR <span class="kw">DESC</span>;`,
+   headers:['Category','PO Count','Total Spend SAR','Avg PO Value','Largest PO','Avg Lead Days'],
+   rows:[['Construction & Civil','148','4,820,000','32,567','285,000','18'],['MEP & Facilities','92','2,340,000','25,434','190,000','12'],['IT & Technology','67','1,180,000','17,611','145,000','8'],['Furniture & Fixtures','54','870,000','16,111','98,000','22'],['Security Systems','31','540,000','17,419','75,000','14'],['Cleaning Services','28','210,000','7,500','18,000','5']],
+   numCols:[1,2,3,4,5],barCol:2,time:'00:00:02',db:'Logix_ERP_PROD'},
+  {code:`<span class="cm">-- Project budget vs actual with variance analysis</span>\n<span class="kw">SELECT</span>\n    p.project_name <span class="kw">AS</span> <span class="alias">Project</span>, p.project_manager <span class="kw">AS</span> <span class="alias">PM</span>,\n    <span class="fn">FORMAT</span>(p.budget_amount,<span class="str">'N0'</span>) <span class="kw">AS</span> <span class="alias">Budget_SAR</span>,\n    <span class="fn">FORMAT</span>(<span class="fn">SUM</span>(t.actual_cost),<span class="str">'N0'</span>) <span class="kw">AS</span> <span class="alias">Actual_SAR</span>,\n    <span class="fn">FORMAT</span>(p.budget_amount-<span class="fn">SUM</span>(t.actual_cost),<span class="str">'N0'</span>) <span class="kw">AS</span> <span class="alias">Variance_SAR</span>,\n    <span class="fn">CAST</span>((<span class="fn">SUM</span>(t.actual_cost)*<span class="num">100.0</span>/p.budget_amount) <span class="kw">AS</span> <span class="fn">DECIMAL</span>(<span class="num">5</span>,<span class="num">1</span>)) <span class="kw">AS</span> <span class="alias">Pct_Used</span>,\n    p.status <span class="kw">AS</span> <span class="alias">Status</span>\n<span class="kw">FROM</span> <span class="tbl">tbl_Projects</span> p\n<span class="kw">INNER JOIN</span> <span class="tbl">tbl_Transactions</span> t <span class="kw">ON</span> p.project_id=t.project_id\n<span class="kw">WHERE</span> p.fiscal_year=<span class="num">2024</span>\n<span class="kw">GROUP BY</span> p.project_name,p.project_manager,p.budget_amount,p.status\n<span class="kw">ORDER BY</span> Pct_Used <span class="kw">DESC</span>;`,
+   headers:['Project','PM','Budget SAR','Actual SAR','Variance SAR','% Used','Status'],
+   rows:[['Tower B Renovation','Ahmad Al-Rashidi','2,800,000','2,954,000','-154,000','105.5%','Over Budget'],['Lobby Redesign','Sarah Al-Qahtani','450,000','441,000','9,000','98.0%','On Track'],['HVAC Upgrade Block A','Faisal Alabrash','1,200,000','1,116,000','84,000','93.0%','On Track'],['Parking Expansion','Khaled Bin Nasser','3,500,000','2,975,000','525,000','85.0%','On Track'],['Smart Building ERP','Faisal Alabrash','680,000','530,000','150,000','78.0%','On Track'],['Landscaping Phase 2','Noura Al-Harbi','320,000','192,000','128,000','60.0%','In Progress']],
+   numCols:[2,3,4],barCol:5,time:'00:00:03',db:'Logix_ERP_PROD'},
+  {code:`<span class="cm">-- Occupancy rate by building and floor</span>\n<span class="kw">SELECT</span>\n    b.building_name <span class="kw">AS</span> <span class="alias">Building</span>, u.floor_number <span class="kw">AS</span> <span class="alias">Floor</span>,\n    <span class="fn">COUNT</span>(u.unit_id) <span class="kw">AS</span> <span class="alias">Total_Units</span>,\n    <span class="fn">SUM</span>(<span class="kw">CASE WHEN</span> u.status=<span class="str">'Occupied'</span> <span class="kw">THEN</span> <span class="num">1</span> <span class="kw">ELSE</span> <span class="num">0</span> <span class="kw">END</span>) <span class="kw">AS</span> <span class="alias">Occupied</span>,\n    <span class="fn">SUM</span>(<span class="kw">CASE WHEN</span> u.status=<span class="str">'Vacant'</span> <span class="kw">THEN</span> <span class="num">1</span> <span class="kw">ELSE</span> <span class="num">0</span> <span class="kw">END</span>) <span class="kw">AS</span> <span class="alias">Vacant</span>,\n    <span class="fn">CAST</span>(<span class="fn">SUM</span>(<span class="kw">CASE WHEN</span> u.status=<span class="str">'Occupied'</span> <span class="kw">THEN</span> <span class="num">1.0</span> <span class="kw">ELSE</span> <span class="num">0</span> <span class="kw">END</span>)*<span class="num">100</span>/<span class="fn">COUNT</span>(u.unit_id) <span class="kw">AS</span> <span class="fn">DECIMAL</span>(<span class="num">4</span>,<span class="num">1</span>)) <span class="kw">AS</span> <span class="alias">Occupancy_Pct</span>\n<span class="kw">FROM</span> <span class="tbl">tbl_Buildings</span> b\n<span class="kw">INNER JOIN</span> <span class="tbl">tbl_Units</span> u <span class="kw">ON</span> b.building_id=u.building_id\n<span class="kw">GROUP BY</span> b.building_name, u.floor_number\n<span class="kw">HAVING</span> <span class="fn">COUNT</span>(u.unit_id)><span class="num">0</span>\n<span class="kw">ORDER BY</span> b.building_name, u.floor_number;`,
+   headers:['Building','Floor','Total Units','Occupied','Vacant','Occupancy %'],
+   rows:[['Al-Memar Tower A','1','12','12','0','100.0%'],['Al-Memar Tower A','2','12','11','1','91.7%'],['Al-Memar Tower A','3','12','10','2','83.3%'],['Al-Memar Tower B','1','10','10','0','100.0%'],['Al-Memar Tower B','2','10','8','2','80.0%'],['Al-Memar Tower B','3','10','7','3','70.0%'],['Commercial Block C','1','8','7','1','87.5%'],['Commercial Block C','2','8','5','3','62.5%']],
+   numCols:[2,3,4,5],barCol:5,time:'00:00:01',db:'Logix_ERP_PROD'}
+];
+let activeSqlIdx=0;
+function sqlRun(idx,btn){
+  activeSqlIdx=idx;
+  document.querySelectorAll('.sql-tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
+  const q=SQL_QUERIES[idx];
+  document.getElementById('sqlCode').innerHTML=q.code;
+  const tbl=document.getElementById('sqlTable'),rc=document.getElementById('sqlRowCount'),st=document.getElementById('sqlStatus');
+  tbl.innerHTML='<div style="padding:1.5rem;text-align:center;color:var(--muted);font-size:.75rem"><i class="fas fa-spinner fa-spin" style="color:var(--gold);margin-right:.5rem"></i>Executing...</div>';
+  rc.textContent='';
+  setTimeout(()=>{
+    let html='<table><thead><tr>'+q.headers.map(h=>`<th>${h}</th>`).join('')+'</tr></thead><tbody>';
+    q.rows.forEach(row=>{html+='<tr>'+row.map((cell,ci)=>{const isNum=q.numCols.includes(ci),isBar=ci===q.barCol;const pct=isBar?Math.min(parseFloat(cell.replace(/[^0-9.]/g,''))/(parseFloat(q.rows[0][q.barCol].replace(/[^0-9.]/g,''))||1)*100,100):0;return`<td${isNum?' class="num-cell"':isBar?' class="bar-cell"':''}>${cell}${isBar?`<div class="mini-bar" style="width:${pct}%"></div>`:''}</td>`;}).join('')+'</tr>';});
+    html+='</tbody></table>';
+    tbl.innerHTML=html;rc.textContent=q.rows.length+' rows';
+    st.innerHTML=`<span>Query executed &bull; ${q.rows.length} row(s)</span><span>${q.time} &bull; ${q.db}</span>`;
+  },600);
 }
-const counterObs = new IntersectionObserver(entries => entries.forEach(e => {
-  if (e.isIntersecting) {
-    document.querySelectorAll('.stat-n').forEach(el => {
-      const raw = el.textContent.trim();
-      const num = parseFloat(raw);
-      const suffix = raw.slice(String(num).length);
-      animateCounter(el, num, suffix, 1200);
-    });
-    counterObs.disconnect();
-  }
-}), {threshold: .5});
-const statsEl = document.querySelector('.hero-stats');
-if (statsEl) counterObs.observe(statsEl);
+function sqlRunActive(){sqlRun(activeSqlIdx,null);}
 
-// ── Skill card 3D tilt ────────────────────────────────────────────────────────
-document.querySelectorAll('.sk').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const r = card.getBoundingClientRect();
-    const rX = ((e.clientY - r.top - r.height/2) / (r.height/2)) * 6;
-    const rY = ((r.width/2 - (e.clientX - r.left)) / (r.width/2)) * 6;
-    card.style.transform = `perspective(700px) rotateX(${rX}deg) rotateY(${rY}deg) translateY(-4px)`;
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'perspective(700px) rotateX(0) rotateY(0) translateY(0)';
-  });
-});
+/* ═══════════════════════ POWER BI ═══════════════════════ */
+const PBI={
+  all:{q1:{occ:72.1,rev:'2.21M',revpar:318,sat:4.1,bookings:1042},q2:{occ:75.8,rev:'2.53M',revpar:362,sat:4.2,bookings:1158},q3:{occ:78.4,rev:'2.84M',revpar:412,sat:4.3,bookings:1247},q4:{occ:81.2,rev:'3.12M',revpar:445,sat:4.4,bookings:1380}},
+  downtown:{q1:{occ:74,rev:'920K',revpar:340,sat:4.2,bookings:420},q2:{occ:78,rev:'1.05M',revpar:385,sat:4.3,bookings:470},q3:{occ:82,rev:'1.18M',revpar:432,sat:4.4,bookings:510},q4:{occ:85,rev:'1.31M',revpar:480,sat:4.5,bookings:560}},
+  airport:{q1:{occ:68,rev:'710K',revpar:288,sat:4.0,bookings:342},q2:{occ:72,rev:'820K',revpar:332,sat:4.1,bookings:388},q3:{occ:75,rev:'940K',revpar:380,sat:4.1,bookings:420},q4:{occ:78,rev:'1.02M',revpar:408,sat:4.2,bookings:456}},
+  resort:{q1:{occ:70,rev:'580K',revpar:310,sat:4.3,bookings:280},q2:{occ:76,rev:'660K',revpar:348,sat:4.4,bookings:300},q3:{occ:79,rev:'720K',revpar:392,sat:4.5,bookings:317},q4:{occ:83,rev:'790K',revpar:425,sat:4.6,bookings:364}}
+};
+const MO=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const RD={all:[1820,1950,2100,2280,2450,2620,2780,2950,3100,3250,3400,3580],downtown:[720,780,850,920,980,1050,1120,1190,1260,1330,1400,1480],airport:[620,660,720,780,840,900,960,1020,1080,1140,1200,1260],resort:[480,510,530,580,630,670,700,740,760,780,800,840]};
+const OD={all:[68,70,73,74,76,78,77,79,82,80,82,84],downtown:[71,74,76,78,79,81,80,83,85,84,85,87],airport:[64,66,69,70,72,74,73,75,78,76,78,80],resort:[66,68,71,72,74,77,76,78,81,79,80,83]};
+const PT={all:[{name:'Downtown Grand',rooms:200,occ:82,rev:'1,180,000',revpar:432,sat:4.4},{name:'Airport Suites',rooms:150,occ:75,rev:'940,000',revpar:380,sat:4.1},{name:'Red Sea Resort',rooms:120,occ:79,rev:'720,000',revpar:392,sat:4.5}],downtown:[{name:'Downtown Grand',rooms:200,occ:82,rev:'1,180,000',revpar:432,sat:4.4}],airport:[{name:'Airport Suites',rooms:150,occ:75,rev:'940,000',revpar:380,sat:4.1}],resort:[{name:'Red Sea Resort',rooms:120,occ:79,rev:'720,000',revpar:392,sat:4.5}]};
+let pbiP='all',pbiQ='q3',lci,dci,oci;
+function gq(q){return{q1:[0,1,2],q2:[3,4,5],q3:[6,7,8],q4:[9,10,11]}[q];}
+function renderCharts(){
+  const d=PBI[pbiP][pbiQ];
+  document.getElementById('kpi-occ').textContent=d.occ+'%';document.getElementById('kpi-rev').textContent='SAR '+d.rev;document.getElementById('kpi-revpar').textContent='SAR '+d.revpar;document.getElementById('kpi-sat').textContent=d.sat+' / 5';document.getElementById('kpi-bookings').textContent=d.bookings.toLocaleString();
+  const idx=gq(pbiQ),labels=idx.map(i=>MO[i]),rv=idx.map(i=>RD[pbiP][i]),ov=idx.map(i=>OD[pbiP][i]);
+  const ax={grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#7a7673',font:{size:11}}};
+  if(lci)lci.destroy();
+  lci=new Chart(document.getElementById('lineChart'),{type:'line',data:{labels,datasets:[{label:"Revenue (SAR '000)",data:rv,borderColor:'#c9a86c',backgroundColor:'rgba(201,168,108,0.08)',borderWidth:2,pointBackgroundColor:'#c9a86c',pointRadius:5,fill:true,tension:0.4}]},options:{responsive:true,plugins:{legend:{display:true,labels:{color:'#a09c97',font:{size:11}}},tooltip:{callbacks:{label:c=>'SAR '+c.parsed.y.toLocaleString()+'K'}}},scales:{x:ax,y:ax}}});
+  if(dci)dci.destroy();
+  const rt=['Deluxe Room','Junior Suite','Executive Suite','Standard Room'],rr=[38,28,22,12],rc2=['#c9a86c','#6fb5ae','#c97b6b','#8888aa'];
+  dci=new Chart(document.getElementById('donutChart'),{type:'doughnut',data:{labels:rt,datasets:[{data:rr,backgroundColor:rc2,borderWidth:2,borderColor:'#17171e',hoverOffset:6}]},options:{responsive:true,cutout:'65%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+'%'}}}}});
+  document.getElementById('donutLegend').innerHTML=rt.map((t,i)=>`<div class="pbi-legend-item"><span class="pbi-legend-dot" style="background:${rc2[i]}"></span>${t} &mdash; ${rr[i]}%</div>`).join('');
+  if(oci)oci.destroy();
+  oci=new Chart(document.getElementById('occBar'),{type:'bar',data:{labels,datasets:[{label:'Occupancy %',data:ov,backgroundColor:ov.map(v=>v>=80?'rgba(74,222,128,0.7)':v>=70?'rgba(201,168,108,0.7)':'rgba(201,123,107,0.7)'),borderRadius:3,borderSkipped:false}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y+'%'}}},scales:{x:ax,y:{...ax,min:50,max:100,ticks:{color:'#7a7673',callback:v=>v+'%'}}}}});
+  const sp=[65,70,75,72,78,80];
+  document.getElementById('propTableBody').innerHTML=PT[pbiP].map(p=>{const cl=p.occ>=80?'occ-high':p.occ>=70?'occ-mid':'occ-low';return`<tr><td><strong>${p.name}</strong></td><td>${p.rooms}</td><td><span class="occ-pill ${cl}">${p.occ}%</span></td><td>SAR ${p.rev}</td><td>SAR ${p.revpar}</td><td>${p.sat} &#9733;</td><td><div class="pbi-sparkline">${sp.map(v=>`<div class="spark-bar" style="height:${(v/100)*18}px"></div>`).join('')}</div></td></tr>`;}).join('');
+}
+function pbiProp(k,btn){pbiP=k;document.querySelectorAll('.pbi-filters .pbi-fbtn').forEach((b,i)=>{if(i<4)b.classList.toggle('active',b===btn);});renderCharts();}
+function pbiQuarter(k,btn){pbiQ=k;document.querySelectorAll('.pbi-filters .pbi-fbtn').forEach((b,i)=>{if(i>=5)b.classList.toggle('active',b===btn);});renderCharts();}
+const pbiObs2=new IntersectionObserver(([e])=>{if(e.isIntersecting){renderCharts();pbiObs2.disconnect();}},{threshold:0.15});
 
-
-// ═══════════════════════════════════════════════════════════════════
-// SQL INTERACTIVE PLAYGROUND
-// ═══════════════════════════════════════════════════════════════════
-const SQL_QUERIES = [
-  {
-    label: 'Top Revenue Units',
-    code: `<span class="cm">-- Top 8 revenue-generating property units (Q3 2024)</span>
-<span class="kw">SELECT TOP</span> <span class="num">8</span>
-    u.unit_code          <span class="kw">AS</span> <span class="alias">Unit</span>,
-    u.unit_type          <span class="kw">AS</span> <span class="alias">Type</span>,
-    t.tenant_name        <span class="kw">AS</span> <span class="alias">Tenant</span>,
-    <span class="fn">FORMAT</span>(t.monthly_rent, <span class="str">'N0'</span>) <span class="kw">AS</span> <span class="alias">Monthly_Rent_SAR</span>,
-    <span class="fn">SUM</span>(p.amount)         <span class="kw">AS</span> <span class="alias">Q3_Revenue_SAR</span>,
-    <span class="fn">COUNT</span>(p.payment_id)   <span class="kw">AS</span> <span class="alias">Payments</span>
-<span class="kw">FROM</span>       <span class="tbl">tbl_Units</span>        u
-<span class="kw">INNER JOIN</span> <span class="tbl">tbl_Tenants</span>      t  <span class="kw">ON</span> u.unit_id = t.unit_id
-<span class="kw">INNER JOIN</span> <span class="tbl">tbl_Payments</span>     p  <span class="kw">ON</span> t.tenant_id = p.tenant_id
-<span class="kw">WHERE</span>  p.payment_date <span class="kw">BETWEEN</span> <span class="str">'2024-07-01'</span> <span class="kw">AND</span> <span class="str">'2024-09-30'</span>
-  <span class="kw">AND</span>  p.status = <span class="str">'Paid'</span>
-<span class="kw">GROUP BY</span>  u.unit_code, u.unit_type, t.tenant_name, t.monthly_rent
-<span class="kw">ORDER BY</span>  Q3_Revenue_SAR <span class="kw">DESC</span>;`,
-    headers: ['Unit','Type','Tenant','Monthly Rent SAR','Q3 Revenue SAR','Payments'],
-    rows: [
-      ['B-1201','Suite','Al-Noor Trading Co.','42,500','127,500','3'],
-      ['A-0801','Office','Gulf Tech Solutions','38,200','114,600','3'],
-      ['C-1501','Retail','Riyadh Cafe Chain','35,000','105,000','3'],
-      ['B-0602','Apartment','Dr. Khalid Mansour','28,000','84,000','3'],
-      ['A-1102','Office','Saudi Consulting Grp','26,500','79,500','3'],
-      ['D-0301','Retail','Pharmacy Plus KSA','24,000','72,000','3'],
-      ['C-0401','Suite','Al-Madar Investments','23,800','71,400','3'],
-      ['B-0903','Apartment','Eng. Faisal Al-Otaibi','18,500','55,500','3'],
-    ],
-    numCols: [3,4,5],
-    barCol: 4,
-    time: '00:00:01',
-    db: 'Logix_ERP_PROD'
-  },
-  {
-    label: 'Procurement Summary',
-    code: `<span class="cm">-- Procurement spend by vendor category (YTD 2024)</span>
-<span class="kw">SELECT</span>
-    v.vendor_category    <span class="kw">AS</span> <span class="alias">Category</span>,
-    <span class="fn">COUNT</span>(po.po_id)      <span class="kw">AS</span> <span class="alias">PO_Count</span>,
-    <span class="fn">SUM</span>(po.total_amount) <span class="kw">AS</span> <span class="alias">Total_Spend_SAR</span>,
-    <span class="fn">AVG</span>(po.total_amount) <span class="kw">AS</span> <span class="alias">Avg_PO_Value</span>,
-    <span class="fn">MAX</span>(po.total_amount) <span class="kw">AS</span> <span class="alias">Largest_PO</span>,
-    <span class="fn">AVG</span>(<span class="fn">DATEDIFF</span>(day, po.issue_date, po.delivery_date))
-                         <span class="kw">AS</span> <span class="alias">Avg_Lead_Days</span>
-<span class="kw">FROM</span>       <span class="tbl">tbl_PurchaseOrders</span>  po
-<span class="kw">INNER JOIN</span> <span class="tbl">tbl_Vendors</span>         v  <span class="kw">ON</span> po.vendor_id = v.vendor_id
-<span class="kw">WHERE</span>  <span class="fn">YEAR</span>(po.issue_date) = <span class="num">2024</span>
-  <span class="kw">AND</span>  po.status <span class="kw">IN</span> (<span class="str">'Approved'</span>, <span class="str">'Delivered'</span>)
-<span class="kw">GROUP BY</span>  v.vendor_category
-<span class="kw">ORDER BY</span>  Total_Spend_SAR <span class="kw">DESC</span>;`,
-    headers: ['Category','PO Count','Total Spend SAR','Avg PO Value','Largest PO','Avg Lead Days'],
-    rows: [
-      ['Construction & Civil','148','4,820,000','32,567','285,000','18'],
-      ['MEP & Facilities','92','2,340,000','25,434','190,000','12'],
-      ['IT & Technology','67','1,180,000','17,611','145,000','8'],
-      ['Furniture & Fixtures','54','870,000','16,111','98,000','22'],
-      ['Security Systems','31','540,000','17,419','75,000','14'],
-      ['Cleaning Services','28','210,000','7,500','18,000','5'],
-    ],
-    numCols: [1,2,3,4,5],
-    barCol: 2,
-    time: '00:00:02',
-    db: 'Logix_ERP_PROD'
-  },
-  {
-    label: 'Project Cost Variance',
-    code: `<span class="cm">-- Project budget vs actual with variance analysis</span>
-<span class="kw">SELECT</span>
-    p.project_name                          <span class="kw">AS</span> <span class="alias">Project</span>,
-    p.project_manager                       <span class="kw">AS</span> <span class="alias">PM</span>,
-    <span class="fn">FORMAT</span>(p.budget_amount, <span class="str">'N0'</span>)           <span class="kw">AS</span> <span class="alias">Budget_SAR</span>,
-    <span class="fn">FORMAT</span>(<span class="fn">SUM</span>(t.actual_cost), <span class="str">'N0'</span>)      <span class="kw">AS</span> <span class="alias">Actual_SAR</span>,
-    <span class="fn">FORMAT</span>(p.budget_amount
-         - <span class="fn">SUM</span>(t.actual_cost), <span class="str">'N0'</span>)      <span class="kw">AS</span> <span class="alias">Variance_SAR</span>,
-    <span class="fn">CAST</span>((<span class="fn">SUM</span>(t.actual_cost) * <span class="num">100.0</span>
-         / p.budget_amount) <span class="kw">AS</span> <span class="fn">DECIMAL</span>(<span class="num">5</span>,<span class="num">1</span>))
-                                            <span class="kw">AS</span> <span class="alias">Pct_Used</span>,
-    p.status                                <span class="kw">AS</span> <span class="alias">Status</span>
-<span class="kw">FROM</span>       <span class="tbl">tbl_Projects</span>     p
-<span class="kw">INNER JOIN</span> <span class="tbl">tbl_Transactions</span>  t  <span class="kw">ON</span> p.project_id = t.project_id
-<span class="kw">WHERE</span>  p.fiscal_year = <span class="num">2024</span>
-<span class="kw">GROUP BY</span>  p.project_name, p.project_manager,
-          p.budget_amount, p.status
-<span class="kw">ORDER BY</span>  Pct_Used <span class="kw">DESC</span>;`,
-    headers: ['Project','PM','Budget SAR','Actual SAR','Variance SAR','% Used','Status'],
-    rows: [
-      ['Tower B Renovation','Ahmad Al-Rashidi','2,800,000','2,954,000','-154,000','105.5%','Over Budget'],
-      ['Lobby Redesign','Sarah Al-Qahtani','450,000','441,000','9,000','98.0%','On Track'],
-      ['HVAC Upgrade Block A','Faisal Alabrash','1,200,000','1,116,000','84,000','93.0%','On Track'],
-      ['Parking Expansion','Khaled Bin Nasser','3,500,000','2,975,000','525,000','85.0%','On Track'],
-      ['Smart Building ERP','Faisal Alabrash','680,000','530,000','150,000','78.0%','On Track'],
-      ['Landscaping Phase 2','Noura Al-Harbi','320,000','192,000','128,000','60.0%','In Progress'],
-    ],
-    numCols: [2,3,4],
-    barCol: 5,
-    time: '00:00:03',
-    db: 'Logix_ERP_PROD'
-  },
-  {
-    label: 'Tenant Occupancy',
-    code: `<span class="cm">-- Occupancy rate by building and floor (current snapshot)</span>
-<span class="kw">SELECT</span>
-    b.building_name       <span class="kw">AS</span> <span class="alias">Building</span>,
-    u.floor_number        <span class="kw">AS</span> <span class="alias">Floor</span>,
-    <span class="fn">COUNT</span>(u.unit_id)      <span class="kw">AS</span> <span class="alias">Total_Units</span>,
-    <span class="fn">SUM</span>(<span class="kw">CASE WHEN</span> u.status = <span class="str">'Occupied'</span>
-        <span class="kw">THEN</span> <span class="num">1</span> <span class="kw">ELSE</span> <span class="num">0</span> <span class="kw">END</span>)
-                          <span class="kw">AS</span> <span class="alias">Occupied</span>,
-    <span class="fn">SUM</span>(<span class="kw">CASE WHEN</span> u.status = <span class="str">'Vacant'</span>
-        <span class="kw">THEN</span> <span class="num">1</span> <span class="kw">ELSE</span> <span class="num">0</span> <span class="kw">END</span>)
-                          <span class="kw">AS</span> <span class="alias">Vacant</span>,
-    <span class="fn">CAST</span>(<span class="fn">SUM</span>(<span class="kw">CASE WHEN</span> u.status=<span class="str">'Occupied'</span>
-        <span class="kw">THEN</span> <span class="num">1.0</span> <span class="kw">ELSE</span> <span class="num">0</span> <span class="kw">END</span>) * <span class="num">100</span>
-        / <span class="fn">COUNT</span>(u.unit_id) <span class="kw">AS</span> <span class="fn">DECIMAL</span>(<span class="num">4</span>,<span class="num">1</span>))
-                          <span class="kw">AS</span> <span class="alias">Occupancy_Pct</span>
-<span class="kw">FROM</span>       <span class="tbl">tbl_Buildings</span>   b
-<span class="kw">INNER JOIN</span> <span class="tbl">tbl_Units</span>       u  <span class="kw">ON</span> b.building_id = u.building_id
-<span class="kw">GROUP BY</span>  b.building_name, u.floor_number
-<span class="kw">HAVING</span>    <span class="fn">COUNT</span>(u.unit_id) > <span class="num">0</span>
-<span class="kw">ORDER BY</span>  b.building_name, u.floor_number;`,
-    headers: ['Building','Floor','Total Units','Occupied','Vacant','Occupancy %'],
-    rows: [
-      ['Al-Memar Tower A','1','12','12','0','100.0%'],
-      ['Al-Memar Tower A','2','12','11','1','91.7%'],
-      ['Al-Memar Tower A','3','12','10','2','83.3%'],
-      ['Al-Memar Tower B','1','10','10','0','100.0%'],
-      ['Al-Memar Tower B','2','10','8','2','80.0%'],
-      ['Al-Memar Tower B','3','10','7','3','70.0%'],
-      ['Commercial Block C','1','8','7','1','87.5%'],
-      ['Commercial Block C','2','8','5','3','62.5%'],
-    ],
-    numCols: [2,3,4,5],
-    barCol: 5,
-    time: '00:00:01',
-    db: 'Logix_ERP_PROD'
-  }
+/* ═══════════════════════ LANGUAGE TOGGLE ═══════════════════════ */
+window._lang='en';
+// [selector, nodeList-index, EN, AR]
+const _T=[
+  // NAV
+  ['.nav-links a[href="#about"]',0,'About','عن'],
+  ['.nav-links a[href="#skills"]',0,'Skills','المهارات'],
+  ['.nav-links a[href="#experience"]',0,'Experience','الخبرة'],
+  ['.nav-links a[href="#projects"]',0,'Projects','المشاريع'],
+  ['.nav-links a[href="#sql-demo"]',0,'SQL','SQL'],
+  ['.nav-links a[href="#powerbi-demo"]',0,'Dashboard','لوحة البيانات'],
+  ['.nav-cta',0,'Hire Me <i class="fas fa-arrow-right"></i>','وظّفني <i class="fas fa-arrow-left"></i>'],
+  // HERO
+  ['.eyebrow span',0,'ERP Consultant &middot; Business Analyst &middot; Riyadh, KSA','استشاري ERP &middot; محلل أعمال &middot; الرياض، المملكة العربية السعودية'],
+  ['.hero-bio',0,'5+ years delivering ERP implementations with zero data loss &mdash; ERPNext, Logix ERP, Power BI &amp; SQL for Saudi Arabia&rsquo;s real estate and investment sector.','أكثر من 5 سنوات في تنفيذ أنظمة ERP بدون فقدان للبيانات &mdash; ERPNext وLogix ERP وPower BI وSQL لقطاع العقارات والاستثمار في المملكة العربية السعودية.'],
+  ['.hero-actions a:first-child',0,'<i class="fas fa-download"></i> Download CV','<i class="fas fa-download"></i> تحميل السيرة الذاتية'],
+  ['.hero-actions a:last-child',0,'<i class="fas fa-paper-plane"></i> Get in Touch','<i class="fas fa-paper-plane"></i> تواصل معي'],
+  ['.stat-l',0,'Years &middot; ERP Consulting','سنوات &middot; استشارات ERP'],
+  ['.stat-l',1,'Records &middot; Zero Data Loss','سجل &middot; بدون فقدان للبيانات'],
+  ['.stat-l',2,'Staff Trained &middot; 6 Depts','موظف مدرّب &middot; 6 أقسام'],
+  ['.avail-text',0,'Available &mdash; 30 Days Notice','متاح &mdash; إشعار 30 يوم'],
+  ['.avail-sub',0,'Riyadh &middot; Open to roles across KSA','الرياض &middot; منفتح على الفرص في المملكة'],
+  // ABOUT
+  ['#about .stag span',0,'About Me','نبذة عني'],
+  ['#about .sec-title',0,'Analyst. Consultant.<br><em>Problem Solver.</em>','محلل. مستشار.<br><em>مُحلّ المشكلات.</em>'],
+  ['.about-body blockquote p',0,'&ldquo;I don&rsquo;t just configure systems &mdash; I redesign the workflows that feed them.&rdquo;','&laquo;لا أكتفي بضبط الأنظمة &mdash; بل أُعيد تصميم العمليات التي تُغذّيها.&raquo;'],
+  ['.about-body > p',0,'I am <strong>Mohammad Faisal Alabrash</strong> &mdash; an ERP Consultant and Business Analyst with <strong>5+ years of hands-on experience</strong> transforming how real estate and investment organizations operate in Saudi Arabia. My work sits at the intersection of technology and business strategy: I translate complex operational needs into precise, scalable ERP configurations that actually get used.','أنا <strong>محمد فيصل الأبرش</strong> &mdash; استشاري ERP ومحلل أعمال بخبرة تزيد على <strong>5 سنوات</strong> في تحويل عمليات شركات العقارات والاستثمار بالمملكة العربية السعودية. يقع عملي عند تقاطع التقنية واستراتيجية الأعمال: أترجم الاحتياجات التشغيلية المعقدة إلى تكوينات ERP دقيقة وقابلة للتوسع تُستخدم فعلياً.'],
+  ['.about-body > p',1,'My expertise covers the <strong>full ERP lifecycle</strong> &mdash; from discovery workshops and Business Requirements Specification (BRS) documentation, through system design, data migration, UAT, go-live, and post-launch optimization. I&rsquo;ve led a complete multi-module <strong>Logix ERP rollout</strong> across 6 departments, migrated over <strong>50,000 legacy records</strong> with 99%+ accuracy, and trained 40+ staff who adopted the system with minimal friction.','تمتد خبرتي على <strong>دورة حياة ERP الكاملة</strong> &mdash; من ورش الاستكشاف وإعداد وثائق متطلبات الأعمال (BRS)، مروراً بتصميم النظام وهجرة البيانات واختبار القبول والإطلاق والتحسين. قدت تنفيذاً شاملاً لـ <strong>Logix ERP</strong> عبر 6 أقسام، وهاجرت أكثر من <strong>50,000 سجل</strong> بدقة 99%+، ودرّبت 40+ موظفاً اعتمدوا النظام بسلاسة.'],
+  ['.about-body > p',2,'Beyond implementation, I build <strong>Power BI dashboards</strong> that surface real-time KPIs for leadership, write production-grade <strong>SQL reports</strong> in SSMS, and automate cross-departmental workflows via Power Automate and SSIS &mdash; reducing manual effort by up to 40%. I hold a <strong>B.Sc. in Information Technology</strong> (First Class Honors, GPA 3.54) from Arab Open University and communicate with equal fluency in Arabic and English.','بالإضافة إلى التنفيذ، أبني <strong>لوحات Power BI</strong> تعرض مؤشرات الأداء في الوقت الفعلي، وأكتب <strong>تقارير SQL</strong> على SSMS، وأؤتمت العمليات عبر Power Automate وSISS &mdash; تقليل الجهد اليدوي بنسبة 40%. أحمل <strong>بكالوريوس تقنية المعلومات</strong> بمرتبة الشرف الأولى (GPA 3.54) من الجامعة العربية المفتوحة.'],
+  // CHIPS
+  ['.chip',0,'<i class="fas fa-cogs"></i> ERPNext &amp; Logix ERP','<i class="fas fa-cogs"></i> ERPNext وLogix ERP'],
+  ['.chip',1,'<i class="fas fa-chart-bar"></i> Power BI Dashboards','<i class="fas fa-chart-bar"></i> لوحات Power BI'],
+  ['.chip',2,'<i class="fas fa-database"></i> SQL &amp; SSMS','<i class="fas fa-database"></i> SQL وSSMS'],
+  ['.chip',3,'<i class="fas fa-bolt"></i> Power Automate','<i class="fas fa-bolt"></i> Power Automate'],
+  ['.chip',4,'<i class="fas fa-project-diagram"></i> SSIS Packages','<i class="fas fa-project-diagram"></i> حزم SSIS'],
+  ['.chip',5,'<i class="fas fa-shield-alt"></i> ERP Security &amp; Access Control','<i class="fas fa-shield-alt"></i> أمان ERP والتحكم بالوصول'],
+  ['.chip',6,'<i class="fas fa-code-branch"></i> Agile / Scrum','<i class="fas fa-code-branch"></i> أجايل / سكرم'],
+  ['.chip',7,'<i class="fas fa-sitemap"></i> CSI Code Categorization','<i class="fas fa-sitemap"></i> تصنيف كود CSI'],
+  // SIDEBAR
+  ['.slbl',0,'Location','الموقع'],
+  ['.sval',0,'Riyadh, Saudi Arabia','الرياض، المملكة العربية السعودية'],
+  ['.slbl',1,'Nationality','الجنسية'],
+  ['.sval',1,'Syrian','سوري'],
+  ['.slbl',2,'Availability','الإتاحة'],
+  ['.sval',2,'30 Days Notice','إشعار 30 يوم'],
+  ['.slbl',3,'Specialization','التخصص'],
+  ['.sval',3,'ERP Consulting &middot; Business Analysis','استشارات ERP &middot; تحليل الأعمال'],
+  ['.slbl',4,'ERP Platforms','أنظمة ERP'],
+  ['.slbl',5,'Tools','الأدوات'],
+  ['.slbl',6,'Education','التعليم'],
+  ['.sval',6,'B.Sc. Information Technology &amp; Computing<br><span style="color:var(--gold);font-size:.8rem">GPA 3.54 &mdash; First Class Honors &middot; 2021</span>','بكالوريوس تقنية المعلومات والحوسبة<br><span style="color:var(--gold);font-size:.8rem">GPA 3.54 &mdash; مرتبة الشرف الأولى &middot; 2021</span>'],
+  ['.slbl',7,'Languages','اللغات'],
+  ['.sval',7,'Arabic (Native) &middot; English (C1 &mdash; Fluent)','العربية (لغة أم) &middot; الإنجليزية (C1 &mdash; طليق)'],
+  ['.slbl',8,'LinkedIn','LinkedIn'],
+  ['.sidebar > div:last-of-type .btn-gold',0,'Download CV <i class="fas fa-download"></i>','تحميل السيرة الذاتية <i class="fas fa-download"></i>'],
+  // SKILLS
+  ['#skills .stag span',0,'Core Technical Skills','المهارات التقنية الأساسية'],
+  ['#skills .sec-title',0,'What I <em>Bring</em>','ما أُقدّمه'],
+  ['#skills .sec-lead',0,'A proven technical stack built over 5+ years of ERP implementation, data engineering, and business process optimization in Saudi Arabia&rsquo;s real estate and investment sector.','مجموعة تقنية متكاملة بُنيت على مدار 5+ سنوات من تنفيذ ERP وهندسة البيانات وتحسين العمليات في قطاع العقارات والاستثمار بالمملكة.'],
+  ['.sk h3',0,'ERP Implementation &amp; Administration','تنفيذ وإدارة ERP'],
+  ['.sk h3',1,'Business Requirements Specification','وثائق متطلبات الأعمال (BRS)'],
+  ['.sk h3',2,'Workflow Automation &amp; Process Optimization','أتمتة العمليات والتحسين التشغيلي'],
+  ['.sk h3',3,'Power BI &amp; KPI Dashboards','Power BI ولوحات مؤشرات الأداء'],
+  ['.sk h3',4,'SQL &amp; Database Reporting','SQL وتقارير قواعد البيانات'],
+  ['.sk h3',5,'Data Migration &amp; Cleansing','هجرة البيانات وتنظيفها'],
+  ['.sk h3',6,'CSI Code Categorization','تصنيف كود CSI'],
+  ['.sk h3',7,'ERP Security &amp; Access Control','أمان ERP والتحكم بالوصول'],
+  ['.sk h3',8,'Agile / Scrum Methodology','منهجية أجايل / سكرم'],
+  ['.sk p',0,'End-to-end implementation, configuration, and optimization of ERPNext and Logix ERP &mdash; aligning modules with Finance, PMO, Projects, Property Management, Procurement, and Contracts.','تنفيذ وتهيئة وتحسين ERPNext وLogix ERP من الألف إلى الياء &mdash; بمحاذاة الوحدات مع المالية ومكتب المشاريع والمشاريع وإدارة العقارات والمشتريات والعقود.'],
+  ['.sk p',1,'Preparing detailed BRS documents for multiple departments &mdash; capturing functional requirements, process flows, and system configuration specifications for ERP deployments.','إعداد وثائق BRS مفصلة لأقسام متعددة &mdash; تشمل المتطلبات الوظيفية ومخططات العمليات ومواصفات تهيئة النظام لعمليات تنفيذ ERP.'],
+  ['.sk p',2,'Creating and automating enterprise business processes via Power Automate and SSIS packages &mdash; improving operational efficiency, accuracy, and approval cycles.','إنشاء وأتمتة العمليات التجارية عبر Power Automate وحزم SSIS &mdash; تحسين الكفاءة التشغيلية والدقة ودورات الاعتماد.'],
+  ['.sk p',3,'Developing Power BI dashboards and KPI reports that surface ERP performance data, track strategic metrics, and support management decision-making in real time.','تطوير لوحات Power BI وتقارير مؤشرات الأداء التي تعرض بيانات أداء ERP وتدعم اتخاذ القرار الإداري في الوقت الفعلي.'],
+  ['.sk p',4,'Extracting, validating, and analyzing data using SQL in SSMS and Report Builder &mdash; building operational reports that improve management insights and ERP performance tracking.','استخراج البيانات والتحقق منها وتحليلها باستخدام SQL في SSMS وReport Builder &mdash; بناء تقارير تشغيلية تحسّن رؤى الإدارة وتتبع أداء ERP.'],
+  ['.sk p',5,'Managing data migration from legacy systems &mdash; extraction, cleansing, validation, and reconciliation to ensure integrity and continuity during ERP transitions.','إدارة هجرة البيانات من الأنظمة القديمة &mdash; الاستخراج والتنظيف والتحقق والمطابقة لضمان النزاهة والاستمرارية خلال انتقالات ERP.'],
+  ['.sk p',6,'Categorizing Finance, PMO, and Project items using CSI codes &mdash; enabling accurate budgeting, forecasting, project cost tracking, and strategic decision-making.','تصنيف بنود المالية ومكتب المشاريع والمشاريع باستخدام رموز CSI &mdash; تمكين الميزانية الدقيقة والتوقعات وتتبع التكاليف واتخاذ القرارات الاستراتيجية.'],
+  ['.sk p',7,'Defining user roles, permissions, and security protocols within ERP systems &mdash; enhancing compliance, data integrity, and organizational governance.','تحديد أدوار المستخدمين والصلاحيات والبروتوكولات الأمنية ضمن أنظمة ERP &mdash; تعزيز الامتثال ونزاهة البيانات والحوكمة التنظيمية.'],
+  ['.sk p',8,'Applying Agile/Scrum practices to plan, review, and deliver ERP solutions iteratively &mdash; ensuring continuous alignment between business needs and technical delivery.','تطبيق ممارسات أجايل/سكرم لتخطيط ومراجعة وتسليم حلول ERP بصورة تكرارية &mdash; ضمان التوافق المستمر بين متطلبات الأعمال والتسليم التقني.'],
+  // EXPERIENCE
+  ['#experience .stag span',0,'Career Timeline','المسيرة المهنية'],
+  ['#experience .sec-title',0,'Professional <em>Experience</em>','الخبرة <em>المهنية</em>'],
+  ['.tl-period',0,'Jan 2021 &mdash; Present &middot; 4+ Years','يناير 2021 &mdash; حتى الآن &middot; 4+ سنوات'],
+  ['.tl-title',0,'ERP Administrator / Business Analyst','مدير ERP / محلل أعمال'],
+  ['.tl-co',0,'Memar Development and Investment &mdash; Riyadh, Saudi Arabia','معمار للتطوير والاستثمار &mdash; الرياض، المملكة العربية السعودية'],
+  ['.tl-period',1,'Concurrent &mdash; ERPNext Implementation','متزامن &mdash; تنفيذ ERPNext'],
+  ['.tl-title',1,'ERPNext Consultant','استشاري ERPNext'],
+  ['.tl-co',1,'Memar Development and Investment &mdash; Riyadh, Saudi Arabia','معمار للتطوير والاستثمار &mdash; الرياض، المملكة العربية السعودية'],
+  ['.tl-period',2,'Education','التعليم'],
+  ['.tl-title',2,'B.Sc. Information Technology &amp; Computing','بكالوريوس تقنية المعلومات والحوسبة'],
+  ['.tl-co',2,'Arab Open University &middot; GPA: 3.54 / 4.0 &mdash; First Class Honors','الجامعة العربية المفتوحة &middot; GPA: 3.54 / 4.0 &mdash; مرتبة الشرف الأولى'],
+  // PROJECTS
+  ['#projects .stag span',0,'Portfolio','المحفظة'],
+  ['#projects .sec-title',0,'Key <em>Deliverables</em>','أبرز <em>الإنجازات</em>'],
+  ['#projects .sec-lead',0,'Selected implementations and analytical deliverables from my role at Memar Development and Investment.','مشاريع تنفيذية ومخرجات تحليلية مختارة من عملي في معمار للتطوير والاستثمار.'],
+  ['.proj-cat',0,'ERP Implementation &middot; Logix ERP &middot; Memar Development','تنفيذ ERP &middot; Logix ERP &middot; معمار للتطوير'],
+  ['.proj-body h3',0,'Full Logix ERP Implementation &mdash; Multi-Module Rollout','تنفيذ Logix ERP الكامل &mdash; إطلاق متعدد الوحدات'],
+  ['.proj-body p',0,'Led complete end-to-end implementation of Logix ERP across Finance, Procurement, Projects, Property Management, and Contracts. BRS documentation, data migration from 3 legacy systems, security configuration, go-live support.','قاد تنفيذ Logix ERP الشامل عبر المالية والمشتريات والمشاريع وإدارة العقارات والعقود. توثيق BRS وهجرة البيانات من 3 أنظمة قديمة وإعداد الأمان ودعم الإطلاق.'],
+  ['.proj-cat',1,'Data Engineering &middot; ERPNext','هندسة البيانات &middot; ERPNext'],
+  ['.proj-body h3',1,'ERPNext Implementation &amp; BRS Documentation','تنفيذ ERPNext وتوثيق BRS'],
+  ['.proj-body p',1,'Full ERPNext deployment with BRS documentation, embedded ERP workflows, and Agile sprint delivery.','نشر ERPNext الكامل مع توثيق BRS وسير عمل ERP المدمجة والتسليم على دورات أجايل.'],
+  ['.proj-cat',2,'Analytics &middot; Power BI &middot; SQL','التحليلات &middot; Power BI &middot; SQL'],
+  ['.proj-body h3',2,'Executive KPI Dashboards &amp; Automated Reporting','لوحات KPI التنفيذية والتقارير الآلية'],
+  ['.proj-body p',2,'Power BI dashboards and SQL reports for management. Automated workflows with Power Automate and SSIS &mdash; reducing manual reporting by 40%.','لوحات Power BI وتقارير SQL للإدارة. أتمت سير العمل بـ Power Automate وSISS &mdash; خفّض التقارير اليدوية بـ 40%.'],
+  // SQL
+  ['#sql-demo .stag span',0,'Live Demo &middot; SQL','عرض حي &middot; SQL'],
+  ['#sql-demo .sec-title',0,'Interactive <em>SQL</em> Playground','بيئة <em>SQL</em> التفاعلية'],
+  ['#sql-demo .sec-lead',0,'Real queries I write against ERP &amp; property management databases. Click any tab to load the query, then hit Run to see results instantly.','استعلامات حقيقية أكتبها على قواعد بيانات ERP وإدارة العقارات. انقر على أي تبويب لتحميل الاستعلام ثم اضغط تشغيل لرؤية النتائج فوراً.'],
+  // POWER BI
+  ['#powerbi-demo .stag span',0,'Live Demo &middot; Power BI Style','عرض حي &middot; أسلوب Power BI'],
+  ['#powerbi-demo .sec-title',0,'Hotel Operations <em>Dashboard</em>','لوحة بيانات <em>العمليات الفندقية</em>'],
+  ['#powerbi-demo .sec-lead',0,'Operational intelligence report for a 3-property hotel group &mdash; built in the style of Power BI dashboards I develop for management. Sample data, fully interactive.','تقرير ذكاء تشغيلي لمجموعة فنادق من 3 عقارات &mdash; مبني على غرار لوحات Power BI التي أطورها للإدارة. بيانات نموذجية، تفاعلية بالكامل.'],
+  ['.pbi-kpi-lbl',0,'Occupancy Rate','معدل الإشغال'],
+  ['.pbi-kpi-lbl',1,'Total Revenue (MTD)','الإيرادات الإجمالية (الشهر الحالي)'],
+  ['.pbi-kpi-lbl',2,'RevPAR','إيراد الغرفة المتاحة'],
+  ['.pbi-kpi-lbl',3,'Guest Satisfaction','رضا النزلاء'],
+  ['.pbi-kpi-lbl',4,'Total Bookings','إجمالي الحجوزات'],
+  ['.pbi-kpi-delta',0,'<i class="fas fa-caret-up"></i> +3.2% vs last month','<i class="fas fa-caret-up"></i> +3.2% مقارنة بالشهر الماضي'],
+  ['.pbi-kpi-delta',1,'<i class="fas fa-caret-up"></i> +12.1% vs prev month','<i class="fas fa-caret-up"></i> +12.1% مقارنة بالشهر السابق'],
+  ['.pbi-kpi-delta',2,'<i class="fas fa-caret-down"></i> -1.8% vs prev month','<i class="fas fa-caret-down"></i> -1.8% مقارنة بالشهر السابق'],
+  ['.pbi-kpi-delta',3,'<i class="fas fa-caret-up"></i> +0.2 vs prev month','<i class="fas fa-caret-up"></i> +0.2 مقارنة بالشهر السابق'],
+  ['.pbi-kpi-delta',4,'<i class="fas fa-caret-up"></i> +8.4% vs prev month','<i class="fas fa-caret-up"></i> +8.4% مقارنة بالشهر السابق'],
+  ['.pbi-filter-lbl',0,'<i class="fas fa-filter"></i> Property:','<i class="fas fa-filter"></i> العقار:'],
+  ['.pbi-filter-lbl',1,'Quarter:','الربع:'],
+  ['.pbi-fbtn',0,'All Properties','جميع العقارات'],
+  ['.pbi-fbtn',1,'Downtown Grand','داون تاون جراند'],
+  ['.pbi-fbtn',2,'Airport Suites','أجنحة المطار'],
+  ['.pbi-fbtn',3,'Red Sea Resort','منتجع البحر الأحمر'],
+  ['.pbi-chart-title',0,'<i class="fas fa-chart-line" style="color:var(--gold)"></i> Monthly Revenue (SAR &rsquo;000)','<i class="fas fa-chart-line" style="color:var(--gold)"></i> الإيرادات الشهرية (ألف ريال سعودي)'],
+  ['.pbi-chart-title',1,'<i class="fas fa-chart-pie" style="color:var(--teal)"></i> Revenue by Room Type','<i class="fas fa-chart-pie" style="color:var(--teal)"></i> الإيرادات حسب نوع الغرفة'],
+  ['.pbi-chart-title',2,'<i class="fas fa-chart-bar" style="color:var(--coral)"></i> Monthly Occupancy %','<i class="fas fa-chart-bar" style="color:var(--coral)"></i> نسبة الإشغال الشهرية'],
+  ['.pbi-chart-title',3,'<i class="fas fa-table" style="color:var(--gold)"></i> Property Performance','<i class="fas fa-table" style="color:var(--gold)"></i> أداء العقارات'],
+  // CONTACT
+  ['#contact .stag span',0,'Contact','التواصل'],
+  ['#contact .sec-title',0,'Let&rsquo;s <em>Connect</em>','لنتواصل'],
+  ['.c-intro p',0,'Whether you&rsquo;re looking for an ERP Consultant to lead an implementation, a Business Analyst for a transformation project, or want to explore collaboration &mdash; I&rsquo;d love to hear from you.','سواء كنت تبحث عن استشاري ERP لقيادة مشروع تنفيذ، أو محلل أعمال لمشروع تحول رقمي، أو ترغب في استكشاف التعاون &mdash; يسعدني التواصل معك.'],
+  ['.clink-lbl',0,'Email','البريد الإلكتروني'],
+  ['.clink-lbl',1,'WhatsApp','واتساب'],
+  ['.clink-lbl',2,'Phone','الهاتف'],
+  ['.clink-lbl',3,'LinkedIn','لينكدإن'],
+  ['.clink-lbl',4,'Curriculum Vitae','السيرة الذاتية'],
+  ['.clink-val',4,'Download PDF &mdash; Mohammad Faisal Alabrash','تحميل PDF &mdash; محمد فيصل الأبرش'],
+  ['label[for="fname"]',0,'Your Name','اسمك'],
+  ['label[for="femail"]',0,'Email Address','البريد الإلكتروني'],
+  ['label[for="fsubj"]',0,'Subject','الموضوع'],
+  ['label[for="fmsg"]',0,'Message','الرسالة'],
+  ['.cform .btn-gold',0,'Send Message <i class="fas fa-paper-plane"></i>','إرسال الرسالة <i class="fas fa-paper-plane"></i>'],
+  // FOOTER
+  ['.fcopy',0,'&copy; <span id="yr"></span> Mohammad Faisal Alabrash. All rights reserved. &middot; Riyadh, Saudi Arabia','&copy; <span id="yr"></span> محمد فيصل الأبرش. جميع الحقوق محفوظة. &middot; الرياض، المملكة العربية السعودية'],
+  ['#mobile-cta a',0,'<i class="fas fa-download"></i> Download CV &mdash; Mohammad Faisal Alabrash','<i class="fas fa-download"></i> تحميل السيرة الذاتية &mdash; محمد فيصل الأبرش'],
 ];
 
-let activeSqlIdx = 0;
+// Experience bullet arrays
+const _j1en=['Led end-to-end implementation of Logix ERP across <strong style="color:var(--text)">6 departments</strong>, delivered on schedule and within scope','Prepared <strong style="color:var(--text)">15+ detailed BRS documents</strong> covering Finance, Procurement, PMO, Projects, and Property Management','Automated enterprise workflows, improving operational efficiency by <strong style="color:var(--gold)">over 30%</strong> and eliminating manual bottlenecks','Migrated <strong style="color:var(--gold)">50,000+ records</strong> from 3 legacy systems with a <strong style="color:var(--gold)">99%+ data accuracy rate</strong>','Configured ERP modules: Finance, Procurement, Projects, Property Management, and Contracts','Defined user roles, permissions, and security protocols &mdash; enhancing compliance and data integrity','Conducted UAT, system testing, and go-live support &mdash; <strong style="color:var(--text)">5 integrated modules launched simultaneously</strong>','Trained <strong style="color:var(--gold)">40+ end-users</strong> across 6 departments &mdash; rapid adoption with minimal post-go-live support requests','Categorized items using CSI Codes for accurate budgeting, forecasting, and project cost tracking'];
+const _j1ar=['قاد التنفيذ الشامل لنظام Logix ERP عبر <strong style="color:var(--text)">6 أقسام</strong>، أُنجز في الوقت المحدد وضمن النطاق','أعدّ أكثر من <strong style="color:var(--text)">15 وثيقة BRS مفصلة</strong> تغطي المالية والمشتريات ومكتب المشاريع والمشاريع وإدارة العقارات','أتمت العمليات التشغيلية مما رفع الكفاءة بنسبة <strong style="color:var(--gold)">تزيد على 30%</strong> وألغى الاختناقات اليدوية','هاجر <strong style="color:var(--gold)">أكثر من 50,000 سجل</strong> من 3 أنظمة قديمة بمعدل دقة <strong style="color:var(--gold)">99%+</strong>','هيّأ وحدات ERP: المالية والمشتريات والمشاريع وإدارة العقارات والعقود','حدّد أدوار المستخدمين والصلاحيات والبروتوكولات الأمنية &mdash; تعزيز الامتثال ونزاهة البيانات','نفّذ UAT واختبار النظام ودعم الإطلاق &mdash; <strong style="color:var(--text)">5 وحدات متكاملة أُطلقت في وقت واحد</strong>','درّب <strong style="color:var(--gold)">أكثر من 40 مستخدماً</strong> في 6 أقسام &mdash; اعتماد سريع مع حد أدنى من طلبات الدعم','صنّف البنود باستخدام رموز CSI لضمان الميزانية الدقيقة والتوقعات وتتبع تكاليف المشاريع'];
+const _j2en=['Supported ERPNext implementation with full BRS documentation for all key processes','Designed and improved business processes embedded into ERP workflows, streamlining approvals','Collaborated with Finance, PMO, and Project teams for forecasting, budgeting, and reporting alignment','Developed SQL-based reports and dashboards to improve management insights','Guided technical teams on ERP customization and system functionality','Applied Agile/Scrum practices for iterative ERP solution delivery','Automated reporting and workflows using Power Automate and SSIS &mdash; reducing manual reporting effort by <strong style="color:var(--gold)">~40%</strong>'];
+const _j2ar=['دعم تنفيذ ERPNext مع توثيق BRS الكامل لجميع العمليات الرئيسية','صمّم وحسّن العمليات التجارية المدمجة في سير عمل ERP وعقلن عمليات الاعتماد','تعاون مع فرق المالية ومكتب المشاريع للتوافق في التوقعات والميزانية والتقارير','طوّر تقارير ولوحات تحكم على SQL لتحسين رؤى الإدارة','وجّه الفرق التقنية في تخصيص ERP ووظائف النظام','طبّق ممارسات أجايل/سكرم للتسليم التكراري لحلول ERP','أتمت التقارير وسير العمل باستخدام Power Automate وSISS &mdash; مما خفّض الجهد بنسبة <strong style="color:var(--gold)">~40%</strong>'];
 
-function sqlHighlight(html) { return html; } // already HTML
+function _applyBullets(sel,enArr,arArr){const li=document.querySelectorAll(sel);li.forEach((el,i)=>{const v=window._lang==='ar'?arArr[i]:enArr[i];if(v)el.innerHTML=v;});}
 
-function sqlRun(idx, btn) {
-  activeSqlIdx = idx;
-  document.querySelectorAll('.sql-tab').forEach((t,i) => t.classList.toggle('active', i === idx));
-  const q = SQL_QUERIES[idx];
-  // Show code
-  document.getElementById('sqlCode').innerHTML = q.code;
-  // Animate results
-  const tbl = document.getElementById('sqlTable');
-  const status = document.getElementById('sqlStatus');
-  const rowCount = document.getElementById('sqlRowCount');
-  tbl.innerHTML = '<div style="padding:1.5rem;text-align:center;color:var(--muted);font-size:.75rem"><i class="fas fa-spinner fa-spin" style="color:var(--gold);margin-right:.5rem"></i>Executing...</div>';
-  rowCount.textContent = '';
-  setTimeout(() => {
-    let html = '<table><thead><tr>';
-    q.headers.forEach(h => { html += `<th>${h}</th>`; });
-    html += '</tr></thead><tbody>';
-    q.rows.forEach(row => {
-      html += '<tr>';
-      row.forEach((cell, ci) => {
-        const isNum = q.numCols.includes(ci);
-        const isBar = ci === q.barCol;
-        let cls = isNum ? ' class="num-cell"' : '';
-        if (isBar) cls = ' class="bar-cell"';
-        const pct = isBar ? Math.min(parseFloat(cell.replace(/[^0-9.]/g,'')) / (parseFloat(q.rows[0][q.barCol].replace(/[^0-9.]/g,'')) || 1) * 100, 100) : 0;
-        html += `<td${cls}>${cell}${isBar ? `<div class="mini-bar" style="width:${pct}%"></div>` : ''}</td>`;
-      });
-      html += '</tr>';
-    });
-    html += '</tbody></table>';
-    tbl.innerHTML = html;
-    rowCount.textContent = `${q.rows.length} rows`;
-    status.innerHTML = `<span>Query executed successfully &bull; ${q.rows.length} row(s) returned</span><span>${q.time} &bull; ${q.db}</span>`;
-  }, 600);
+function toggleLang(){
+  window._lang=window._lang==='en'?'ar':'en';
+  const isAr=window._lang==='ar';
+  const html=document.documentElement;
+  html.setAttribute('lang',window._lang);
+  html.setAttribute('dir',isAr?'rtl':'ltr');
+  const btn=document.getElementById('lang-btn');
+  if(btn)btn.innerHTML=isAr?'<i class="fas fa-globe"></i> EN':'<i class="fas fa-globe"></i> عربي';
+  // Apply all translations
+  _T.forEach(([sel,idx,en,ar])=>{const els=document.querySelectorAll(sel);if(els[idx])els[idx].innerHTML=isAr?ar:en;});
+  // Experience bullets
+  _applyBullets('#exp-grid .tl:first-child .tl-list li',_j1en,_j1ar);
+  _applyBullets('#exp-grid .tl:last-child .tl-item:first-child .tl-list li',_j2en,_j2ar);
+  const eduLi=document.querySelector('#exp-grid .tl:last-child .tl-item:last-child .tl-list li');
+  if(eduLi)eduLi.innerHTML=isAr?'مساقات ذات صلة: تحليل البيانات والإحصاء وإدارة الموارد البشرية وأنظمة المعلومات':'Relevant courses: Data Analytics, Statistics, HR Management, Information Systems';
+  // Form placeholders
+  const fp={fname:[isAr?'أحمد الراشد':'Ahmed Al-Rashid'],femail:['ahmed@company.com'],fsubj:[isAr?'استفسار مشروع ERP / تعاون':'ERP Project Inquiry / Collaboration'],fmsg:[isAr?'أخبرني عن مشروعك...':'Tell me about your project...']};
+  Object.entries(fp).forEach(([id,[ph]])=>{const el=document.getElementById(id);if(el)el.placeholder=ph;});
+  // Re-init footer year
+  const yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();
+  // Re-init Typed.js
+  if(window._typed)window._typed.destroy();
+  window._typed=new Typed('#typed-text',{strings:isAr?['قائد تنفيذ ERP','محلل أعمال','مطوّر Power BI','متخصص SQL والبيانات','خبير أتمتة العمليات']:['ERP Implementation Lead','Business Analyst','Power BI Developer','SQL & Data Specialist','Workflow Automation Expert'],typeSpeed:55,backSpeed:30,backDelay:1800,loop:true,showCursor:true,cursorChar:'|'});
+  // Redraw charts
+  if(window.lci||window.dci||window.oci)renderCharts();
 }
 
-function sqlRunActive() { sqlRun(activeSqlIdx, null); }
-
-// Init SQL on load
-window.addEventListener('DOMContentLoaded', () => {
-  sqlRun(0, null);
+/* ═══════════════════════ INIT ═══════════════════════ */
+window.addEventListener('DOMContentLoaded',()=>{
+  window._typed=new Typed('#typed-text',{strings:['ERP Implementation Lead','Business Analyst','Power BI Developer','SQL & Data Specialist','Workflow Automation Expert'],typeSpeed:55,backSpeed:30,backDelay:1800,loop:true,showCursor:true,cursorChar:'|'});
+  setTimeout(()=>{document.querySelector('.hero-role')?.classList.add('line-revealed');},1200);
+  const yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();
+  sqlRun(0,null);
+  checkGrid();
+  updateNav();
+  const pbiSec=document.getElementById('powerbi-demo');if(pbiSec)pbiObs2.observe(pbiSec);
 });
-
-// ═══════════════════════════════════════════════════════════════════
-// POWER BI HOTEL DASHBOARD
-// ═══════════════════════════════════════════════════════════════════
-const PBI_DATA = {
-  all: {
-    q1: { occ:72.1, rev:'2.21M', revpar:318, sat:4.1, bookings:1042 },
-    q2: { occ:75.8, rev:'2.53M', revpar:362, sat:4.2, bookings:1158 },
-    q3: { occ:78.4, rev:'2.84M', revpar:412, sat:4.3, bookings:1247 },
-    q4: { occ:81.2, rev:'3.12M', revpar:445, sat:4.4, bookings:1380 },
-  },
-  downtown: {
-    q1:{occ:74,rev:'920K',revpar:340,sat:4.2,bookings:420},
-    q2:{occ:78,rev:'1.05M',revpar:385,sat:4.3,bookings:470},
-    q3:{occ:82,rev:'1.18M',revpar:432,sat:4.4,bookings:510},
-    q4:{occ:85,rev:'1.31M',revpar:480,sat:4.5,bookings:560},
-  },
-  airport: {
-    q1:{occ:68,rev:'710K',revpar:288,sat:4.0,bookings:342},
-    q2:{occ:72,rev:'820K',revpar:332,sat:4.1,bookings:388},
-    q3:{occ:75,rev:'940K',revpar:380,sat:4.1,bookings:420},
-    q4:{occ:78,rev:'1.02M',revpar:408,sat:4.2,bookings:456},
-  },
-  resort: {
-    q1:{occ:70,rev:'580K',revpar:310,sat:4.3,bookings:280},
-    q2:{occ:76,rev:'660K',revpar:348,sat:4.4,bookings:300},
-    q3:{occ:79,rev:'720K',revpar:392,sat:4.5,bookings:317},
-    q4:{occ:83,rev:'790K',revpar:425,sat:4.6,bookings:364},
-  }
-};
-
-let pbiPropActive = 'all', pbiQtrActive = 'q3';
-let lineChartInst, donutChartInst, occBarInst;
-
-const MONTHS_ALL = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const REV_DATA = {
-  all:      [1820,1950,2100,2280,2450,2620,2780,2950,3100,3250,3400,3580],
-  downtown: [720, 780, 850, 920, 980,1050,1120,1190,1260,1330,1400,1480],
-  airport:  [620, 660, 720, 780, 840, 900, 960,1020,1080,1140,1200,1260],
-  resort:   [480, 510, 530, 580, 630, 670, 700, 740, 760, 780, 800, 840],
-};
-const OCC_DATA = {
-  all:      [68,70,73,74,76,78,77,79,82,80,82,84],
-  downtown: [71,74,76,78,79,81,80,83,85,84,85,87],
-  airport:  [64,66,69,70,72,74,73,75,78,76,78,80],
-  resort:   [66,68,71,72,74,77,76,78,81,79,80,83],
-};
-const PROP_TABLE = {
-  all: [
-    {name:'Downtown Grand',rooms:200,occ:82,rev:'1,180,000',revpar:432,sat:4.4},
-    {name:'Airport Suites',rooms:150,occ:75,rev:'940,000',revpar:380,sat:4.1},
-    {name:'Red Sea Resort',rooms:120,occ:79,rev:'720,000',revpar:392,sat:4.5},
-  ],
-  downtown: [{name:'Downtown Grand',rooms:200,occ:82,rev:'1,180,000',revpar:432,sat:4.4}],
-  airport:  [{name:'Airport Suites',rooms:150,occ:75,rev:'940,000',revpar:380,sat:4.1}],
-  resort:   [{name:'Red Sea Resort',rooms:120,occ:79,rev:'720,000',revpar:392,sat:4.5}],
-};
-
-function getQtrMonths(q) {
-  return {q1:[0,1,2],q2:[3,4,5],q3:[6,7,8],q4:[9,10,11]}[q];
-}
-
-function renderCharts() {
-  const d = PBI_DATA[pbiPropActive][pbiQtrActive];
-  // Update KPIs
-  document.getElementById('kpi-occ').textContent = d.occ + '%';
-  document.getElementById('kpi-rev').textContent = 'SAR ' + d.rev;
-  document.getElementById('kpi-revpar').textContent = 'SAR ' + d.revpar;
-  document.getElementById('kpi-sat').textContent = d.sat + ' / 5';
-  document.getElementById('kpi-bookings').textContent = d.bookings.toLocaleString();
-
-  const idxs = getQtrMonths(pbiQtrActive);
-  const labels = idxs.map(i => MONTHS_ALL[i]);
-  const revSlice = idxs.map(i => REV_DATA[pbiPropActive][i]);
-  const occSlice = idxs.map(i => OCC_DATA[pbiPropActive][i]);
-
-  const cjsDefaults = {
-    responsive:true,
-    plugins:{legend:{display:false}},
-    scales:{
-      x:{grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#7a7673',font:{size:11}}},
-      y:{grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#7a7673',font:{size:11}}}
-    }
-  };
-
-  // Line chart
-  if (lineChartInst) lineChartInst.destroy();
-  lineChartInst = new Chart(document.getElementById('lineChart'), {
-    type:'line',
-    data:{
-      labels,
-      datasets:[{
-        label:'Revenue (SAR \'000)',
-        data: revSlice,
-        borderColor:'#c9a86c',
-        backgroundColor:'rgba(201,168,108,0.08)',
-        borderWidth:2,
-        pointBackgroundColor:'#c9a86c',
-        pointRadius:5,
-        pointHoverRadius:7,
-        fill:true,
-        tension:0.4
-      }]
-    },
-    options:{...cjsDefaults,
-      plugins:{legend:{display:true,labels:{color:'#a09c97',font:{size:11}}},
-        tooltip:{callbacks:{label:c=>'SAR '+c.parsed.y.toLocaleString()+'K'}}}
-    }
-  });
-
-  // Donut chart
-  if (donutChartInst) donutChartInst.destroy();
-  const roomTypes = ['Deluxe Room','Junior Suite','Executive Suite','Standard Room'];
-  const roomRevs = [38,28,22,12];
-  const roomColors = ['#c9a86c','#6fb5ae','#c97b6b','#8888aa'];
-  donutChartInst = new Chart(document.getElementById('donutChart'), {
-    type:'doughnut',
-    data:{
-      labels:roomTypes,
-      datasets:[{data:roomRevs,backgroundColor:roomColors,borderWidth:2,borderColor:'#17171e',hoverOffset:6}]
-    },
-    options:{responsive:true,cutout:'65%',
-      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+'%'}}}
-    }
-  });
-  // Legend
-  const leg = document.getElementById('donutLegend');
-  leg.innerHTML = roomTypes.map((t,i)=>`<div class="pbi-legend-item"><span class="pbi-legend-dot" style="background:${roomColors[i]}"></span>${t} &mdash; ${roomRevs[i]}%</div>`).join('');
-
-  // Occupancy bar
-  if (occBarInst) occBarInst.destroy();
-  occBarInst = new Chart(document.getElementById('occBar'), {
-    type:'bar',
-    data:{
-      labels,
-      datasets:[{
-        label:'Occupancy %',
-        data:occSlice,
-        backgroundColor:occSlice.map(v=>v>=80?'rgba(74,222,128,0.7)':v>=70?'rgba(201,168,108,0.7)':'rgba(201,123,107,0.7)'),
-        borderRadius:3,
-        borderSkipped:false
-      }]
-    },
-    options:{...cjsDefaults,
-      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y+'%'}}},
-      scales:{...cjsDefaults.scales,y:{...cjsDefaults.scales.y,min:50,max:100,ticks:{color:'#7a7673',callback:v=>v+'%'}}}
-    }
-  });
-
-  // Property table
-  const props = PROP_TABLE[pbiPropActive];
-  const tbody = document.getElementById('propTableBody');
-  const spark = [65,70,75,72,78,80,79,82].slice(0,6);
-  tbody.innerHTML = props.map(p=>{
-    const occCls = p.occ >= 80 ? 'occ-high' : p.occ >= 70 ? 'occ-mid' : 'occ-low';
-    const sparkHtml = spark.map(v=>`<div class="spark-bar" style="height:${(v/100)*18}px"></div>`).join('');
-    return `<tr>
-      <td><strong>${p.name}</strong></td>
-      <td>${p.rooms}</td>
-      <td><span class="occ-pill ${occCls}">${p.occ}%</span></td>
-      <td>SAR ${p.rev}</td>
-      <td>SAR ${p.revpar}</td>
-      <td>${p.sat} &#9733;</td>
-      <td><div class="pbi-sparkline">${sparkHtml}</div></td>
-    </tr>`;
-  }).join('');
-}
-
-function pbiProp(key, btn) {
-  pbiPropActive = key;
-  document.querySelectorAll('.pbi-filters .pbi-fbtn').forEach((b,i)=>{
-    if(i < 4) b.classList.toggle('active', b === btn);
-  });
-  renderCharts();
-}
-
-function pbiQuarter(key, btn) {
-  pbiQtrActive = key;
-  document.querySelectorAll('.pbi-filters .pbi-fbtn').forEach((b,i)=>{
-    if(i >= 5) b.classList.toggle('active', b === btn);
-  });
-  renderCharts();
-}
-
-// Init dashboard when section enters viewport
-const pbiObs = new IntersectionObserver(entries => entries.forEach(e => {
-  if (e.isIntersecting) { renderCharts(); pbiObs.disconnect(); }
-}), {threshold: 0.15});
-window.addEventListener('DOMContentLoaded', () => {
-  const pbiSection = document.getElementById('powerbi-demo');
-  if (pbiSection) pbiObs.observe(pbiSection);
-});
-
 </script>
 </body>
 </html>
