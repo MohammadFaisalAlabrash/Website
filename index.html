@@ -287,6 +287,38 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
 [dir="rtl"] .sk-icon{margin-right:0;margin-left:1rem}
 @media(max-width:600px){[dir="rtl"] .nav-links{direction:rtl}}
 
+/* Blog / Thought Leadership */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.blog-card{background:var(--bg2);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s,transform .3s var(--ease)}
+.blog-card.featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.blog-card:hover{border-color:var(--gold-border);transform:translateY(-4px);box-shadow:0 18px 40px -12px rgba(0,0,0,.5)}
+.blog-banner{background:var(--bg3);padding:2.5rem 2rem;display:flex;align-items:flex-start;justify-content:space-between;min-height:150px;position:relative;overflow:hidden}
+.blog-card.featured .blog-banner{min-height:100%;padding:3rem 2.5rem;flex-direction:column;justify-content:flex-end}
+.blog-banner-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:6rem;opacity:.05;color:var(--gold);pointer-events:none}
+.blog-cat{display:inline-flex;align-items:center;gap:.4rem;padding:.28rem .75rem;border:1px solid var(--gold-border);border-radius:2px;background:var(--gold-dim);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.blog-cat.c2{border-color:rgba(111,181,174,.22);background:var(--teal-dim);color:var(--teal)}
+.blog-cat.c3{border-color:rgba(201,123,107,.2);background:rgba(201,123,107,.08);color:var(--coral)}
+.blog-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+.blog-meta{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.75rem}
+.blog-meta-item{font-size:.65rem;color:var(--muted);display:flex;align-items:center;gap:.3rem}
+.blog-dot{width:3px;height:3px;border-radius:50%;background:var(--muted);flex-shrink:0}
+.blog-card h3{font-family:var(--serif);font-size:1.22rem;font-weight:400;line-height:1.3;margin-bottom:.7rem;color:var(--text);transition:color .25s}
+.blog-card:hover h3{color:var(--gold)}
+.blog-card.featured h3{font-size:1.55rem}
+.blog-excerpt{font-size:.81rem;color:rgba(237,233,225,.6);line-height:1.85;margin-bottom:1.1rem;flex:1}
+.blog-read{display:inline-flex;align-items:center;gap:.45rem;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-top:auto;width:fit-content;transition:gap .25s,color .25s}
+.blog-read i{transition:transform .25s}
+.blog-read:hover{gap:.8rem;color:var(--gold)}
+.blog-read:hover i{transform:translateX(3px)}
+[dir="rtl"] .blog-read:hover i{transform:translateX(-3px)}
+[dir="rtl"] .blog-card.featured{grid-template-columns:1fr 1fr}
+[dir="rtl"] .blog-grid{direction:rtl}
+[dir="rtl"] .blog-body{text-align:right}
+[dir="rtl"] .blog-meta{direction:rtl}
+[dir="rtl"] .blog-cat{direction:rtl}
+@media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr}.blog-card.featured{grid-column:1/-1;grid-template-columns:1fr}}
+@media(max-width:600px){.blog-grid{grid-template-columns:1fr}}
+
 /* SQL */
 .sql-shell{background:var(--bg3);border:1px solid var(--line2);border-radius:8px;overflow:hidden;font-family:'Courier New',monospace}
 .sql-tabs{display:flex;border-bottom:1px solid var(--line2);background:var(--bg);overflow-x:auto}
@@ -370,6 +402,7 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
     <a href="#projects">Projects</a>
     <a href="#sql-demo">SQL</a>
     <a href="#powerbi-demo">Dashboard</a>
+    <a href="#blog">Blog</a>
     <div class="nav-sep"></div>
     <a href="#contact" class="nav-cta">Hire Me <i class="fas fa-arrow-right"></i></a>
   </div>
@@ -646,6 +679,94 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
 </div>
 </div>
 
+<div class="section-full" id="blog" style="background:var(--bg)">
+<div class="section-inner">
+  <div class="stag reveal"><span>Thought Leadership</span></div>
+  <h2 class="sec-title reveal d1">Insights &amp; <em>Articles</em></h2>
+  <p class="sec-lead reveal d2">Perspectives on ERP implementation, data strategy, and digital transformation &mdash; drawn from 5+ years of hands-on experience in Saudi Arabia&rsquo;s real estate and investment sector.</p>
+  <div class="blog-grid">
+
+    <div class="blog-card featured reveal">
+      <div class="blog-banner" style="background:linear-gradient(135deg,var(--bg4) 0%,var(--bg3) 100%)">
+        <div class="blog-banner-bg"><i class="fas fa-exchange-alt"></i></div>
+        <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:1.2rem;height:100%;justify-content:flex-end">
+          <div class="blog-cat">ERP Platforms</div>
+          <div style="font-family:var(--serif);font-size:3.5rem;font-weight:300;line-height:1;color:var(--gold);opacity:.18;user-select:none">ERPNext<br>vs.<br>Logix</div>
+        </div>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-meta-item"><i class="fas fa-calendar-alt"></i> Sep 2023</span>
+          <span class="blog-dot"></span>
+          <span class="blog-meta-item"><i class="fas fa-clock"></i> 8 min read</span>
+          <span class="blog-dot"></span>
+          <span class="blog-meta-item"><i class="fas fa-user"></i> Mohammad Faisal Alabrash</span>
+        </div>
+        <h3>ERPNext vs. Logix ERP: A Practitioner&rsquo;s Honest Comparison</h3>
+        <p class="blog-excerpt">Having implemented both ERPNext and Logix ERP for real estate and investment firms in Saudi Arabia, I offer a candid comparison &mdash; capabilities, customization depth, data migration complexity, and total cost of ownership. Neither system wins in every category, and the right choice depends on your organization&rsquo;s size, budget, and tolerance for technical debt.</p>
+        <div class="blog-tags"><span class="tag">ERPNext</span><span class="tag">Logix ERP</span><span class="tag t2">System Selection</span><span class="tag t2">Saudi Arabia</span></div>
+        <a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer" class="blog-read">Read on LinkedIn <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card reveal">
+      <div class="blog-banner">
+        <div class="blog-banner-bg"><i class="fas fa-project-diagram"></i></div>
+        <div class="blog-cat c3"><i class="fas fa-exclamation-triangle"></i> ERP Strategy</div>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-meta-item"><i class="fas fa-calendar-alt"></i> Mar 2024</span>
+          <span class="blog-dot"></span>
+          <span class="blog-meta-item"><i class="fas fa-clock"></i> 5 min read</span>
+        </div>
+        <h3>Why 60% of ERP Implementations Fail &mdash; And How to Avoid It</h3>
+        <p class="blog-excerpt">Most ERP failures aren&rsquo;t technical &mdash; they&rsquo;re process failures. After leading multiple go-lives, I&rsquo;ve identified three root causes that derail projects and the BRS practices that prevent them.</p>
+        <div class="blog-tags"><span class="tag">ERP</span><span class="tag t2">BRS</span><span class="tag t2">Go-Live</span></div>
+        <a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer" class="blog-read">Read on LinkedIn <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card reveal d1">
+      <div class="blog-banner">
+        <div class="blog-banner-bg"><i class="fas fa-database"></i></div>
+        <div class="blog-cat c2"><i class="fas fa-database"></i> Data Engineering</div>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-meta-item"><i class="fas fa-calendar-alt"></i> Jan 2024</span>
+          <span class="blog-dot"></span>
+          <span class="blog-meta-item"><i class="fas fa-clock"></i> 7 min read</span>
+        </div>
+        <h3>From 50,000 Legacy Records to Clean ERP Data: A Migration Playbook</h3>
+        <p class="blog-excerpt">Data migration is the highest-risk phase of any ERP project. Here&rsquo;s the validation framework I used to achieve 99%+ accuracy across three legacy systems &mdash; without a single rollback.</p>
+        <div class="blog-tags"><span class="tag">Data Migration</span><span class="tag t2">SQL</span><span class="tag t2">SSIS</span></div>
+        <a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer" class="blog-read">Read on LinkedIn <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="blog-card reveal d2">
+      <div class="blog-banner">
+        <div class="blog-banner-bg"><i class="fas fa-chart-line"></i></div>
+        <div class="blog-cat"><i class="fas fa-chart-bar"></i> Business Intelligence</div>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-meta-item"><i class="fas fa-calendar-alt"></i> Nov 2023</span>
+          <span class="blog-dot"></span>
+          <span class="blog-meta-item"><i class="fas fa-clock"></i> 4 min read</span>
+        </div>
+        <h3>Building Power BI Dashboards That Management Actually Uses</h3>
+        <p class="blog-excerpt">A dashboard is only valuable if leadership opens it daily. I share the KPI selection methodology and design principles refined over five years building management reports for real estate executives.</p>
+        <div class="blog-tags"><span class="tag">Power BI</span><span class="tag t2">KPI</span><span class="tag t2">DAX</span></div>
+        <a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer" class="blog-read">Read on LinkedIn <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
 <div class="section-full" id="contact" style="background:var(--bg2)">
 <div class="section-inner">
   <div class="stag reveal"><span>Contact</span></div>
@@ -715,7 +836,7 @@ document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',
 
 /* Active nav */
 function updateNav(){
-  const ids=['about','skills','experience','projects','sql-demo','powerbi-demo','contact'];
+  const ids=['about','skills','experience','projects','sql-demo','powerbi-demo','blog','contact'];
   let cur2='';
   ids.forEach(id=>{const el=document.getElementById(id);if(el&&window.pageYOffset>=el.offsetTop-200)cur2=id;});
   document.querySelectorAll('.nav-links a:not(.nav-cta)').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur2));
@@ -977,6 +1098,23 @@ const _T=[
   ['.pbi-chart-title',1,'<i class="fas fa-chart-pie" style="color:var(--teal)"></i> Revenue by Room Type','<i class="fas fa-chart-pie" style="color:var(--teal)"></i> الإيرادات حسب نوع الغرفة'],
   ['.pbi-chart-title',2,'<i class="fas fa-chart-bar" style="color:var(--coral)"></i> Monthly Occupancy %','<i class="fas fa-chart-bar" style="color:var(--coral)"></i> نسبة الإشغال الشهرية'],
   ['.pbi-chart-title',3,'<i class="fas fa-table" style="color:var(--gold)"></i> Property Performance','<i class="fas fa-table" style="color:var(--gold)"></i> أداء العقارات'],
+  // BLOG
+  ['.nav-links a[href="#blog"]',0,'Blog','المقالات'],
+  ['#blog .stag span',0,'Thought Leadership','قيادة فكرية'],
+  ['#blog .sec-title',0,'Insights &amp; <em>Articles</em>','رؤى <em>ومقالات</em>'],
+  ['#blog .sec-lead',0,'Perspectives on ERP implementation, data strategy, and digital transformation &mdash; drawn from 5+ years of hands-on experience in Saudi Arabia&rsquo;s real estate and investment sector.','وجهات نظر حول تنفيذ ERP واستراتيجية البيانات والتحول الرقمي &mdash; مستقاة من أكثر من 5 سنوات من الخبرة الميدانية في قطاع العقارات والاستثمار بالمملكة العربية السعودية.'],
+  ['.blog-card.featured h3',0,'ERPNext vs. Logix ERP: A Practitioner&rsquo;s Honest Comparison','ERPNext مقابل Logix ERP: مقارنة صريحة من ممارس'],
+  ['.blog-card.featured .blog-excerpt',0,'Having implemented both ERPNext and Logix ERP for real estate and investment firms in Saudi Arabia, I offer a candid comparison &mdash; capabilities, customization depth, data migration complexity, and total cost of ownership. Neither system wins in every category, and the right choice depends on your organization&rsquo;s size, budget, and tolerance for technical debt.','بعد تنفيذ كلا النظامين ERPNext وLogix ERP لشركات العقارات والاستثمار في المملكة العربية السعودية، أقدم مقارنة صريحة &mdash; القدرات وعمق التخصيص وتعقيد هجرة البيانات والتكلفة الإجمالية. لا يتفوق أي نظام في كل الفئات، والاختيار الصحيح يعتمد على حجم مؤسستك وميزانيتها.'],
+  ['.blog-card:not(.featured) h3',0,'Why 60% of ERP Implementations Fail &mdash; And How to Avoid It','لماذا تفشل 60% من مشاريع ERP &mdash; وكيف تتجنب ذلك'],
+  ['.blog-card:not(.featured) .blog-excerpt',0,'Most ERP failures aren&rsquo;t technical &mdash; they&rsquo;re process failures. After leading multiple go-lives, I&rsquo;ve identified three root causes that derail projects and the BRS practices that prevent them.','معظم إخفاقات ERP ليست تقنية &mdash; بل هي إخفاقات في العمليات. بعد قيادة عمليات إطلاق متعددة، رصدت ثلاثة أسباب جذرية تعطّل المشاريع وممارسات BRS التي تمنعها.'],
+  ['.blog-card:not(.featured) h3',1,'From 50,000 Legacy Records to Clean ERP Data: A Migration Playbook','من 50,000 سجل قديم إلى بيانات ERP نظيفة: دليل الهجرة'],
+  ['.blog-card:not(.featured) .blog-excerpt',1,'Data migration is the highest-risk phase of any ERP project. Here&rsquo;s the validation framework I used to achieve 99%+ accuracy across three legacy systems &mdash; without a single rollback.','هجرة البيانات هي المرحلة الأعلى خطراً في أي مشروع ERP. إليك إطار التحقق الذي استخدمته لتحقيق دقة 99%+ عبر ثلاثة أنظمة قديمة &mdash; بدون أي تراجع.'],
+  ['.blog-card:not(.featured) h3',2,'Building Power BI Dashboards That Management Actually Uses','بناء لوحات Power BI التي تستخدمها الإدارة فعلاً'],
+  ['.blog-card:not(.featured) .blog-excerpt',2,'A dashboard is only valuable if leadership opens it daily. I share the KPI selection methodology and design principles refined over five years building management reports for real estate executives.','لوحة البيانات ذات قيمة فقط إذا فتحتها القيادة يومياً. أشارك منهجية اختيار مؤشرات الأداء ومبادئ التصميم التي صقّلتها على مدار خمس سنوات.'],
+  ['.blog-read',0,'Read on LinkedIn <i class="fas fa-arrow-right"></i>','اقرأ على LinkedIn <i class="fas fa-arrow-left"></i>'],
+  ['.blog-read',1,'Read on LinkedIn <i class="fas fa-arrow-right"></i>','اقرأ على LinkedIn <i class="fas fa-arrow-left"></i>'],
+  ['.blog-read',2,'Read on LinkedIn <i class="fas fa-arrow-right"></i>','اقرأ على LinkedIn <i class="fas fa-arrow-left"></i>'],
+  ['.blog-read',3,'Read on LinkedIn <i class="fas fa-arrow-right"></i>','اقرأ على LinkedIn <i class="fas fa-arrow-left"></i>'],
   // CONTACT
   ['#contact .stag span',0,'Contact','التواصل'],
   ['#contact .sec-title',0,'Let&rsquo;s <em>Connect</em>','لنتواصل'],
