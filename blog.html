@@ -185,7 +185,26 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
   .modal-close{right:.8rem;top:.8rem}
   [dir="rtl"] .modal-close{left:.8rem;right:auto}
 }
+
+/* ─── THEME TOGGLE BUTTON ─── */
+.theme-toggle{width:32px;height:32px;border-radius:50%;border:1px solid var(--line2);background:transparent;color:var(--muted2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.78rem;transition:all .25s;flex-shrink:0;font-family:inherit}
+.theme-toggle:hover{border-color:var(--gold-border);color:var(--gold);background:var(--gold-dim)}
+
+/* ─── LIGHT MODE ─── */
+html[data-theme="light"]{
+  --bg:#f5f3ef;--bg2:#eceae4;--bg3:#e2dfd7;--bg4:#d4d0c7;
+  --line:rgba(0,0,0,0.08);--line2:rgba(0,0,0,0.15);--line3:rgba(0,0,0,0.25);
+  --text:#1a1917;--muted:#6b6762;--muted2:#4a4744;
+  --gold:#9a6f2e;--gold2:#7d5920;--gold-dim:rgba(154,111,46,0.1);--gold-border:rgba(154,111,46,0.22);
+  --teal:#2e7d77;--teal-dim:rgba(46,125,119,0.1);
+  --coral:#9c4433;
+}
+html[data-theme="light"] nav.scrolled{background:rgba(245,243,239,.96);box-shadow:0 4px 24px rgba(0,0,0,.08)}
+html[data-theme="light"] .filter-bar{background:rgba(245,243,239,.96)}
+html[data-theme="light"] .modal-overlay{background:rgba(180,176,168,.88)}
+html[data-theme="light"] #cur-r{border-color:rgba(154,111,46,.35)}
 </style>
+<script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||'dark')</script>
 </head>
 <body>
 
@@ -199,6 +218,7 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
   </a>
   <div class="nav-right">
     <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i> <span id="back-txt">Back to Portfolio</span></a>
+    <button class="theme-toggle" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle light/dark mode"><i class="fas fa-sun"></i></button>
     <button class="lang-toggle" id="lang-btn" onclick="toggleLang()"><i class="fas fa-globe"></i> عربي</button>
   </div>
 </nav>
@@ -744,6 +764,23 @@ function handleOverlayClick(e) {
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && _openSlug) closeModal(); });
 
 /* ─────────────────────────────────────────────────────── */
+/*  THEME                                                   */
+/* ─────────────────────────────────────────────────────── */
+function initTheme() {
+  updateThemeBtn(document.documentElement.getAttribute('data-theme') || 'dark');
+}
+function toggleTheme() {
+  const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  updateThemeBtn(next);
+}
+function updateThemeBtn(theme) {
+  const btn = document.getElementById('theme-btn');
+  if (btn) btn.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+}
+
+/* ─────────────────────────────────────────────────────── */
 /*  CURSOR                                                  */
 /* ─────────────────────────────────────────────────────── */
 const cur = document.getElementById('cur'), curR = document.getElementById('cur-r');
@@ -766,6 +803,7 @@ document.querySelectorAll('a,button,.post-card').forEach(el => {
 window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', scrollY > 40));
 
 window.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   // Show date of most recent post as "last updated"
   const latest = POSTS[0];
   if (latest) {

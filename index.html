@@ -382,7 +382,19 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
 .pbi-footer{margin-top:1.2rem;font-size:.68rem;color:var(--muted);text-align:center;padding:.8rem;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:.5rem}
 @media(max-width:900px){.pbi-kpis{grid-template-columns:repeat(3,1fr)}.pbi-charts-row{grid-template-columns:1fr}}
 @media(max-width:560px){.pbi-kpis{grid-template-columns:1fr 1fr}}
+/* ─── THEME TOGGLE BUTTON ─── */
+.theme-toggle{width:32px;height:32px;border-radius:50%;border:1px solid var(--line2);background:transparent;color:var(--muted2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.78rem;transition:all .25s;flex-shrink:0;font-family:inherit}
+.theme-toggle:hover{border-color:var(--gold-border);color:var(--gold);background:var(--gold-dim)}
+/* ─── LIGHT MODE ─── */
+html[data-theme="light"]{--bg:#f5f3ef;--bg2:#eceae4;--bg3:#e2dfd7;--bg4:#d4d0c7;--line:rgba(0,0,0,0.08);--line2:rgba(0,0,0,0.15);--line3:rgba(0,0,0,0.25);--text:#1a1917;--muted:#6b6762;--muted2:#4a4744;--gold:#9a6f2e;--gold2:#7d5920;--gold-dim:rgba(154,111,46,0.1);--gold-border:rgba(154,111,46,0.22);--teal:#2e7d77;--teal-dim:rgba(46,125,119,0.1);--coral:#9c4433}
+html[data-theme="light"] nav.scrolled{background:rgba(245,243,239,.96);box-shadow:0 4px 24px rgba(0,0,0,.08)}
+html[data-theme="light"] .mob-nav{background:rgba(245,243,239,.97)}
+html[data-theme="light"] #cur-r{border-color:rgba(154,111,46,.35)}
+html[data-theme="light"] .hero::before{background:linear-gradient(to bottom,transparent 60%,var(--bg) 100%)}
+html[data-theme="light"] .section-full{background:var(--bg) !important}
+html[data-theme="light"] .section-full[style*="background:var(--bg2)"]{background:var(--bg2) !important}
 </style>
+<script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||'dark')</script>
 </head>
 <body>
 
@@ -406,6 +418,7 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
     <div class="nav-sep"></div>
     <a href="#contact" class="nav-cta">Hire Me <i class="fas fa-arrow-right"></i></a>
   </div>
+  <button class="theme-toggle" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle light/dark mode"><i class="fas fa-sun"></i></button>
   <button class="lang-toggle" id="lang-btn" onclick="toggleLang()" aria-label="Switch language"><i class="fas fa-globe"></i> عربي</button>
   <div class="burger" id="burger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -829,6 +842,11 @@ window.addEventListener('scroll',()=>{
   if(toTopBtn) toTopBtn.classList.toggle('visible',scrollY>400);
 });
 
+/* Theme */
+function initTheme(){updateThemeBtn(document.documentElement.getAttribute('data-theme')||'dark');}
+function toggleTheme(){const next=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('theme',next);updateThemeBtn(next);}
+function updateThemeBtn(theme){const btn=document.getElementById('theme-btn');if(btn)btn.innerHTML=theme==='dark'?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>';}
+
 /* Mobile menu */
 function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('navLinks').classList.toggle('open');}
 document.addEventListener('click',e=>{
@@ -1175,6 +1193,7 @@ function toggleLang(){
 
 /* ═══════════════════════ INIT ═══════════════════════ */
 window.addEventListener('DOMContentLoaded',()=>{
+  initTheme();
   window._typed=new Typed('#typed-text',{strings:['ERP Implementation Lead','Business Analyst','Power BI Developer','SQL & Data Specialist','Workflow Automation Expert'],typeSpeed:55,backSpeed:30,backDelay:1800,loop:true,showCursor:true,cursorChar:'|'});
   setTimeout(()=>{document.querySelector('.hero-role')?.classList.add('line-revealed');},1200);
   const yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();
