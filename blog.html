@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog &amp; Insights | Mohammad Faisal Alabrash &mdash; ERP Consultant Riyadh</title>
+<meta name="description" content="Weekly insights on ERP implementation, data migration, Power BI, and digital transformation by Mohammad Faisal Alabrash &mdash; ERP Consultant in Riyadh, Saudi Arabia.">
+<link rel="canonical" href="https://mohammadfaisalalabrash.github.io/Website/blog.html" />
+<link rel="icon" type="image/jpeg" href="PIC.jpeg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#09090c;--bg2:#111116;--bg3:#17171e;--bg4:#1e1e27;
+  --line:rgba(255,255,255,0.07);--line2:rgba(255,255,255,0.13);--line3:rgba(255,255,255,0.2);
+  --text:#ede9e1;--muted:#7a7673;--muted2:#a09c97;
+  --gold:#c9a86c;--gold2:#e8c98a;--gold-dim:rgba(201,168,108,0.12);--gold-border:rgba(201,168,108,0.22);
+  --teal:#6fb5ae;--teal-dim:rgba(111,181,174,0.1);
+  --coral:#c97b6b;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Outfit',system-ui,sans-serif;
+  --nav-h:66px;--max:1120px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;cursor:none}
+a{color:inherit;text-decoration:none}
+@media(hover:none){body{cursor:auto}#cur,#cur-r{display:none}}
+#cur{position:fixed;top:0;left:0;z-index:9999;width:9px;height:9px;border-radius:50%;background:var(--gold);pointer-events:none;transform:translate(-50%,-50%);transition:width .25s,height .25s,opacity .3s}
+#cur-r{position:fixed;top:0;left:0;z-index:9998;width:34px;height:34px;border-radius:50%;border:1px solid rgba(201,168,108,0.35);pointer-events:none;transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:800;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.2rem,4vw,3.5rem);transition:background .5s,border-color .5s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(9,9,12,.92);border-color:var(--line2);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);box-shadow:0 8px 32px rgba(0,0,0,.35)}
+.nav-logo{font-family:var(--serif);font-size:1.28rem;font-weight:400;letter-spacing:.03em;display:flex;align-items:center;gap:.7rem;flex-shrink:0}
+.nav-logo-mark{width:30px;height:30px;border-radius:50%;border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;background:var(--gold-dim);font-family:var(--serif);font-size:.85rem;color:var(--gold);flex-shrink:0;transition:background .3s}
+.nav-logo:hover .nav-logo-mark{background:var(--gold);color:var(--bg)}
+.nav-logo b{color:var(--gold);font-weight:600}
+.nav-right{display:flex;align-items:center;gap:1.2rem}
+.nav-back{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .25s;display:flex;align-items:center;gap:.4rem}
+.nav-back:hover{color:var(--gold)}
+.nav-back i{font-size:.65rem;transition:transform .25s}
+.nav-back:hover i{transform:translateX(-3px)}
+.lang-toggle{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:.38rem .8rem;border:1px solid var(--line2);border-radius:2px;background:transparent;color:var(--muted2);cursor:pointer;transition:all .25s;white-space:nowrap;font-family:var(--sans);display:inline-flex;align-items:center;gap:.4rem;flex-shrink:0}
+.lang-toggle:hover{border-color:var(--gold-border);color:var(--gold)}
+
+/* BLOG HERO */
+.blog-hero{padding:calc(var(--nav-h) + 4rem) clamp(1.2rem,4vw,3.5rem) 3rem;max-width:var(--max);margin:0 auto;display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.hero-eyebrow{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+.hero-eyebrow::before{content:'';width:36px;height:1px;background:var(--gold)}
+.hero-eyebrow span{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.blog-hero h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,4rem);font-weight:300;line-height:1.1;margin-bottom:.8rem}
+.blog-hero h1 em{font-style:italic;color:var(--gold)}
+.blog-hero p{font-size:.95rem;color:rgba(237,233,225,.62);max-width:500px;line-height:1.9}
+.blog-hero-stats{display:flex;gap:2.5rem;flex-shrink:0}
+.bstat{text-align:center}
+.bstat-n{font-family:var(--serif);font-size:2.2rem;font-weight:300;color:var(--gold);display:block;line-height:1}
+.bstat-l{font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.3rem;display:block}
+
+/* FILTER BAR */
+.filter-bar{position:sticky;top:var(--nav-h);z-index:700;background:rgba(9,9,12,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:.75rem clamp(1.2rem,4vw,3.5rem);display:flex;align-items:center;gap:.55rem;overflow-x:auto;scrollbar-width:none}
+.filter-bar::-webkit-scrollbar{display:none}
+.filter-lbl{font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap;flex-shrink:0;margin-right:.4rem}
+.fpill{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;padding:.3rem .85rem;border:1px solid var(--line2);border-radius:20px;background:transparent;color:var(--muted);cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0;font-family:var(--sans)}
+.fpill:hover{border-color:var(--line3);color:var(--text)}
+.fpill.active{background:var(--gold-dim);border-color:var(--gold-border);color:var(--gold)}
+.filter-count{font-size:.63rem;color:var(--muted);margin-left:auto;flex-shrink:0;white-space:nowrap}
+
+/* UPDATE BADGE */
+.update-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .8rem;background:var(--teal-dim);border:1px solid rgba(111,181,174,.22);border-radius:20px;color:var(--teal);margin-left:.8rem;flex-shrink:0}
+.update-badge i{font-size:.55rem}
+
+/* POSTS CONTAINER */
+.posts-wrap{max-width:var(--max);margin:0 auto;padding:3rem clamp(1.2rem,4vw,3.5rem) 5rem}
+.posts-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.no-results{grid-column:1/-1;text-align:center;padding:4rem 0;color:var(--muted)}
+.no-results i{font-size:2.5rem;color:var(--line2);margin-bottom:1rem;display:block}
+
+/* POST CARD */
+.post-card{background:var(--bg2);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:border-color .3s,transform .3s var(--ease),box-shadow .3s}
+.post-card.featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.1fr}
+.post-card:hover{border-color:var(--gold-border);transform:translateY(-4px);box-shadow:0 20px 45px -12px rgba(0,0,0,.55)}
+.post-banner{background:var(--bg3);padding:2.5rem 2rem;display:flex;flex-direction:column;justify-content:flex-end;gap:1rem;min-height:180px;position:relative;overflow:hidden}
+.post-card.featured .post-banner{min-height:100%;padding:3rem 2.5rem}
+.post-banner-icon{position:absolute;bottom:-10px;right:-10px;font-size:7rem;opacity:.07;color:var(--gold);pointer-events:none;line-height:1}
+.post-cat{display:inline-flex;align-items:center;gap:.4rem;padding:.26rem .72rem;border-radius:2px;font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;width:fit-content}
+.post-cat.gold{background:var(--gold-dim);border:1px solid var(--gold-border);color:var(--gold)}
+.post-cat.teal{background:var(--teal-dim);border:1px solid rgba(111,181,174,.22);color:var(--teal)}
+.post-cat.coral{background:rgba(201,123,107,.1);border:1px solid rgba(201,123,107,.22);color:var(--coral)}
+.post-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+.post-meta{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.7rem}
+.pmeta{font-size:.63rem;color:var(--muted);display:flex;align-items:center;gap:.28rem}
+.meta-dot{width:3px;height:3px;border-radius:50%;background:var(--muted);flex-shrink:0}
+.post-card h2{font-family:var(--serif);font-size:1.25rem;font-weight:400;line-height:1.3;margin-bottom:.6rem;color:var(--text);transition:color .25s}
+.post-card.featured h2{font-size:1.6rem}
+.post-card:hover h2{color:var(--gold)}
+.post-excerpt{font-size:.82rem;color:rgba(237,233,225,.58);line-height:1.85;margin-bottom:1rem;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.post-card.featured .post-excerpt{-webkit-line-clamp:4}
+.post-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:.8rem;border-top:1px solid var(--line)}
+.post-tags{display:flex;gap:.3rem;flex-wrap:wrap}
+.post-tag{font-size:.59rem;letter-spacing:.06em;text-transform:uppercase;padding:.17rem .48rem;background:var(--bg3);border:1px solid var(--line);border-radius:2px;color:var(--muted2)}
+.post-card:hover .post-tag{background:var(--bg4)}
+.post-read-btn{font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:.4rem;flex-shrink:0;transition:gap .2s,color .2s;white-space:nowrap}
+.post-card:hover .post-read-btn{gap:.7rem;color:var(--gold)}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;z-index:1000;background:rgba(9,9,12,.88);backdrop-filter:blur(14px);display:flex;align-items:flex-start;justify-content:center;padding:calc(var(--nav-h) + 1rem) 1.2rem 2rem;opacity:0;pointer-events:none;transition:opacity .35s var(--ease);overflow-y:auto}
+.modal-overlay.open{opacity:1;pointer-events:auto}
+.modal{background:var(--bg2);border:1px solid var(--line2);border-radius:8px;max-width:800px;width:100%;position:relative;margin:auto;animation:fadeUp .45s var(--ease) both}
+.modal-header{padding:2.5rem 2.8rem 0}
+.modal-close{position:absolute;top:1.2rem;right:1.2rem;width:36px;height:36px;border-radius:50%;background:var(--bg3);border:1px solid var(--line);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:background .2s,color .2s;font-size:.75rem;z-index:10;font-family:inherit}
+.modal-close:hover{background:var(--bg4);color:var(--text)}
+.modal-cat-row{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;flex-wrap:wrap}
+.modal-meta{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap}
+.modal-meta-item{font-size:.66rem;color:var(--muted);display:flex;align-items:center;gap:.28rem}
+.modal h1{font-family:var(--serif);font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:300;line-height:1.2;margin-bottom:1.2rem}
+.modal-divider{height:1px;background:var(--line);margin:0 2.8rem 2rem}
+.modal-body{padding:0 2.8rem 0;max-height:58vh;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line2) transparent}
+.modal-body::-webkit-scrollbar{width:4px}
+.modal-body::-webkit-scrollbar-thumb{background:var(--line2);border-radius:2px}
+
+/* ARTICLE TYPOGRAPHY */
+.post-content{line-height:1.9;padding-bottom:2rem}
+.post-content p{font-size:.93rem;color:rgba(237,233,225,.75);margin-bottom:1.15rem}
+.post-content .lead{font-size:1.02rem;color:rgba(237,233,225,.9);border-left:3px solid var(--gold);padding-left:1.2rem;margin-bottom:1.8rem;line-height:1.85}
+.post-content h2{font-family:var(--serif);font-size:1.45rem;font-weight:400;color:var(--text);margin:2rem 0 .75rem}
+.post-content h3{font-size:.75rem;font-weight:500;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin:1.5rem 0 .55rem}
+.post-content ul,.post-content ol{padding-left:1.3rem;margin-bottom:1.15rem}
+.post-content li{font-size:.9rem;color:rgba(237,233,225,.7);margin-bottom:.45rem;line-height:1.75}
+.post-content li strong{color:var(--text)}
+.post-content .callout{background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:4px;padding:.9rem 1.1rem;margin:1.4rem 0;font-size:.86rem;color:var(--gold2);line-height:1.8}
+.post-content .callout strong{color:var(--gold)}
+.post-content .callout.teal{background:var(--teal-dim);border-color:rgba(111,181,174,.22);color:var(--teal)}
+.modal-footer-bar{padding:1.1rem 2.8rem;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
+.modal-tags{display:flex;gap:.35rem;flex-wrap:wrap}
+.modal-tag{font-size:.6rem;letter-spacing:.07em;text-transform:uppercase;padding:.2rem .52rem;background:var(--bg3);border:1px solid var(--line);border-radius:2px;color:var(--muted2)}
+.share-btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:.42rem .9rem;border-radius:2px;border:1px solid rgba(0,119,181,.3);color:#4fa3d4;cursor:pointer;background:transparent;transition:all .2s;font-family:inherit}
+.share-btn:hover{background:rgba(0,119,181,.12);border-color:rgba(0,119,181,.5)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.fcopy{font-size:.72rem;color:var(--muted)}
+.fsocials{display:flex;gap:1.2rem}
+.fsocials a{font-size:.82rem;color:var(--muted);transition:color .25s}
+.fsocials a:hover{color:var(--gold)}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.post-card{animation:fadeUp .5s both}
+
+/* RTL */
+[dir="rtl"]{font-family:'Tajawal',var(--sans)}
+[dir="rtl"] .hero-eyebrow{flex-direction:row-reverse}
+[dir="rtl"] .hero-eyebrow::before{content:none}
+[dir="rtl"] .hero-eyebrow::after{content:'';width:36px;height:1px;background:var(--gold)}
+[dir="rtl"] .post-content .lead{border-left:none;border-right:3px solid var(--gold);padding-left:0;padding-right:1.2rem}
+[dir="rtl"] .post-content ul,[dir="rtl"] .post-content ol{padding-left:0;padding-right:1.3rem}
+[dir="rtl"] .modal-close{right:auto;left:1.2rem}
+[dir="rtl"] .nav-back i{transform:scaleX(-1)}
+[dir="rtl"] .nav-back:hover i{transform:scaleX(-1) translateX(-3px)}
+[dir="rtl"] .post-body{text-align:right}
+[dir="rtl"] .post-footer{flex-direction:row-reverse}
+[dir="rtl"] .modal-header{text-align:right}
+[dir="rtl"] .modal-cat-row{flex-direction:row-reverse}
+[dir="rtl"] .modal-footer-bar{flex-direction:row-reverse}
+[dir="rtl"] .post-banner-icon{right:auto;left:-10px}
+[dir="rtl"] .filter-bar{direction:rtl}
+[dir="rtl"] .lang-toggle{font-family:'Tajawal',var(--sans)}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  .post-card.featured{grid-template-columns:1fr;display:flex}
+  .post-card.featured .post-banner{min-height:180px}
+}
+@media(max-width:600px){
+  .posts-grid{grid-template-columns:1fr}
+  .blog-hero{flex-direction:column;align-items:flex-start;gap:1.5rem}
+  .modal-body{max-height:65vh}
+  .modal-header{padding:2rem 1.5rem 0}
+  .modal-footer-bar{padding:1rem 1.5rem}
+  .modal-divider{margin:0 1.5rem 1.5rem}
+  .modal-close{right:.8rem;top:.8rem}
+  [dir="rtl"] .modal-close{left:.8rem;right:auto}
+}
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-r"></div>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">M</div>
+    <span>MF <b>Alabrash</b></span>
+  </a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i> <span id="back-txt">Back to Portfolio</span></a>
+    <button class="lang-toggle" id="lang-btn" onclick="toggleLang()"><i class="fas fa-globe"></i> عربي</button>
+  </div>
+</nav>
+
+<div class="blog-hero">
+  <div>
+    <div class="hero-eyebrow"><span id="eyebrow-txt">Thought Leadership</span></div>
+    <h1 id="hero-title">Blog &amp; <em>Insights</em></h1>
+    <p id="hero-desc">Weekly perspectives on ERP implementation, data strategy, and digital transformation &mdash; drawn from hands-on experience in Saudi Arabia&rsquo;s real estate sector.</p>
+  </div>
+  <div class="blog-hero-stats">
+    <div class="bstat">
+      <span class="bstat-n" id="post-total">4</span>
+      <span class="bstat-l" id="stat-articles-lbl">Articles</span>
+    </div>
+    <div class="bstat">
+      <span class="bstat-n" id="stat-updated-val">Weekly</span>
+      <span class="bstat-l" id="stat-updated-lbl">Updates</span>
+    </div>
+    <div class="bstat">
+      <span class="bstat-n">5+</span>
+      <span class="bstat-l" id="stat-exp-lbl">Years ERP</span>
+    </div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <span class="filter-lbl" id="filter-lbl">Filter:</span>
+  <button class="fpill active" onclick="filterPosts('all',this)" id="pill-all">All Posts</button>
+  <button class="fpill" onclick="filterPosts('ERP Platforms',this)" id="pill-p1">ERP Platforms</button>
+  <button class="fpill" onclick="filterPosts('ERP Strategy',this)" id="pill-p2">ERP Strategy</button>
+  <button class="fpill" onclick="filterPosts('Data Engineering',this)" id="pill-p3">Data Engineering</button>
+  <button class="fpill" onclick="filterPosts('Business Intelligence',this)" id="pill-p4">Business Intelligence</button>
+  <span class="update-badge"><i class="fas fa-sync-alt"></i> <span id="last-updated-txt">Last updated: </span><span id="last-updated-date"></span></span>
+  <span class="filter-count" id="filter-count"></span>
+</div>
+
+<div class="posts-wrap">
+  <div class="posts-grid" id="postsGrid"></div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModal()" id="modal-close-btn" aria-label="Close"><i class="fas fa-times"></i></button>
+    <div class="modal-header">
+      <div class="modal-cat-row">
+        <span id="modal-cat" class="post-cat gold"></span>
+        <div class="modal-meta">
+          <span class="modal-meta-item"><i class="fas fa-calendar-alt"></i>&nbsp;<span id="modal-date"></span></span>
+          <span class="meta-dot"></span>
+          <span class="modal-meta-item"><i class="fas fa-clock"></i>&nbsp;<span id="modal-read"></span></span>
+        </div>
+      </div>
+      <h1 id="modal-title"></h1>
+    </div>
+    <div class="modal-divider"></div>
+    <div class="modal-body">
+      <div class="post-content" id="modal-content"></div>
+    </div>
+    <div class="modal-footer-bar">
+      <div class="modal-tags" id="modal-tags"></div>
+      <a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer" class="share-btn">
+        <i class="fab fa-linkedin-in"></i>&nbsp;<span id="share-lbl">Share on LinkedIn</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="fcopy" id="footer-copy">&copy; <span id="yr"></span> Mohammad Faisal Alabrash. All rights reserved.</div>
+  <div class="fsocials">
+    <a href="https://www.linkedin.com/in/mohammed-faisal-alabrash-2302131a0/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="mailto:faisalabohusian@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://wa.me/966553845572" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="index.html" title="Portfolio"><i class="fas fa-home"></i></a>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════════════
+   📝  BLOG POSTS DATA  —  HOW TO ADD A NEW WEEKLY POST
+   ───────────────────────────────────────────────────────────────────────
+   1. Copy the template object below
+   2. Paste it at the VERY TOP of the POSTS array (newest first)
+   3. Fill every field — slug must be unique and URL-safe
+   4. Save the file and push to GitHub — it goes live automatically
+
+   TEMPLATE  (copy from here):
+   ┌─────────────────────────────────────────────────────────────────┐
+   │ {                                                               │
+   │   slug: 'your-unique-slug',      // lowercase, hyphens only    │
+   │   date: '2024-06-10',            // YYYY-MM-DD (newest first)  │
+   │   dateDisplay: 'June 10, 2024',                                 │
+   │   dateDisplayAr: '10 يونيو 2024',                              │
+   │   category: 'ERP Strategy',      // see categories below       │
+   │   categoryAr: 'استراتيجية ERP',                                │
+   │   catColor: 'gold',              // 'gold' | 'teal' | 'coral'  │
+   │   icon: 'fas fa-project-diagram',// Font Awesome class         │
+   │   readTime: 5,                   // minutes                    │
+   │   title: 'Your Article Title',                                 │
+   │   titleAr: 'عنوان المقال بالعربية',                            │
+   │   excerpt: 'Two-sentence teaser.',                              │
+   │   excerptAr: 'ملخص قصير بالعربية.',                           │
+   │   tags: ['Tag1', 'Tag2'],                                       │
+   │   tagsAr: ['وسم1', 'وسم2'],                                    │
+   │   content: `<p class="lead">Intro...</p>                       │
+   │              <h2>Section</h2><p>Body...</p>                    │
+   │              <div class="callout"><strong>Key:</strong></div>`, │
+   │   contentAr: `<p class="lead">مقدمة...</p>                     │
+   │               <h2>القسم</h2><p>المحتوى...</p>`,                │
+   │ },                                                              │
+   └─────────────────────────────────────────────────────────────────┘
+
+   CATEGORIES:  'ERP Platforms' | 'ERP Strategy' | 'Data Engineering' | 'Business Intelligence'
+   CAT COLORS:  gold = ERP Platforms / BI,  teal = Data Engineering,  coral = ERP Strategy
+   ═══════════════════════════════════════════════════════════════════════ */
+
+const POSTS = [
+
+  /* ▼▼▼  ADD NEW POSTS HERE — NEWEST FIRST  ▼▼▼ */
+
+  {
+    slug: 'erp-implementation-failures',
+    date: '2024-03-15',
+    dateDisplay: 'March 15, 2024',
+    dateDisplayAr: '15 مارس 2024',
+    category: 'ERP Strategy',
+    categoryAr: 'استراتيجية ERP',
+    catColor: 'coral',
+    icon: 'fas fa-project-diagram',
+    readTime: 5,
+    title: 'Why 60% of ERP Implementations Fail &mdash; And How to Avoid It',
+    titleAr: 'لماذا تفشل 60% من مشاريع ERP &mdash; وكيف تتجنب ذلك',
+    excerpt: 'Most ERP failures aren\'t technical — they\'re process failures. After leading multiple go-lives in Saudi Arabia\'s real estate sector, I\'ve identified three root causes that derail projects before they reach the finish line.',
+    excerptAr: 'معظم إخفاقات ERP ليست تقنية — بل هي إخفاقات في العمليات. بعد قيادة عمليات إطلاق متعددة، رصدت ثلاثة أسباب جذرية تعطّل المشاريع قبل الوصول إلى النهاية.',
+    tags: ['ERP Implementation', 'BRS', 'Change Management', 'Go-Live'],
+    tagsAr: ['تنفيذ ERP', 'BRS', 'إدارة التغيير', 'إطلاق النظام'],
+    content: `
+<p class="lead">According to Gartner and McKinsey, 55–75% of ERP projects fail to meet their original objectives — delivered late, over budget, or underused. After leading multiple implementations in Saudi Arabia's real estate sector, I've seen these failures up close. The root causes are almost always the same three things.</p>
+<h2>Root Cause 1: BRS Is Treated as a Formality</h2>
+<p>The Business Requirements Specification document is the contract between the business and the ERP system. In failed projects, it's rushed through in two weeks, signed off without real departmental input, and filed away. Then configuration begins — based on assumptions rather than validated requirements.</p>
+<p>The result: months into the project, the Finance team discovers the AP workflow doesn't match their approval matrix. The PMO finds the project costing module doesn't support their CSI code structure. Scope creep begins. Timelines slip.</p>
+<div class="callout"><strong>What I do instead:</strong> Each BRS document goes through minimum two review cycles with the actual department head — not just the IT liaison. Sign-off is conditional on UAT simulation, not just document review.</div>
+<h2>Root Cause 2: Data Migration Is Under-Resourced</h2>
+<p>Project plans typically allocate 10–15% of the timeline to data migration. In my experience, it consistently requires 30–40%. The reason: legacy data quality is almost always worse than anyone estimates.</p>
+<p>Duplicate vendors. Accounts with missing cost centers. Property records with inconsistent unit codes. Open POs that reference closed contracts. Every one of these is an exception that needs a documented resolution — not a quick fix in the ETL script.</p>
+<div class="callout teal"><strong>The framework that works:</strong> Three-phase migration — Profile (SQL analysis of all source tables), Cleanse (documented rules, signed off by business owners), Load (three test runs minimum, full reconciliation after each).</div>
+<h2>Root Cause 3: End-User Adoption Is Treated as Training</h2>
+<p>Most projects schedule a one-week training program just before go-live. This is too late and too shallow. Users are overwhelmed, anxious, and more likely to work around the system than in it.</p>
+<p>Real adoption requires involving end-users in UAT — not as passive observers, but as active testers running their actual daily workflows. When users discover issues in UAT, they become invested in fixing them. When they discover issues in production, they lose confidence permanently.</p>
+<ul>
+  <li><strong>Start training early:</strong> Introduce the system three months before go-live in sandbox mode</li>
+  <li><strong>Use real data in UAT:</strong> Test with actual vendors, actual cost centers, actual open POs</li>
+  <li><strong>Assign department champions:</strong> One power user per department who can answer peer questions post-go-live</li>
+</ul>
+<h2>The Result When You Get It Right</h2>
+<p>On our Logix ERP implementation at Memar Development, we followed these principles across six departments. We ran BRS documentation for six weeks before a single configuration was touched. We ran three test migrations with full reconciliation. We assigned department champions who co-designed the UAT scripts.</p>
+<p>Go-live covered five integrated modules simultaneously. Zero rollbacks. Post-go-live support requests were minimal because users had already solved most issues during UAT.</p>
+<div class="callout"><strong>The uncomfortable truth:</strong> ERP projects fail because organizations don't invest in the boring work — documentation, data quality, and change management. The technology is rarely the problem.</div>
+`,
+    contentAr: `
+<p class="lead">وفقاً لتقارير غارتنر وماكنزي، تفشل ما بين 55% و75% من مشاريع ERP في تحقيق أهدافها الأصلية — تُسلَّم متأخرة، أو تتجاوز الميزانية، أو لا يُستخدم النظام استخداماً كافياً. بعد قيادة عدة تنفيذات في قطاع العقارات بالمملكة، شهدت هذه الإخفاقات عن كثب. الأسباب الجذرية كانت دائماً نفسها الثلاثة.</p>
+<h2>السبب الأول: وثيقة BRS تُعامَل كإجراء شكلي</h2>
+<p>وثيقة متطلبات الأعمال (BRS) هي العقد بين الأعمال ونظام ERP. في المشاريع الفاشلة، يُنجز هذا التوثيق على عجل في أسبوعين، ويُوقَّع عليه دون مشاركة فعلية من الأقسام، ثم يُحفَّظ في الأدراج. تبدأ بعدها إعدادات النظام استناداً إلى افتراضات لا إلى متطلبات محققة.</p>
+<div class="callout"><strong>ما أفعله بدلاً من ذلك:</strong> كل وثيقة BRS تمر بدورتين من المراجعة مع المدير الفعلي للقسم. التوقيع مشروط بمحاكاة اختبار القبول، لا بمراجعة الوثيقة فحسب.</div>
+<h2>السبب الثاني: هجرة البيانات تفتقر إلى الموارد الكافية</h2>
+<p>تُخصص خطط المشاريع عادةً 10-15% من الجدول الزمني لهجرة البيانات. لكن في تجربتي، تحتاج الهجرة إلى 30-40% من الوقت. السبب: جودة البيانات في الأنظمة القديمة أسوأ مما يتوقعه أي أحد.</p>
+<div class="callout teal"><strong>الإطار الذي يجدي نفعاً:</strong> هجرة ثلاثية المراحل — التنميط (تحليل SQL لجميع الجداول المصدر)، التنظيف (قواعد موثقة يوافق عليها أصحاب الأعمال)، التحميل (ثلاث تجارب على الأقل مع مطابقة كاملة بعد كل منها).</div>
+<h2>السبب الثالث: اعتماد المستخدمين يُختزَل في التدريب</h2>
+<p>معظم المشاريع تجدول أسبوعاً تدريبياً قبيل الإطلاق مباشرة. هذا متأخر جداً وسطحي. الاعتماد الحقيقي يتطلب إشراك المستخدمين النهائيين في اختبار القبول بوصفهم مختبرين فاعلين، لا متفرجين سلبيين.</p>
+<ul>
+  <li><strong>ابدأ التدريب مبكراً:</strong> قدّم النظام قبل ثلاثة أشهر من الإطلاق في بيئة تجريبية</li>
+  <li><strong>استخدم بيانات حقيقية في UAT:</strong> اختبر بموردين حقيقيين ومراكز تكلفة فعلية وطلبات شراء مفتوحة</li>
+  <li><strong>عيّن بطلاً لكل قسم:</strong> مستخدم متمكن يجيب على أسئلة زملائه بعد الإطلاق</li>
+</ul>
+<div class="callout"><strong>الحقيقة غير المريحة:</strong> تفشل مشاريع ERP لأن المؤسسات لا تستثمر في العمل الممل — التوثيق وجودة البيانات وإدارة التغيير. التقنية نادراً ما تكون المشكلة.</div>
+`,
+  },
+
+  {
+    slug: 'erp-data-migration-playbook',
+    date: '2024-01-20',
+    dateDisplay: 'January 20, 2024',
+    dateDisplayAr: '20 يناير 2024',
+    category: 'Data Engineering',
+    categoryAr: 'هندسة البيانات',
+    catColor: 'teal',
+    icon: 'fas fa-database',
+    readTime: 7,
+    title: 'From 50,000 Legacy Records to Clean ERP Data: A Migration Playbook',
+    titleAr: 'من 50,000 سجل قديم إلى بيانات ERP نظيفة: دليل الهجرة',
+    excerpt: 'Data migration is the highest-risk phase of any ERP project. Here\'s the exact four-phase framework I used to migrate 50,000+ records from three legacy systems with 99%+ accuracy — and zero rollbacks.',
+    excerptAr: 'هجرة البيانات هي المرحلة الأعلى خطراً في أي مشروع ERP. إليك الإطار الرباعي الدقيق الذي استخدمته لهجرة أكثر من 50,000 سجل من ثلاثة أنظمة قديمة بدقة تتجاوز 99% وبدون أي تراجع.',
+    tags: ['Data Migration', 'SQL', 'SSIS', 'ERPNext', 'Logix ERP'],
+    tagsAr: ['هجرة البيانات', 'SQL', 'SSIS', 'ERPNext', 'Logix ERP'],
+    content: `
+<p class="lead">I've seen ERP go-lives fail silently. The system launches, users log in, everything looks clean — until the Finance team runs their first monthly report and discovers SAR 2 million in unexplained variances. The culprit is almost always the same: a data migration that passed a row-count check but failed a business logic validation.</p>
+<p>This is the four-phase framework I've refined across multiple ERP migrations. It's not glamorous. It requires patience and rigor. But it's the reason I've never had a rollback.</p>
+<h2>Phase 1: Inventory and Profiling</h2>
+<p>Before a single record moves, I spend two weeks doing nothing but profiling the source data. SQL queries against every legacy table generate a quality report covering:</p>
+<ul>
+  <li><strong>Completeness:</strong> Null rates per column — any required field with &gt;5% nulls is flagged immediately</li>
+  <li><strong>Uniqueness:</strong> Duplicate detection on primary keys and business keys (vendor codes, property unit numbers)</li>
+  <li><strong>Referential integrity:</strong> Purchase orders referencing deleted vendors, invoices referencing closed cost centers</li>
+  <li><strong>Format consistency:</strong> IBAN formats, phone numbers, date formats across different tables</li>
+  <li><strong>Business logic:</strong> Open POs with no delivery dates, payables with negative balances, units with occupancy status but no active lease</li>
+</ul>
+<div class="callout"><strong>Output of Phase 1:</strong> A Data Quality Report that becomes an annex to the BRS. Every issue gets a resolution: Fix in source, Transform in ETL, Migrate as approved exception, or Exclude.</div>
+<h2>Phase 2: Cleansing Rules and SSIS Design</h2>
+<p>Every identified issue gets a documented cleansing rule — a written, numbered specification that the data owner signs off on. These rules become the specifications for the SSIS packages or SQL scripts that execute the migration.</p>
+<p>Examples from real projects:</p>
+<ul>
+  <li><strong>Rule 007:</strong> Vendor records with NULL payment terms → Default to Net-30; flag in migration log</li>
+  <li><strong>Rule 023:</strong> Property units with status 'Active' but no lease record → Set to 'Available'; notify PM team</li>
+  <li><strong>Rule 041:</strong> Cost center codes in format 'CC-XXX' → Convert to 'CC.XXX' for ERP target format</li>
+</ul>
+<h2>Phase 3: Three-Round Test Migration</h2>
+<p>Never migrate directly to production. The test environment is where you discover what profiling missed — and there's always something.</p>
+<p><strong>Round 1 — Structural validation:</strong> Does the data load without errors? Are all field mappings correct? Does record count match between source and target?</p>
+<p><strong>Round 2 — Business logic validation:</strong> Can Finance run their chart of accounts without errors? Can Procurement process a test PO through the full approval workflow?</p>
+<p><strong>Round 3 — User acceptance:</strong> Department heads run their actual workflows on the migrated data. They sign off on correctness, not just completeness.</p>
+<div class="callout teal"><strong>Reconciliation after each round:</strong> Financial balances match, physical counts match (unit inventory, vendor count, active contracts), exception log reviewed and resolved. No batch advances until it passes all three.</div>
+<h2>Phase 4: Production Migration and Cutover</h2>
+<p>By production day there are no surprises. The SSIS packages are tested. The reconciliation templates are ready. Cutover happens over a defined blackout window — typically a weekend. During this window: legacy system locked, production migration runs, full reconciliation completed, go/no-go decision made before business hours resume.</p>
+<h2>The Numbers from Our Last Migration</h2>
+<ul>
+  <li>50,000+ records across Finance, Procurement, Projects, and Property Management</li>
+  <li>3 legacy systems consolidated into one ERP</li>
+  <li>99.2% clean migration on first production pass</li>
+  <li>0.8% documented exceptions — approved by business owners pre-migration</li>
+  <li>Zero rollbacks. Zero post-go-live corrections affecting financial reporting.</li>
+</ul>
+`,
+    contentAr: `
+<p class="lead">شهدت عمليات إطلاق ERP تفشل بصمت. يُطلق النظام، يسجّل المستخدمون الدخول، يبدو كل شيء نظيفاً — حتى يُشغّل فريق المالية أول تقرير شهري ليكتشف فروقات غير مفسّرة بقيمة مليوني ريال. المذنب في الغالب هو هجرة بيانات اجتازت فحص عدد الصفوف لكنها فشلت في التحقق من منطق الأعمال.</p>
+<h2>المرحلة 1: الجرد والتنميط</h2>
+<p>قبل نقل سجل واحد، أُمضي أسبوعين في تنميط بيانات المصدر. استعلامات SQL على كل جدول قديم تُنتج تقرير جودة يغطي: معدلات الإكمال، الازدواجية، السلامة المرجعية، اتساق التنسيق، ومنطق الأعمال.</p>
+<div class="callout"><strong>مخرج المرحلة 1:</strong> تقرير جودة البيانات يصبح ملحقاً بوثيقة BRS. كل مشكلة مُحددة تحصل على قرار حل: إصلاح في المصدر، تحويل في ETL، هجرة كاستثناء معتمد، أو استبعاد.</div>
+<h2>المرحلة 2: قواعد التنظيف وتصميم SSIS</h2>
+<p>كل مشكلة مُحددة تحصل على قاعدة تنظيف موثقة ومرقمة يوافق عليها صاحب البيانات. هذه القواعد تصبح مواصفات حزم SSIS أو نصوص SQL التي ستنفذ الهجرة الفعلية.</p>
+<h2>المرحلة 3: ثلاث جولات هجرة تجريبية</h2>
+<p>لا تهاجر مباشرةً إلى الإنتاج أبداً. الجولة الأولى: التحقق الهيكلي. الجولة الثانية: التحقق من منطق الأعمال. الجولة الثالثة: قبول المستخدمين — يشغّل مديرو الأقسام سير عملهم الفعلي ويوقّعون على صحة البيانات.</p>
+<div class="callout teal"><strong>أرقام من آخر هجرة:</strong> أكثر من 50,000 سجل، 3 أنظمة قديمة، دقة 99.2% في أول تمرير، صفر عمليات تراجع، صفر تصحيحات بيانات مؤثرة على التقارير المالية.</div>
+`,
+  },
+
+  {
+    slug: 'powerbi-management-dashboards',
+    date: '2023-11-12',
+    dateDisplay: 'November 12, 2023',
+    dateDisplayAr: '12 نوفمبر 2023',
+    category: 'Business Intelligence',
+    categoryAr: 'ذكاء الأعمال',
+    catColor: 'gold',
+    icon: 'fas fa-chart-line',
+    readTime: 4,
+    title: 'Building Power BI Dashboards That Management Actually Uses',
+    titleAr: 'بناء لوحات Power BI التي تستخدمها الإدارة فعلاً',
+    excerpt: 'A dashboard is only valuable if leadership opens it daily. After five years building KPI reports for real estate executives, I\'ve identified four principles that separate dashboards that drive decisions from those that collect dust.',
+    excerptAr: 'لوحة البيانات ذات قيمة فقط إذا فتحتها القيادة يومياً. بعد خمس سنوات من بناء تقارير KPI للمديرين التنفيذيين، رصدت أربعة مبادئ تُميّز اللوحات التي تُحرك القرارات عن تلك التي تتراكم عليها الغبار.',
+    tags: ['Power BI', 'KPI Design', 'DAX', 'Management Reporting'],
+    tagsAr: ['Power BI', 'تصميم KPI', 'DAX', 'تقارير الإدارة'],
+    content: `
+<p class="lead">Early in my career, I built technically impressive Power BI reports — 15 pages, 40 visuals, drill-through paths six levels deep. My manager praised them. No executive ever opened them. The problem wasn't technical. I was answering questions no one was asking.</p>
+<p>After rebuilding my entire approach around four principles, daily active usage on our management dashboards went from 2 users to 14.</p>
+<h2>Principle 1: Start with the Decision, Not the Data</h2>
+<p>Before building a single visual, I sit with the decision-maker and ask one question: "What are the decisions you make every week that this dashboard should support?" Not "what data do you want to see" — what decisions.</p>
+<div class="callout"><strong>The test:</strong> For every visual on the dashboard, complete the sentence: "This helps the user decide whether to ________." If you can't, the visual doesn't belong.</div>
+<h2>Principle 2: The 5-KPI Landing Rule</h2>
+<p>The first page of any executive dashboard should have exactly five primary KPIs. Each answers one strategic question about the business right now. For our real estate portfolio: Occupancy Rate, Revenue MTD vs. Target, Outstanding Receivables, Active Projects vs. Budget, and Upcoming Lease Renewals (next 90 days). That's the entire story of the business on one screen.</p>
+<h2>Principle 3: Color Means Nothing Without Rules</h2>
+<p>Red/amber/green status is one of the most powerful visual tools in Power BI — and one of the most misused. Every KPI needs three things before it gets a color:</p>
+<ul>
+  <li><strong>Target:</strong> What does "good" look like? (e.g., Occupancy ≥ 85%)</li>
+  <li><strong>Warning threshold:</strong> When should we pay attention? (e.g., Occupancy 75–85%)</li>
+  <li><strong>Alert threshold:</strong> When is action required? (e.g., Occupancy &lt;75%)</li>
+</ul>
+<p>These thresholds are agreed with the business owner and embedded in DAX measures — not hardcoded in visual formatting. When targets change (and they always do), you update one measure, not 40 visuals.</p>
+<h2>Principle 4: One-Click Drill-Through</h2>
+<p>Executives don't navigate multi-page reports. They see a red KPI and want to know: why is this red, and what can I do about it? Build your executive landing page first. Build explanatory detail pages second, as drill-through targets. The structure should always be: Summary → Why → What To Do.</p>
+<div class="callout teal"><strong>The change that built trust:</strong> I added a "Last Updated" timestamp with conditional formatting to every dashboard. If data is more than 24 hours old, it turns amber. Executives now open the reports in morning meetings because they trust the numbers.</div>
+`,
+    contentAr: `
+<p class="lead">في بداية مسيرتي، بنيت تقارير Power BI متطورة تقنياً — 15 صفحة، 40 مؤشراً بصرياً. أثنى عليها مديري. لم يفتحها أي مسؤول تنفيذي. المشكلة لم تكن تقنية — كنت أجيب على أسئلة لا أحد يطرحها. بعد إعادة بناء منهجي وفق أربعة مبادئ، ارتفع عدد المستخدمين اليوميين من 2 إلى 14.</p>
+<h2>المبدأ الأول: ابدأ بالقرار لا بالبيانات</h2>
+<p>قبل بناء أي مؤشر بصري، أجلس مع صاحب القرار وأطرح سؤالاً واحداً: "ما القرارات التي تتخذها أسبوعياً والتي يجب أن تدعمها هذه اللوحة؟"</p>
+<div class="callout"><strong>الاختبار:</strong> لكل مؤشر بصري في اللوحة، أكمل الجملة: "هذا يساعد المستخدم على تقرير ما إذا كان يجب ________." إن لم تستطع، فالمؤشر لا مكان له.</div>
+<h2>المبدأ الثاني: قاعدة الخمسة KPIs في الصفحة الرئيسية</h2>
+<p>الصفحة الأولى من أي لوحة تنفيذية تحتوي على خمسة مؤشرات أداء أساسية بالضبط. في محفظتنا العقارية: معدل الإشغال، الإيرادات حتى الآن مقابل الهدف، المستحقات المتأخرة، المشاريع النشطة مقابل الميزانية، وعقود الإيجار المنتهية خلال 90 يوماً.</p>
+<h2>المبدأ الثالث: اللون لا معنى له بدون قواعد</h2>
+<p>كل مؤشر أداء يحتاج: هدف (ما الجيد؟)، عتبة تحذير، وعتبة إنذار. هذه العتبات متفق عليها ومُضمَّنة في مقاييس DAX — لا مُشفَّرة في تنسيقات المؤشر. عندما تتغير الأهداف، تُحدّث مقياساً واحداً لا 40 مؤشراً بصرياً.</p>
+<h2>المبدأ الرابع: تفصيل بنقرة واحدة</h2>
+<p>بنِ صفحة الملخص التنفيذي أولاً. بنِ صفحات التفصيل ثانياً كأهداف للتفصيل بالنقر. الهيكل دائماً: ملخص ← السبب ← ماذا تفعل.</p>
+<div class="callout teal"><strong>التغيير الذي بنى الثقة:</strong> أضفت طابعاً زمنياً "آخر تحديث" بتنسيق شرطي. إذا تجاوزت البيانات 24 ساعة يتحول إلى الأصفر. المسؤولون الآن يفتحون التقارير في اجتماعات الصباح لأنهم يثقون بالأرقام.</div>
+`,
+  },
+
+  {
+    slug: 'erpnext-vs-logix-erp',
+    date: '2023-09-05',
+    dateDisplay: 'September 5, 2023',
+    dateDisplayAr: '5 سبتمبر 2023',
+    category: 'ERP Platforms',
+    categoryAr: 'أنظمة ERP',
+    catColor: 'gold',
+    icon: 'fas fa-exchange-alt',
+    readTime: 8,
+    title: "ERPNext vs. Logix ERP: A Practitioner&rsquo;s Honest Comparison",
+    titleAr: 'ERPNext مقابل Logix ERP: مقارنة صريحة من ممارس',
+    excerpt: 'Having implemented both ERPNext and Logix ERP for real estate and investment firms in Saudi Arabia, I offer a candid comparison — capabilities, customization depth, data migration complexity, and total cost of ownership.',
+    excerptAr: 'بعد تنفيذ كلا النظامين لشركات العقارات والاستثمار في المملكة، أقدم مقارنة صريحة بين قدراتهما وعمق التخصيص وتعقيد هجرة البيانات والتكلفة الإجمالية للملكية.',
+    tags: ['ERPNext', 'Logix ERP', 'System Selection', 'Saudi Arabia', 'Real Estate ERP'],
+    tagsAr: ['ERPNext', 'Logix ERP', 'اختيار النظام', 'المملكة العربية السعودية', 'ERP العقارات'],
+    content: `
+<p class="lead">I'm asked this question more than any other: "Should we go with ERPNext or Logix ERP?" My answer is always: it depends — but not on what most people think. After implementing both platforms for real estate and investment companies in Riyadh, here is my honest assessment.</p>
+<h2>ERPNext: Open-Source Power with Real Trade-offs</h2>
+<p>ERPNext (built on the Frappe framework) is one of the most feature-complete open-source ERP systems available. It covers Accounting, HR, Payroll, CRM, Purchasing, and more — all in one platform with a modern interface.</p>
+<h3>Where ERPNext excels</h3>
+<ul>
+  <li><strong>Cost structure:</strong> Open-source licensing dramatically reduces the initial investment</li>
+  <li><strong>Customization depth:</strong> Frappe framework allows serious customization without modifying core code — Custom DocTypes, custom workflows, all version-safe</li>
+  <li><strong>Multi-entity support:</strong> Consolidated financial reporting across entities is native, not bolted on</li>
+  <li><strong>Global community:</strong> Large, active community. Most configuration questions are answered in the forum</li>
+</ul>
+<h3>Where ERPNext struggles</h3>
+<ul>
+  <li><strong>Arabic support:</strong> RTL interface has improved but is still less polished than solutions built Arabic-first</li>
+  <li><strong>GCC compliance:</strong> Saudi VAT reporting, IBAN validation, and Hijri calendar require configuration that's often underestimated</li>
+  <li><strong>Property management:</strong> No native property management module — real estate workflows require custom development</li>
+  <li><strong>Local partner availability:</strong> Fewer specialized ERPNext implementation partners in Saudi Arabia</li>
+</ul>
+<h2>Logix ERP: Purpose-Built for GCC Real Estate</h2>
+<p>Logix ERP is designed specifically for property management and investment companies in the GCC. The starting point isn't a generic ERP adapted for real estate — it's a real estate system with integrated ERP modules.</p>
+<h3>Where Logix ERP excels</h3>
+<ul>
+  <li><strong>Arabic-first design:</strong> Interface, reports, and data structure built for Arabic-language operation — RTL layout, Arabic field labels, bilingual PDF generation are all native</li>
+  <li><strong>Saudi compliance:</strong> VAT invoicing, ZATCA e-invoicing integration, IBAN validation, Hijri calendar — all standard, not customizations</li>
+  <li><strong>Property management workflows:</strong> Lease management, rent collection, maintenance work orders, unit tracking — tightly integrated with Finance</li>
+  <li><strong>Time to value:</strong> A mid-size real estate company can go live in 4–6 months. Equivalent ERPNext implementation with customization takes 8–12 months</li>
+</ul>
+<h3>Where Logix ERP struggles</h3>
+<ul>
+  <li><strong>Customization flexibility:</strong> Deep customization requires vendor involvement and is more expensive than ERPNext's Frappe framework</li>
+  <li><strong>Per-user cost:</strong> Named license model costs add up as organizations scale</li>
+  <li><strong>Global ecosystem:</strong> Support and development resources concentrated in GCC — limiting for internationally-scoped organizations</li>
+</ul>
+<h2>My Recommendation Framework</h2>
+<p>There is no universally better system. The decision comes down to three factors: timeline, technical capacity, and customization needs.</p>
+<div class="callout"><strong>Choose Logix ERP if:</strong> You're a Saudi real estate or investment company with 20–300 employees, need to go live in under 6 months, and want minimal customization. The Arabic-first, GCC-compliant foundation removes significant implementation risk.</div>
+<div class="callout teal"><strong>Choose ERPNext if:</strong> You're a multi-entity holding company with international scope, have internal technical resources or a strong ERPNext partner, and need deep workflow customization. The open-source flexibility is genuinely powerful in the right hands.</div>
+<p>The question I always end with: what is your organization's actual tolerance for implementation risk? Both can deliver excellent outcomes. ERPNext requires more investment in the implementation process. If you can't commit to that rigor, Logix's narrower but deeper functionality for your use case will serve you better.</p>
+`,
+    contentAr: `
+<p class="lead">يُسألني هذا السؤال أكثر من أي سؤال آخر: "هل نختار ERPNext أم Logix ERP؟" إجابتي دائماً: يعتمد الأمر — لكن ليس على ما يظنه معظم الناس. بعد تنفيذ كلا النظامين لشركات العقارات والاستثمار في الرياض، إليك تقييمي الصريح.</p>
+<h2>ERPNext: قوة المصدر المفتوح مع مقايضات حقيقية</h2>
+<h3>نقاط القوة</h3>
+<ul>
+  <li><strong>هيكل التكاليف:</strong> ترخيص مفتوح المصدر يقلل الاستثمار الأولي بشكل كبير</li>
+  <li><strong>عمق التخصيص:</strong> إطار Frappe يتيح تخصيصاً جاداً دون تعديل الكود الأساسي</li>
+  <li><strong>دعم الكيانات المتعددة:</strong> التقارير المالية الموحدة عبر الكيانات أصيلة في النظام، لا مضافة لاحقاً</li>
+</ul>
+<h3>نقاط الضعف</h3>
+<ul>
+  <li><strong>دعم العربية:</strong> تحسّن كثيراً لكنه أقل صقلاً من الحلول المبنية بالعربية كلغة أولى</li>
+  <li><strong>الامتثال للسعودية:</strong> ضريبة القيمة المضافة وتحقق IBAN والتقويم الهجري تحتاج تكوين</li>
+  <li><strong>إدارة العقارات:</strong> لا توجد وحدة إدارة عقارات أصيلة — سير عمل العقارات يتطلب تطويراً مخصصاً</li>
+</ul>
+<h2>Logix ERP: مبني خصيصاً لعقارات الخليج</h2>
+<h3>نقاط القوة</h3>
+<ul>
+  <li><strong>تصميم عربي أولاً:</strong> الواجهة والتقارير وهيكل البيانات مبنية للتشغيل العربي — RTL وتوليد PDF ثنائي اللغة أصيلان</li>
+  <li><strong>الامتثال السعودي:</strong> فاتورة الزكاة وتكامل ZATCA وتحقق IBAN والتقويم الهجري — كلها معيارية</li>
+  <li><strong>الوقت حتى تحقيق القيمة:</strong> شركة عقارية متوسطة يمكنها الإطلاق في 4-6 أشهر</li>
+</ul>
+<h2>إطار التوصية</h2>
+<div class="callout"><strong>اختر Logix ERP إذا:</strong> كنت شركة عقارية أو استثمارية سعودية بـ 20-300 موظف وتريد الإطلاق في أقل من 6 أشهر بتخصيص أدنى.</div>
+<div class="callout teal"><strong>اختر ERPNext إذا:</strong> كنت مجموعة متعددة الكيانات ذات نطاق دولي، ولديك موارد تقنية داخلية وتحتاج تخصيصاً عميقاً لسير العمل.</div>
+`,
+  },
+
+]; /* ▲▲▲  END OF POSTS ARRAY  ▲▲▲ */
+
+/* ─────────────────────────────────────────────────────── */
+/*  LANGUAGE TOGGLE                                         */
+/* ─────────────────────────────────────────────────────── */
+let _lang = 'en';
+const UI = {
+  en: {
+    back:'Back to Portfolio', eyebrow:'Thought Leadership',
+    heroTitle:'Blog &amp; <em>Insights</em>',
+    heroDesc:'Weekly perspectives on ERP implementation, data strategy, and digital transformation &mdash; drawn from hands-on experience in Saudi Arabia&rsquo;s real estate sector.',
+    articlesLbl:'Articles', updatedLbl:'Weekly Updates', expLbl:'Years ERP',
+    filterLbl:'Filter:', all:'All Posts', p1:'ERP Platforms', p2:'ERP Strategy', p3:'Data Engineering', p4:'Business Intelligence',
+    lastUpdated:'Last updated:',
+    minRead:'min read', showing:'Showing', articleSingular:'article', articlePlural:'articles',
+    readBtn:'Read Article <i class="fas fa-arrow-right"></i>',
+    shareLbl:'Share on LinkedIn',
+    footerCopy:'&copy; YEAR Mohammad Faisal Alabrash. All rights reserved.',
+    noResults:'No articles in this category yet.',
+    cats:{'ERP Platforms':'ERP Platforms','ERP Strategy':'ERP Strategy','Data Engineering':'Data Engineering','Business Intelligence':'Business Intelligence'},
+  },
+  ar: {
+    back:'العودة للمحفظة', eyebrow:'قيادة فكرية',
+    heroTitle:'المدونة <em>والرؤى</em>',
+    heroDesc:'وجهات نظر أسبوعية حول تنفيذ ERP واستراتيجية البيانات والتحول الرقمي &mdash; مستقاة من خبرة ميدانية في قطاع العقارات بالمملكة.',
+    articlesLbl:'مقالات', updatedLbl:'تحديثات أسبوعية', expLbl:'سنوات ERP',
+    filterLbl:'تصفية:', all:'كل المقالات', p1:'أنظمة ERP', p2:'استراتيجية ERP', p3:'هندسة البيانات', p4:'ذكاء الأعمال',
+    lastUpdated:'آخر تحديث:',
+    minRead:'دقائق قراءة', showing:'عرض', articleSingular:'مقال', articlePlural:'مقالات',
+    readBtn:'اقرأ المقال <i class="fas fa-arrow-left"></i>',
+    shareLbl:'شارك على LinkedIn',
+    footerCopy:'&copy; YEAR محمد فيصل الأبرش. جميع الحقوق محفوظة.',
+    noResults:'لا توجد مقالات في هذه الفئة بعد.',
+    cats:{'ERP Platforms':'أنظمة ERP','ERP Strategy':'استراتيجية ERP','Data Engineering':'هندسة البيانات','Business Intelligence':'ذكاء الأعمال'},
+  }
+};
+
+function toggleLang() {
+  _lang = _lang === 'en' ? 'ar' : 'en';
+  const isAr = _lang === 'ar';
+  document.documentElement.setAttribute('lang', _lang);
+  document.documentElement.setAttribute('dir', isAr ? 'rtl' : 'ltr');
+  document.getElementById('lang-btn').innerHTML = isAr ? '<i class="fas fa-globe"></i> EN' : '<i class="fas fa-globe"></i> عربي';
+  applyUI();
+  renderPosts(_currentCat);
+  if (_openSlug) openPost(_openSlug); // refresh open modal content
+}
+
+function applyUI() {
+  const u = UI[_lang];
+  const yr = new Date().getFullYear();
+  document.getElementById('back-txt').textContent = u.back;
+  document.getElementById('eyebrow-txt').textContent = u.eyebrow;
+  document.getElementById('hero-title').innerHTML = u.heroTitle;
+  document.getElementById('hero-desc').innerHTML = u.heroDesc;
+  document.getElementById('stat-articles-lbl').textContent = u.articlesLbl;
+  document.getElementById('stat-updated-lbl').textContent = u.updatedLbl;
+  document.getElementById('stat-exp-lbl').textContent = u.expLbl;
+  document.getElementById('filter-lbl').textContent = u.filterLbl;
+  document.getElementById('pill-all').textContent = u.all;
+  document.getElementById('pill-p1').textContent = u.p1;
+  document.getElementById('pill-p2').textContent = u.p2;
+  document.getElementById('pill-p3').textContent = u.p3;
+  document.getElementById('pill-p4').textContent = u.p4;
+  document.getElementById('last-updated-txt').textContent = u.lastUpdated + ' ';
+  document.getElementById('share-lbl').textContent = u.shareLbl;
+  document.getElementById('footer-copy').innerHTML = u.footerCopy.replace('YEAR', yr);
+}
+
+/* ─────────────────────────────────────────────────────── */
+/*  RENDER                                                  */
+/* ─────────────────────────────────────────────────────── */
+let _currentCat = 'all';
+
+function renderPosts(cat) {
+  _currentCat = cat;
+  const u = UI[_lang];
+  const isAr = _lang === 'ar';
+  const list = cat === 'all' ? POSTS : POSTS.filter(p => p.category === cat);
+  const grid = document.getElementById('postsGrid');
+  const countEl = document.getElementById('filter-count');
+  const n = list.length;
+  countEl.textContent = `${u.showing} ${n} ${n === 1 ? u.articleSingular : u.articlePlural}`;
+  document.getElementById('post-total').textContent = POSTS.length;
+  if (!n) {
+    grid.innerHTML = `<div class="no-results"><i class="fas fa-search"></i><p>${u.noResults}</p></div>`;
+    return;
+  }
+  grid.innerHTML = list.map((post, i) => {
+    const featured = i === 0 && cat === 'all';
+    const title = isAr ? post.titleAr : post.title;
+    const excerpt = isAr ? post.excerptAr : post.excerpt;
+    const catLabel = isAr ? (u.cats[post.category] || post.category) : post.category;
+    const date = isAr ? post.dateDisplayAr : post.dateDisplay;
+    const tags = (isAr && post.tagsAr ? post.tagsAr : post.tags).slice(0, 3);
+    const cc = post.catColor || 'gold';
+    return `<div class="post-card${featured ? ' featured' : ''}" onclick="openPost('${post.slug}')" style="animation-delay:${i * 0.07}s">
+  <div class="post-banner">
+    <div class="post-banner-icon"><i class="${post.icon}"></i></div>
+    <span class="post-cat ${cc}"><i class="${post.icon}"></i>&nbsp;${catLabel}</span>
+  </div>
+  <div class="post-body">
+    <div class="post-meta">
+      <span class="pmeta"><i class="fas fa-calendar-alt"></i>&nbsp;${date}</span>
+      <span class="meta-dot"></span>
+      <span class="pmeta"><i class="fas fa-clock"></i>&nbsp;${post.readTime} ${u.minRead}</span>
+    </div>
+    <h2>${title}</h2>
+    <p class="post-excerpt">${excerpt}</p>
+    <div class="post-footer">
+      <div class="post-tags">${tags.map(t => `<span class="post-tag">${t}</span>`).join('')}</div>
+      <span class="post-read-btn">${u.readBtn}</span>
+    </div>
+  </div>
+</div>`;
+  }).join('');
+}
+
+function filterPosts(cat, btn) {
+  document.querySelectorAll('.fpill').forEach(p => p.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderPosts(cat);
+}
+
+/* ─────────────────────────────────────────────────────── */
+/*  MODAL                                                   */
+/* ─────────────────────────────────────────────────────── */
+let _openSlug = null;
+
+function openPost(slug) {
+  const post = POSTS.find(p => p.slug === slug);
+  if (!post) return;
+  _openSlug = slug;
+  const isAr = _lang === 'ar';
+  const u = UI[_lang];
+  const cc = post.catColor || 'gold';
+  const catLabel = isAr ? (u.cats[post.category] || post.category) : post.category;
+  document.getElementById('modal-cat').className = `post-cat ${cc}`;
+  document.getElementById('modal-cat').innerHTML = `<i class="${post.icon}"></i>&nbsp;${catLabel}`;
+  document.getElementById('modal-date').textContent = isAr ? post.dateDisplayAr : post.dateDisplay;
+  document.getElementById('modal-read').textContent = `${post.readTime} ${u.minRead}`;
+  document.getElementById('modal-title').innerHTML = isAr ? post.titleAr : post.title;
+  document.getElementById('modal-content').innerHTML = isAr ? post.contentAr : post.content;
+  document.getElementById('modal-tags').innerHTML = (isAr && post.tagsAr ? post.tagsAr : post.tags)
+    .map(t => `<span class="modal-tag">${t}</span>`).join('');
+  document.getElementById('share-lbl').textContent = u.shareLbl;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if (history.pushState) history.pushState(null, '', `?post=${slug}`);
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+  _openSlug = null;
+  if (history.pushState) history.pushState(null, '', location.pathname);
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && _openSlug) closeModal(); });
+
+/* ─────────────────────────────────────────────────────── */
+/*  CURSOR                                                  */
+/* ─────────────────────────────────────────────────────── */
+const cur = document.getElementById('cur'), curR = document.getElementById('cur-r');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+(function loop() {
+  cur.style.left = mx + 'px'; cur.style.top = my + 'px';
+  rx += (mx - rx) * .1; ry += (my - ry) * .1;
+  curR.style.left = rx + 'px'; curR.style.top = ry + 'px';
+  requestAnimationFrame(loop);
+})();
+document.querySelectorAll('a,button,.post-card').forEach(el => {
+  el.addEventListener('mouseenter', () => { cur.style.width = '15px'; cur.style.height = '15px'; curR.style.width = '48px'; curR.style.height = '48px'; });
+  el.addEventListener('mouseleave', () => { cur.style.width = '9px'; cur.style.height = '9px'; curR.style.width = '34px'; curR.style.height = '34px'; });
+});
+
+/* ─────────────────────────────────────────────────────── */
+/*  NAV SCROLL + INIT                                       */
+/* ─────────────────────────────────────────────────────── */
+window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', scrollY > 40));
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Show date of most recent post as "last updated"
+  const latest = POSTS[0];
+  if (latest) {
+    const d = new Date(latest.date);
+    document.getElementById('last-updated-date').textContent = latest.dateDisplay;
+  }
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  applyUI();
+  renderPosts('all');
+  // Deep-link: ?post=slug opens the article directly
+  const slug = new URLSearchParams(location.search).get('post');
+  if (slug) openPost(slug);
+});
+</script>
+</body>
+</html>
