@@ -325,8 +325,8 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
 .sql-tab{padding:.7rem 1.2rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:transparent;border:none;border-right:1px solid var(--line);cursor:pointer;white-space:nowrap;transition:color .2s,background .2s;display:flex;align-items:center;gap:.5rem}
 .sql-tab:hover{color:var(--text);background:var(--bg3)}
 .sql-tab.active{color:var(--gold);background:var(--bg3);border-bottom:2px solid var(--gold)}
-.sql-body{display:grid;grid-template-columns:1fr 1fr;min-height:320px}
-.sql-editor-wrap{border-right:1px solid var(--line2);display:flex;flex-direction:column}
+.sql-body{display:grid;grid-template-columns:1fr 1.15fr;min-height:340px}
+.sql-editor-wrap{border-right:1px solid var(--line2);display:flex;flex-direction:column;min-width:0;overflow:hidden}
 .sql-editor-header{display:flex;align-items:center;gap:.5rem;padding:.55rem .9rem;background:var(--bg);border-bottom:1px solid var(--line)}
 .sql-dot{width:11px;height:11px;border-radius:50%;display:inline-block}
 .sql-dot.r{background:#ff5f57}.sql-dot.y{background:#ffbd2e}.sql-dot.g{background:#28c840}
@@ -335,11 +335,11 @@ footer{border-top:1px solid var(--line);padding:1.8rem clamp(1.2rem,4vw,3.5rem);
 .sql-run-btn:hover{background:var(--gold2)}
 .sql-code{padding:1rem 1.2rem;font-size:.78rem;line-height:1.8;color:#abb2bf;overflow-x:auto;flex:1;margin:0;white-space:pre;tab-size:2}
 .sql-code .kw{color:#c678dd}.sql-code .fn{color:#61afef}.sql-code .str{color:#98c379}.sql-code .num{color:#d19a66}.sql-code .cm{color:#5c6370;font-style:italic}.sql-code .tbl{color:#e06c75}.sql-code .alias{color:#56b6c2}
-.sql-results-wrap{display:flex;flex-direction:column}
-.sql-results-header{padding:.55rem .9rem;background:var(--bg);border-bottom:1px solid var(--line);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);display:flex;align-items:center;gap:.6rem}
+.sql-results-wrap{display:flex;flex-direction:column;min-width:0;overflow:hidden}
+.sql-results-header{padding:.55rem .9rem;background:var(--bg);border-bottom:1px solid var(--line);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);display:flex;align-items:center;gap:.6rem;flex-shrink:0}
 .sql-row-count{font-size:.65rem;color:var(--teal);margin-left:auto}
-.sql-table-wrap{flex:1;overflow:auto;padding:.5rem}
-.sql-table-wrap table{width:auto;min-width:100%;border-collapse:collapse;font-size:.73rem}
+.sql-table-wrap{flex:1;overflow-x:auto;overflow-y:auto;padding:.5rem;min-width:0}
+.sql-table-wrap table{width:max-content;min-width:100%;border-collapse:collapse;font-size:.73rem}
 .sql-table-wrap th{padding:.45rem .7rem;text-align:left;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--line2);white-space:nowrap}
 .sql-table-wrap td{padding:.4rem .7rem;color:var(--text);border-bottom:1px solid var(--line);white-space:nowrap}
 .sql-table-wrap tr:hover td{background:rgba(255,255,255,.03)}
