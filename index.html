@@ -399,6 +399,117 @@ html[data-theme="light"] .about-body p{color:var(--muted2)}
 html[data-theme="light"] .tl-list li{color:var(--muted2)}
 html[data-theme="light"] .c-intro p{color:var(--muted2)}
 html[data-theme="light"] .blog-excerpt{color:var(--muted)}
+
+/* ─── SKILL SAMPLE BUTTON ─── */
+.sk-footer{margin-top:1rem;padding-top:.85rem;border-top:1px solid var(--line)}
+.sk-sample-btn{display:inline-flex;align-items:center;gap:.38rem;font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;padding:.36rem .82rem;border:1px solid var(--line2);border-radius:2px;background:transparent;color:var(--muted2);cursor:pointer;transition:all .25s;font-family:var(--sans)}
+.sk-sample-btn:hover{border-color:var(--gold-border);color:var(--gold);background:var(--gold-dim)}
+.sk-sample-btn i{font-size:.58rem}
+
+/* ─── ARTIFACT OVERLAY ─── */
+.artifact-overlay{position:fixed;inset:0;z-index:1100;background:rgba(9,9,12,.92);backdrop-filter:blur(18px);display:flex;align-items:flex-start;justify-content:center;padding:calc(var(--nav-h) + .8rem) 1rem 1.5rem;opacity:0;pointer-events:none;transition:opacity .35s var(--ease);overflow-y:auto}
+.artifact-overlay.open{opacity:1;pointer-events:auto}
+.artifact-box{background:var(--bg2);border:1px solid var(--line2);border-radius:8px;max-width:920px;width:100%;margin:auto;animation:fadeUp .4s var(--ease) both}
+.artifact-topbar{padding:1.1rem 1.6rem;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;position:sticky;top:0;background:var(--bg2);z-index:10;border-radius:8px 8px 0 0}
+.artifact-title{display:flex;align-items:center;gap:.6rem;font-size:.75rem;font-weight:500;color:var(--text)}
+.artifact-title i{color:var(--teal);font-size:.85rem}
+.artifact-btns{display:flex;align-items:center;gap:.5rem}
+.artifact-print{display:inline-flex;align-items:center;gap:.38rem;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:.36rem .85rem;border:1px solid var(--gold-border);border-radius:2px;background:var(--gold-dim);color:var(--gold);cursor:pointer;transition:all .2s;font-family:var(--sans)}
+.artifact-print:hover{background:var(--gold);color:var(--bg)}
+.artifact-x{width:30px;height:30px;border-radius:50%;background:var(--bg3);border:1px solid var(--line);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:all .2s;font-family:inherit;font-size:.72rem}
+.artifact-x:hover{background:var(--bg4);color:var(--text)}
+.artifact-scroll{max-height:78vh;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line2) transparent;border-radius:0 0 8px 8px}
+.artifact-scroll::-webkit-scrollbar{width:4px}
+.artifact-scroll::-webkit-scrollbar-thumb{background:var(--line2);border-radius:2px}
+
+/* ─── BRS DOCUMENT ─── */
+.brs-cover{background:linear-gradient(135deg,var(--bg3) 0%,var(--bg4) 100%);padding:2.2rem 2.5rem 1.8rem;border-bottom:3px solid var(--gold)}
+.brs-cover-eyebrow{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.5rem;margin-bottom:1.2rem}
+.brs-cover h1{font-family:var(--serif);font-size:1.7rem;font-weight:300;line-height:1.2;margin-bottom:.3rem}
+.brs-cover h2{font-size:.78rem;color:var(--muted2);font-weight:400;letter-spacing:.04em;margin-bottom:1.4rem}
+.brs-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem}
+.brs-m{background:rgba(0,0,0,.15);border-radius:3px;padding:.45rem .7rem}
+.brs-ml{font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.12rem}
+.brs-mv{font-size:.76rem;color:var(--text);font-weight:500}
+.brs-mv.ok{color:#4ade80}
+.brs-sec{padding:1.5rem 2.5rem;border-bottom:1px solid var(--line)}
+.brs-sec:last-child{border-bottom:none;padding-bottom:2rem}
+.brs-shead{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem}
+.brs-shead::after{content:'';flex:1;height:1px;background:var(--gold-border)}
+.brs-sec h4{font-family:var(--serif);font-size:1.05rem;font-weight:400;color:var(--text);margin-bottom:.55rem}
+.brs-sec p,.brs-sec li{font-size:.8rem;color:var(--muted2);line-height:1.75}
+.brs-sec ul{padding-left:1.1rem;margin-bottom:.6rem}
+.brs-sec li{margin-bottom:.3rem}
+.brs-two{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:.5rem}
+.brs-col-head{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;padding-bottom:.35rem;border-bottom:1px solid var(--line)}
+.brs-col-head.teal{color:var(--teal)}
+.brs-col-head.gold{color:var(--gold)}
+.btable{width:100%;border-collapse:collapse;font-size:.74rem;margin-top:.3rem}
+.btable th{background:var(--bg3);color:var(--gold);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;padding:.4rem .55rem;text-align:left;border:1px solid var(--line);font-weight:500}
+.btable td{padding:.42rem .55rem;border:1px solid var(--line);color:var(--muted2);vertical-align:top;line-height:1.5}
+.btable tr:nth-child(even) td{background:rgba(0,0,0,.06)}
+.btable td.rid{color:var(--gold);font-weight:600;font-size:.65rem;white-space:nowrap}
+.btable td.hi{color:var(--coral);font-weight:500}
+.btable td.md{color:var(--gold);font-weight:500}
+.btable td.lo{color:var(--teal);font-weight:500}
+.btable td strong{color:var(--text)}
+.brs-callout{background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:4px;padding:.7rem 1rem;margin:.75rem 0;font-size:.78rem;color:var(--gold2);line-height:1.75}
+.brs-callout strong{color:var(--gold)}
+.brs-sign{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-top:.7rem}
+.brs-sign-box{border:1px solid var(--line2);border-radius:4px;padding:.75rem .9rem}
+.brs-sign-role{font-size:.57rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+.brs-sign-name{font-size:.8rem;color:var(--text);font-weight:500;margin-bottom:.2rem}
+.brs-sign-status{font-size:.63rem;display:flex;align-items:center;gap:.28rem}
+.brs-sign-ok{color:#4ade80}
+.brs-sign-sub{color:var(--gold)}
+
+/* ─── POWER AUTOMATE FLOW ─── */
+.flow-wrap{padding:2rem 2rem 1.5rem}
+.flow-intro{text-align:center;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line)}
+.flow-intro h4{font-family:var(--serif);font-size:1.3rem;font-weight:300;margin-bottom:.35rem}
+.flow-intro p{font-size:.75rem;color:var(--muted)}
+.flow-diagram{display:flex;flex-direction:column;align-items:center;gap:0}
+.fn{border-radius:6px;padding:.65rem 1.2rem;text-align:center;width:100%;max-width:420px}
+.fn-label{font-size:.56rem;letter-spacing:.11em;text-transform:uppercase;margin-bottom:.18rem}
+.fn-text{font-size:.82rem;font-weight:500;color:var(--text)}
+.fn-sub{font-size:.65rem;color:var(--muted);margin-top:.12rem}
+.fn-trigger{background:linear-gradient(135deg,rgba(201,168,108,.14),rgba(201,168,108,.07));border:2px solid var(--gold-border)}
+.fn-trigger .fn-label{color:var(--gold)}
+.fn-action{background:var(--bg3);border:1px solid var(--line2)}
+.fn-action .fn-label{color:var(--muted)}
+.fn-diamond{background:linear-gradient(135deg,rgba(111,181,174,.12),rgba(111,181,174,.06));border:2px dashed rgba(111,181,174,.4);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);padding:1.3rem 2rem;max-width:260px}
+.fn-diamond .fn-label{color:var(--teal)}
+.fn-ok{background:rgba(74,222,128,.07);border:1px solid rgba(74,222,128,.22)}
+.fn-ok .fn-label{color:#4ade80}
+.fn-rej{background:rgba(201,123,107,.07);border:1px solid rgba(201,123,107,.22)}
+.fn-rej .fn-label{color:var(--coral)}
+.fn-end{background:var(--bg4);border:1px solid var(--line2);border-radius:30px}
+.fn-end .fn-label{color:var(--muted)}
+.flow-arrow{width:2px;height:24px;background:var(--line2);margin:0 auto;position:relative}
+.flow-arrow::after{content:'';position:absolute;bottom:-5px;left:50%;transform:translateX(-50%);border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--line2)}
+.flow-branch{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;width:100%;max-width:620px}
+.flow-blabel{display:block;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:.22rem .55rem;border-radius:2px;margin-bottom:7px}
+.bl-yes{background:rgba(74,222,128,.1);color:#4ade80}
+.bl-no{background:rgba(201,123,107,.1);color:var(--coral)}
+.flow-bcol{display:flex;flex-direction:column;align-items:center;gap:0}
+.flow-legend{display:flex;gap:1.1rem;justify-content:center;flex-wrap:wrap;margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--line)}
+.fl-item{display:flex;align-items:center;gap:.35rem;font-size:.61rem;color:var(--muted)}
+.fl-dot{width:9px;height:9px;border-radius:2px;flex-shrink:0}
+
+/* ─── LIGHT MODE FOR ARTIFACT ─── */
+html[data-theme="light"] .artifact-overlay{background:rgba(195,192,186,.88)}
+html[data-theme="light"] .brs-cover{background:linear-gradient(135deg,var(--bg3),var(--bg4))}
+html[data-theme="light"] .brs-m{background:rgba(0,0,0,.07)}
+html[data-theme="light"] .btable tr:nth-child(even) td{background:rgba(0,0,0,.04)}
+
+/* ─── PRINT ─── */
+@media print{
+  nav,#cur,#cur-r,.artifact-topbar .artifact-btns,.artifact-x{display:none!important}
+  .artifact-overlay{position:static!important;background:none!important;overflow:visible!important;padding:0!important}
+  .artifact-box{border:none!important;box-shadow:none!important}
+  .artifact-scroll{max-height:none!important;overflow:visible!important}
+  :root{--bg:#fff;--bg2:#fff;--bg3:#f5f3ef;--bg4:#eceae4;--text:#111;--muted:#444;--muted2:#333;--gold:#7a5520;--line:rgba(0,0,0,.15);--line2:rgba(0,0,0,.2)}
+}
 </style>
 <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||'dark')</script>
 </head>
@@ -507,8 +618,8 @@ html[data-theme="light"] .blog-excerpt{color:var(--muted)}
   <p class="sec-lead reveal d2">A proven technical stack built over 5+ years of ERP implementation, data engineering, and business process optimization in Saudi Arabia&rsquo;s real estate and investment sector.</p>
   <div class="skills-grid">
     <div class="sk reveal"><div class="sk-icon"><i class="fas fa-server"></i></div><h3>ERP Implementation &amp; Administration</h3><p>End-to-end implementation, configuration, and optimization of ERPNext and Logix ERP &mdash; aligning modules with Finance, PMO, Projects, Property Management, Procurement, and Contracts.</p><div class="tags"><span class="tag">ERPNext</span><span class="tag">Logix ERP</span><span class="tag">Go-Live</span></div></div>
-    <div class="sk reveal d1"><div class="sk-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="fas fa-file-alt"></i></div><h3>Business Requirements Specification</h3><p>Preparing detailed BRS documents for multiple departments &mdash; capturing functional requirements, process flows, and system configuration specifications for ERP deployments.</p><div class="tags"><span class="tag t2">BRS</span><span class="tag t2">Process Flows</span><span class="tag t2">UAT</span></div></div>
-    <div class="sk reveal d2"><div class="sk-icon" style="background:rgba(201,123,107,.1);color:var(--coral)"><i class="fas fa-bolt"></i></div><h3>Workflow Automation &amp; Process Optimization</h3><p>Creating and automating enterprise business processes via Power Automate and SSIS packages &mdash; improving operational efficiency, accuracy, and approval cycles.</p><div class="tags"><span class="tag">Power Automate</span><span class="tag">SSIS</span><span class="tag">Automation</span></div></div>
+    <div class="sk reveal d1"><div class="sk-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="fas fa-file-alt"></i></div><h3>Business Requirements Specification</h3><p>Preparing detailed BRS documents for multiple departments &mdash; capturing functional requirements, process flows, and system configuration specifications for ERP deployments.</p><div class="tags"><span class="tag t2">BRS</span><span class="tag t2">Process Flows</span><span class="tag t2">UAT</span></div><div class="sk-footer"><button class="sk-sample-btn" onclick="openArtifact('brs')"><i class="fas fa-eye"></i> View Sample BRS</button><button class="sk-sample-btn" style="margin-left:.4rem" onclick="openArtifact('brs');setTimeout(()=>window.print(),400)"><i class="fas fa-download"></i> Download PDF</button></div></div>
+    <div class="sk reveal d2"><div class="sk-icon" style="background:rgba(201,123,107,.1);color:var(--coral)"><i class="fas fa-bolt"></i></div><h3>Workflow Automation &amp; Process Optimization</h3><p>Creating and automating enterprise business processes via Power Automate and SSIS packages &mdash; improving operational efficiency, accuracy, and approval cycles.</p><div class="tags"><span class="tag">Power Automate</span><span class="tag">SSIS</span><span class="tag">Automation</span></div><div class="sk-footer"><button class="sk-sample-btn" onclick="openArtifact('paf')"><i class="fas fa-sitemap"></i> View Flow Diagram</button></div></div>
     <div class="sk reveal d3"><div class="sk-icon"><i class="fas fa-chart-bar"></i></div><h3>Power BI &amp; KPI Dashboards</h3><p>Developing Power BI dashboards and KPI reports that surface ERP performance data, track strategic metrics, and support management decision-making in real time.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">KPI Reporting</span><span class="tag">DAX</span></div></div>
     <div class="sk reveal d1"><div class="sk-icon" style="background:var(--teal-dim);color:var(--teal)"><i class="fas fa-database"></i></div><h3>SQL &amp; Database Reporting</h3><p>Extracting, validating, and analyzing data using SQL in SSMS and Report Builder &mdash; building operational reports that improve management insights and ERP performance tracking.</p><div class="tags"><span class="tag t2">SQL</span><span class="tag t2">SSMS</span><span class="tag t2">Report Builder</span></div></div>
     <div class="sk reveal d2"><div class="sk-icon"><i class="fas fa-exchange-alt"></i></div><h3>Data Migration &amp; Cleansing</h3><p>Managing data migration from legacy systems &mdash; extraction, cleansing, validation, and reconciliation to ensure integrity and continuity during ERP transitions.</p><div class="tags"><span class="tag">Data Migration</span><span class="tag">Validation</span><span class="tag">Reconciliation</span></div></div>
@@ -1208,6 +1319,366 @@ window.addEventListener('DOMContentLoaded',()=>{
   updateNav();
   const pbiSec=document.getElementById('powerbi-demo');if(pbiSec)pbiObs2.observe(pbiSec);
 });
+
+/* Artifact modal */
+function openArtifact(type){
+  document.getElementById('artifactBRS').style.display = type==='brs'?'':'none';
+  document.getElementById('artifactPAF').style.display = type==='paf'?'':'none';
+  const ti=document.getElementById('artifactTitle');
+  if(type==='brs'){ti.innerHTML='<i class="fas fa-file-alt" style="color:var(--teal)"></i> <span>BRS Sample &mdash; Accounts Payable Module</span>';}
+  else{ti.innerHTML='<i class="fas fa-sitemap" style="color:var(--coral)"></i> <span>Invoice Approval &mdash; Power Automate Flow</span>';}
+  document.getElementById('artifactOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeArtifact(){
+  document.getElementById('artifactOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function handleArtifactClick(e){if(e.target===document.getElementById('artifactOverlay'))closeArtifact();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeArtifact();});
 </script>
+
+<!-- ═══════════════════ ARTIFACT OVERLAY ═══════════════════ -->
+<div class="artifact-overlay" id="artifactOverlay" onclick="handleArtifactClick(event)">
+  <div class="artifact-box" id="artifactBox">
+
+    <div class="artifact-topbar">
+      <div class="artifact-title" id="artifactTitle"><i class="fas fa-file-alt"></i> <span></span></div>
+      <div class="artifact-btns">
+        <button class="artifact-print" onclick="window.print()"><i class="fas fa-print"></i> Print / Save PDF</button>
+        <button class="artifact-x" onclick="closeArtifact()" aria-label="Close"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+
+    <div class="artifact-scroll">
+
+      <!-- ══ BRS DOCUMENT ══ -->
+      <div id="artifactBRS">
+        <div class="brs-cover">
+          <div class="brs-cover-eyebrow"><i class="fas fa-building"></i> Memar Development &amp; Investment &nbsp;·&nbsp; ERP Implementation</div>
+          <h1>Business Requirements Specification</h1>
+          <h2>Accounts Payable Module &mdash; Logix ERP Implementation</h2>
+          <div class="brs-meta">
+            <div class="brs-m"><div class="brs-ml">Document No.</div><div class="brs-mv">BRS-AP-2023-01</div></div>
+            <div class="brs-m"><div class="brs-ml">Version</div><div class="brs-mv">1.2</div></div>
+            <div class="brs-m"><div class="brs-ml">Status</div><div class="brs-mv ok">&#10003; Approved</div></div>
+            <div class="brs-m"><div class="brs-ml">Author</div><div class="brs-mv">Mohammad Faisal Alabrash</div></div>
+            <div class="brs-m"><div class="brs-ml">Date</div><div class="brs-mv">15 March 2023</div></div>
+            <div class="brs-m"><div class="brs-ml">Approved By</div><div class="brs-mv">GM Finance</div></div>
+          </div>
+        </div>
+
+        <div class="brs-sec">
+          <div class="brs-shead">1 &nbsp; Executive Summary</div>
+          <p>This document defines the functional requirements for implementing the <strong>Accounts Payable (AP) module</strong> within Logix ERP at Memar Development and Investment. The AP module replaces the current Excel-based payment tracker and email-chain approval process, enabling automated three-way matching, structured dual-control approval workflows, and real-time cash flow visibility for the Finance team.</p>
+          <div class="brs-callout"><strong>Business Driver:</strong> Month-end AP reconciliation currently requires 3&ndash;4 working days and is error-prone due to manual data entry. This implementation targets &lt;1 day reconciliation and eliminates manual matching errors.</div>
+        </div>
+
+        <div class="brs-sec">
+          <div class="brs-shead">2 &nbsp; Scope</div>
+          <div class="brs-two">
+            <div>
+              <div class="brs-col-head teal">&#10003; In-Scope</div>
+              <ul>
+                <li>Vendor master data management</li>
+                <li>Invoice receipt, registration &amp; 3-way matching (PO &rarr; GRN &rarr; Invoice)</li>
+                <li>Payment approval workflow (dual control, &gt;SAR 50K)</li>
+                <li>Bank reconciliation</li>
+                <li>ZATCA e-invoicing compliance</li>
+                <li>VAT on purchases (15%, Zero-rated, Exempt)</li>
+                <li>Aged payables &amp; cash flow forecast reports</li>
+              </ul>
+            </div>
+            <div>
+              <div class="brs-col-head" style="color:var(--coral)">&#10007; Out-of-Scope</div>
+              <ul>
+                <li>Procurement module (separate BRS: BRS-PR-2023-02)</li>
+                <li>Bank API direct integration (Phase 2)</li>
+                <li>Vendor self-service portal (Phase 2)</li>
+                <li>Historical invoice archiving beyond FY2021</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="brs-sec">
+          <div class="brs-shead">3 &nbsp; Stakeholders</div>
+          <table class="btable">
+            <thead><tr><th>Role</th><th>Responsibility</th><th>Involvement</th></tr></thead>
+            <tbody>
+              <tr><td>Finance Director</td><td>Requirements review &amp; approval</td><td>Business Owner</td></tr>
+              <tr><td>AP Accountant (×2)</td><td>Day-to-day invoice processing</td><td>Primary User</td></tr>
+              <tr><td>Treasury Manager</td><td>Payment authorization (&gt;SAR 50K)</td><td>Approver</td></tr>
+              <tr><td>GM Finance</td><td>Final document sign-off</td><td>Executive Sponsor</td></tr>
+              <tr><td>Mohammad F. Alabrash</td><td>BRS author, ERP configuration lead</td><td>IT / ERP Lead</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="brs-sec">
+          <div class="brs-shead">4 &nbsp; Functional Requirements</div>
+          <table class="btable">
+            <thead><tr><th>Req ID</th><th>Priority</th><th>Requirement</th><th>Acceptance Criteria</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="rid">AP-001</td><td class="hi">High</td>
+                <td>Capture vendor invoices with full header and line-level detail</td>
+                <td>Fields: Vendor code, Invoice no., date, PO reference, line items, VAT amount, cost center</td>
+              </tr>
+              <tr>
+                <td class="rid">AP-002</td><td class="hi">High</td>
+                <td>Automated 3-way matching: Purchase Order &rarr; Goods Receipt &rarr; Invoice</td>
+                <td>Match status visible on every invoice. Discrepancies auto-flagged and routed for exception review</td>
+              </tr>
+              <tr>
+                <td class="rid">AP-003</td><td class="hi">High</td>
+                <td>Dual-control payment approval for amounts &gt; SAR 50,000</td>
+                <td>System blocks payment processing until both CFO and Treasury Manager have approved</td>
+              </tr>
+              <tr>
+                <td class="rid">AP-004</td><td class="hi">High</td>
+                <td>ZATCA Phase 2 e-invoicing compliance</td>
+                <td>System generates ZATCA-compliant XML and PDF invoices with QR code and UUID</td>
+              </tr>
+              <tr>
+                <td class="rid">AP-005</td><td class="md">Medium</td>
+                <td>Vendor payment terms auto-calculation (Net-30, Net-60, etc.)</td>
+                <td>Due date auto-populated from invoice date + terms defined in vendor master</td>
+              </tr>
+              <tr>
+                <td class="rid">AP-006</td><td class="md">Medium</td>
+                <td>Aged payables report by vendor, due date, and cost center</td>
+                <td>Real-time report; exportable to Excel / PDF; bucket aging: Current, 30d, 60d, 90d, 90d+</td>
+              </tr>
+              <tr>
+                <td class="rid">AP-007</td><td class="hi">High</td>
+                <td>VAT on purchases: 15%, Zero-rated, and Exempt correctly applied per line</td>
+                <td>5 test scenarios verified against ZATCA requirements. VAT return report matches manual calculation</td>
+              </tr>
+              <tr>
+                <td class="rid">AP-008</td><td class="lo">Low</td>
+                <td>Cash flow forecast for next 30 / 60 / 90 days based on due invoices</td>
+                <td>Report shows total payables due by period, grouped by currency and cost center</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="brs-sec">
+          <div class="brs-shead">5 &nbsp; Current State vs. Future State</div>
+          <div class="brs-two">
+            <div>
+              <div class="brs-col-head" style="color:var(--coral)">AS-IS (Current)</div>
+              <ul>
+                <li>Invoices received by email, filed in shared drive</li>
+                <li>Manual entry into Excel tracker by AP accountant</li>
+                <li>Payment approval via email chain (no audit trail)</li>
+                <li>No automated matching with POs or GRNs</li>
+                <li>Month-end reconciliation: <strong>3&ndash;4 working days</strong></li>
+                <li>Duplicate payment risk: undetected until audit</li>
+              </ul>
+            </div>
+            <div>
+              <div class="brs-col-head teal">TO-BE (After ERP)</div>
+              <ul>
+                <li>Invoices digitally registered in Logix ERP on receipt</li>
+                <li>Automated 3-way matching (PO &rarr; GRN &rarr; Invoice)</li>
+                <li>Structured approval workflow with full audit log in ERP</li>
+                <li>Real-time aged payables &amp; cash flow visibility</li>
+                <li>Month-end reconciliation: <strong>&lt;1 working day</strong></li>
+                <li>Duplicate detection: built-in vendor/invoice no. check</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="brs-sec">
+          <div class="brs-shead">6 &nbsp; Data Migration Requirements</div>
+          <table class="btable">
+            <thead><tr><th>Data Entity</th><th>Volume</th><th>Source</th><th>Migration Type</th></tr></thead>
+            <tbody>
+              <tr><td>Vendor Master</td><td>245 active vendors</td><td>Legacy ERP + Excel</td><td>Full migration — cleansed &amp; deduplicated</td></tr>
+              <tr><td>Open Purchase Orders</td><td>~380 open POs</td><td>Legacy ERP</td><td>Full migration as at go-live date</td></tr>
+              <tr><td>Open Invoices (AP)</td><td>~520 invoices</td><td>Excel tracker</td><td>Open items only; closed = archive</td></tr>
+              <tr><td>Vendor Payment Terms</td><td>12 term codes</td><td>Manual documentation</td><td>Manual configuration in ERP master data</td></tr>
+              <tr><td>Historical AP (FY2021&ndash;22)</td><td>~8,400 records</td><td>Legacy ERP</td><td>Read-only archive; reporting only</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="brs-sec">
+          <div class="brs-shead">7 &nbsp; UAT Acceptance Criteria</div>
+          <p>All scenarios below must pass before go-live sign-off.</p>
+          <table class="btable">
+            <thead><tr><th>#</th><th>Test Scenario</th><th>Expected Result</th></tr></thead>
+            <tbody>
+              <tr><td class="rid">UAT-01</td><td>Register 10 test invoices against existing POs</td><td>All 10 match; 3-way match status = &ldquo;Matched&rdquo;</td></tr>
+              <tr><td class="rid">UAT-02</td><td>Submit invoice above SAR 50,000 for payment</td><td>System routes to CFO + Treasury; blocked until both approve</td></tr>
+              <tr><td class="rid">UAT-03</td><td>Run aged payables report at test date</td><td>Report matches external Excel reconciliation &plusmn;0</td></tr>
+              <tr><td class="rid">UAT-04</td><td>Post invoice with VAT 15%, Zero-rated, and Exempt lines</td><td>VAT amounts correct; VAT return report balances</td></tr>
+              <tr><td class="rid">UAT-05</td><td>Attempt to post duplicate invoice (same vendor + same invoice no.)</td><td>System blocks with &ldquo;Duplicate Invoice&rdquo; warning</td></tr>
+              <tr><td class="rid">UAT-06</td><td>Vendor statement for 3 test vendors</td><td>Opening balance + transactions = closing balance; reconciles to zero</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="brs-sec">
+          <div class="brs-shead">8 &nbsp; Sign-Off</div>
+          <div class="brs-sign">
+            <div class="brs-sign-box">
+              <div class="brs-sign-role">Finance Director</div>
+              <div class="brs-sign-name">Requirements Approved</div>
+              <div class="brs-sign-status"><span class="brs-sign-ok">&#10003;</span> Approved &mdash; 20 Mar 2023</div>
+            </div>
+            <div class="brs-sign-box">
+              <div class="brs-sign-role">GM Finance</div>
+              <div class="brs-sign-name">Executive Sign-Off</div>
+              <div class="brs-sign-status"><span class="brs-sign-ok">&#10003;</span> Approved &mdash; 22 Mar 2023</div>
+            </div>
+            <div class="brs-sign-box">
+              <div class="brs-sign-role">ERP Lead</div>
+              <div class="brs-sign-name">Mohammad Faisal Alabrash</div>
+              <div class="brs-sign-status"><span class="brs-sign-sub">&#10003;</span> Submitted &mdash; 15 Mar 2023</div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /BRS -->
+
+      <!-- ══ POWER AUTOMATE FLOW ══ -->
+      <div id="artifactPAF" style="display:none">
+        <div class="flow-wrap">
+          <div class="flow-intro">
+            <h4>Invoice Receipt &amp; Approval Automation</h4>
+            <p>Power Automate flow &mdash; deployed at Memar Development &amp; Investment &nbsp;&middot;&nbsp; Reduced manual approval cycle from 2 days to 4 hours</p>
+          </div>
+
+          <div class="flow-diagram">
+
+            <!-- TRIGGER -->
+            <div class="fn fn-trigger">
+              <div class="fn-label"><i class="fas fa-bolt"></i> &nbsp;Trigger</div>
+              <div class="fn-text">New Email Received</div>
+              <div class="fn-sub">invoices@company.com &nbsp;&middot;&nbsp; With attachment</div>
+            </div>
+            <div class="flow-arrow"></div>
+
+            <!-- EXTRACT -->
+            <div class="fn fn-action">
+              <div class="fn-label"><i class="fas fa-file-invoice"></i> &nbsp;Action</div>
+              <div class="fn-text">Extract Invoice Data from PDF</div>
+              <div class="fn-sub">AI Builder Form Processing &nbsp;&middot;&nbsp; Vendor, Amount, VAT, PO Ref</div>
+            </div>
+            <div class="flow-arrow"></div>
+
+            <!-- CREATE DRAFT -->
+            <div class="fn fn-action">
+              <div class="fn-label"><i class="fas fa-database"></i> &nbsp;Action</div>
+              <div class="fn-text">Create Draft Record in ERP</div>
+              <div class="fn-sub">Status: Pending Approval &nbsp;&middot;&nbsp; Assigned to AP Queue</div>
+            </div>
+            <div class="flow-arrow"></div>
+
+            <!-- CONDITION -->
+            <div class="fn fn-diamond">
+              <div class="fn-label">Condition</div>
+              <div class="fn-text">Amount &gt; SAR 50,000?</div>
+            </div>
+            <div class="flow-arrow"></div>
+
+            <!-- BRANCH -->
+            <div class="flow-branch">
+              <div class="flow-bcol">
+                <span class="flow-blabel bl-yes">YES &mdash; Dual Approval</span>
+                <div class="fn fn-action" style="max-width:100%">
+                  <div class="fn-label"><i class="fab fa-microsoft"></i> &nbsp;Action</div>
+                  <div class="fn-text">Send Approval Card to CFO</div>
+                  <div class="fn-sub">Microsoft Teams Adaptive Card</div>
+                </div>
+                <div class="flow-arrow"></div>
+                <div class="fn fn-action" style="max-width:100%">
+                  <div class="fn-label"><i class="fab fa-microsoft"></i> &nbsp;Action</div>
+                  <div class="fn-text">Send Approval Card to Treasury</div>
+                  <div class="fn-sub">Teams &nbsp;&middot;&nbsp; Both must approve</div>
+                </div>
+              </div>
+              <div class="flow-bcol">
+                <span class="flow-blabel bl-no">NO &mdash; Single Approval</span>
+                <div class="fn fn-action" style="max-width:100%">
+                  <div class="fn-label"><i class="fab fa-microsoft"></i> &nbsp;Action</div>
+                  <div class="fn-text">Send Approval Card</div>
+                  <div class="fn-sub">Finance Manager via Teams</div>
+                </div>
+                <div class="flow-arrow"></div>
+                <div class="fn fn-action" style="max-width:100%;opacity:.4">
+                  <div class="fn-label">&nbsp;</div>
+                  <div class="fn-text">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+            <div class="flow-arrow"></div>
+
+            <!-- CONDITION 2 -->
+            <div class="fn fn-diamond">
+              <div class="fn-label">Condition</div>
+              <div class="fn-text">All Approvers Approved?</div>
+            </div>
+            <div class="flow-arrow"></div>
+
+            <div class="flow-branch" style="max-width:620px">
+              <div class="flow-bcol">
+                <span class="flow-blabel bl-yes">APPROVED</span>
+                <div class="fn fn-ok" style="max-width:100%">
+                  <div class="fn-label"><i class="fas fa-check-circle"></i> &nbsp;Action</div>
+                  <div class="fn-text">Update ERP Invoice Status</div>
+                  <div class="fn-sub">Status: Ready for Payment</div>
+                </div>
+                <div class="flow-arrow"></div>
+                <div class="fn fn-ok" style="max-width:100%">
+                  <div class="fn-label"><i class="fas fa-envelope"></i> &nbsp;Action</div>
+                  <div class="fn-text">Notify AP Team &amp; Vendor</div>
+                  <div class="fn-sub">Payment scheduled per terms</div>
+                </div>
+              </div>
+              <div class="flow-bcol">
+                <span class="flow-blabel bl-no">REJECTED</span>
+                <div class="fn fn-rej" style="max-width:100%">
+                  <div class="fn-label"><i class="fas fa-times-circle"></i> &nbsp;Action</div>
+                  <div class="fn-text">Update ERP Invoice Status</div>
+                  <div class="fn-sub">Status: Rejected &nbsp;&middot;&nbsp; Log reason</div>
+                </div>
+                <div class="flow-arrow"></div>
+                <div class="fn fn-rej" style="max-width:100%">
+                  <div class="fn-label"><i class="fas fa-envelope"></i> &nbsp;Action</div>
+                  <div class="fn-text">Notify AP Team</div>
+                  <div class="fn-sub">Include rejection reason &amp; approver</div>
+                </div>
+              </div>
+            </div>
+            <div class="flow-arrow"></div>
+
+            <!-- END -->
+            <div class="fn fn-end">
+              <div class="fn-label"><i class="fas fa-flag-checkered"></i> &nbsp;End</div>
+              <div class="fn-text">Flow Complete</div>
+              <div class="fn-sub">All actions logged in ERP audit trail</div>
+            </div>
+
+          </div><!-- /flow-diagram -->
+
+          <div class="flow-legend">
+            <div class="fl-item"><div class="fl-dot" style="background:var(--gold-border)"></div> Trigger</div>
+            <div class="fl-item"><div class="fl-dot" style="background:var(--line2)"></div> Action</div>
+            <div class="fl-item"><div class="fl-dot" style="background:rgba(111,181,174,.4);border-radius:50%"></div> Condition</div>
+            <div class="fl-item"><div class="fl-dot" style="background:rgba(74,222,128,.3)"></div> Approved path</div>
+            <div class="fl-item"><div class="fl-dot" style="background:rgba(201,123,107,.3)"></div> Rejected path</div>
+          </div>
+
+        </div>
+      </div><!-- /PAF -->
+
+    </div><!-- /artifact-scroll -->
+  </div><!-- /artifact-box -->
+</div><!-- /artifact-overlay -->
+
 </body>
 </html>
